@@ -43,12 +43,14 @@ public class MergeSort {
       merge(arr, l, mid, r);
    }
 
-   // Time Complexity - O(nlogn), Auxillary Space - O(n)
    public static void main(String[] args) {
 
+      // Time Complexity: Worst & Average -O(NlogN), Best - O(NlogN)
+      // Auxillary Space: O(N)
+      // It is "Stable Sort" as it does not change the order of the duplicate items.
+      // It is not an "In Place".
       int[] arr = { 5, 3, 2, 4, 1 };
-      int n = arr.length;
-      mergeSort(arr, 0, n - 1);
+      mergeSort(arr, 0, arr.length - 1);
       for (int i : arr) {
          System.out.print(i + " ");
       }
