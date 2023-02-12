@@ -27,7 +27,7 @@ public class SelectionSort {
 
         // Time Complexity: Worst & Average & Best - O(N^2)
         // Auxillary Space: O(1)
-        // It is "UnStable Sort" as it does change the order of the duplicate items.
+        // It is "Stable Sort" as it does not change the order of the duplicate items.
         // It is also "In Place".
         int[] arr = { 7, 4, 5, 1, 2 };
         selectionSort(arr);
