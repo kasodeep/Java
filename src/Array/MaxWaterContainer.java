@@ -2,6 +2,11 @@ package Array;
 
 public class MaxWaterContainer {
 
+    /**
+     * 
+     * @param height - It is the array which represents the height of column.
+     * @return - It returns the maximum water which can be accomodated.
+     */
     static int maxArea(int[] height) {
 
         int l = 0;

@@ -2,6 +2,10 @@ package Array;
 
 public class Reverse {
 
+    /**
+     * 
+     * @param arr - It is the array which must be reversed.
+     */
     static void reverseArray(int arr[]) {
 
         int temp;

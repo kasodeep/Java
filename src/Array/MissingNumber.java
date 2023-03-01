@@ -2,6 +2,11 @@ package Array;
 
 public class MissingNumber {
 
+    /**
+     * 
+     * @param arr  - It is the array in which a number is missing from 1-n..
+     * @param size - It is the size of the array.
+     */
     static void findMissing(int arr[], int size) {
 
         int i;

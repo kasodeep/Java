@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class RangeSum {
 
+    /**
+     * 
+     * @param arr - It is the array whose prefix sum is to be calculated.
+     */
     static void prefixSum(int arr[]) {
 
         int n = arr.length;

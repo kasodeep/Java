@@ -2,11 +2,14 @@ package Array;
 
 public class SortOneZero {
 
+    /**
+     * 
+     * @param a - It is the array which has only zeros and ones which must be
+     *          sorted.
+     */
     public static void sortZeroesAndOne(int[] a) {
 
-        int n = a.length;
-        int i = 0;
-        int j = n - 1;
+        int n = a.length, i = 0, j = n - 1;
 
         while (i < j) {
             if (a[i] == 1 && a[j] == 0) {

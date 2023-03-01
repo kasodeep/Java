@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class SortSquares {
 
+    /**
+     * 
+     * @param a - It is the array which has -ve to +ve values.
+     * @return - It returns the ans array in which squares are sorted.
+     */
     static int[] sortedSquares(int[] a) {
 
         int n = a.length, i = 0, j = n - 1, k = 0;

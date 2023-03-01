@@ -2,6 +2,12 @@ package Array;
 
 public class EqualSumSubArrays {
 
+    /**
+     * 
+     * @param arr - It is the array whos total sum is to be calculated.
+     * @param n   - It is the length of the array.
+     * @return - It returns the total sum of the array.
+     */
     static int totalSum(int arr[], int n) {
 
         int sum = 0;
@@ -10,6 +16,12 @@ public class EqualSumSubArrays {
         return sum;
     }
 
+    /**
+     * 
+     * @param a - It is the array under consideration
+     * @return - It returns if the array 'a' has any two subarrays whose sums are
+     *         equal.
+     */
     static boolean check(int[] a) {
 
         int n = a.length;

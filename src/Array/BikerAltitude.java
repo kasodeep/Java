@@ -2,6 +2,11 @@ package Array;
 
 public class BikerAltitude {
 
+    /**
+     * 
+     * @param arr - This arr contains the altitudes of mountains.
+     * @return - It returns the maximum altitude reached by the biker.
+     */
     static int maxAltitude(int arr[]) {
 
         int curr_Altitude = 0;

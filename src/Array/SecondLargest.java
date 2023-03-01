@@ -2,6 +2,11 @@ package Array;
 
 public class SecondLargest {
 
+    /**
+     * 
+     * @param arr - It is the array under consideration.
+     * @return - It returns the second largest element of the array.
+     */
     public static int secondLargestValue(int[] arr) {
 
         int n = arr.length;

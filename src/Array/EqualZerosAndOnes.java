@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 public class EqualZerosAndOnes {
 
+    /**
+     * 
+     * @param arr - It is the array which contains zeros and ones.
+     * @param n   - It is the length of the array.
+     * @return - It returns the max_len of the array which has equal 0's and 1's.
+     */
     static int maxLen(int arr[], int n) {
 
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();

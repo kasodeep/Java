@@ -4,6 +4,12 @@ import java.util.HashSet;
 
 public class FirstRepeating {
 
+    /**
+     * 
+     * @param arr - It is the array under consideration.
+     * @param n   - It is the length of the array.
+     * @return - It returns the first repeated element of the array.
+     */
     static int firstRepeated(int arr[], int n) {
 
         int num = -1;
@@ -17,7 +23,6 @@ public class FirstRepeating {
                 set.add(arr[i]);
             }
         }
-
         return num;
     }
 

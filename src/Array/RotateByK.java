@@ -2,9 +2,16 @@ package Array;
 
 public class RotateByK {
 
+    /**
+     * 
+     * @param a - It is the array under consideration.
+     * @param k - It is the steps which the array mustt be rotated.
+     */
     public static void rotate(int[] a, int k) {
 
+        // In-Case : If k > a.length
         k %= a.length;
+
         reverse(a, 0, a.length - 1);
         reverse(a, 0, k - 1);
         reverse(a, k, a.length - 1);

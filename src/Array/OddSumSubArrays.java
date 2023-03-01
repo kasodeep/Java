@@ -1,8 +1,14 @@
 package Array;
 
-// If n is odd, the number of odd subarrays is the previous number of even subarrays + 1.
 public class OddSumSubArrays {
 
+    /**
+     * If num is odd, the number of odd subarrays is the previous number of even
+     * subarrays + 1.
+     * 
+     * @param arr - It is the array under consideration.
+     * @return - It returns the number of odd sum sub arrays.
+     */
     static int oddSubArrays(int arr[]) {
 
         int odd = 0, even = 0, sum = 0;

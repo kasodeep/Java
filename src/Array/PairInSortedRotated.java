@@ -2,6 +2,14 @@ package Array;
 
 public class PairInSortedRotated {
 
+    /**
+     * 
+     * @param arr - It is the array under cosideration.
+     * @param n   - It is the length of the array.
+     * @param x   - It is the sum of the pair which is to be found.
+     * @return - It returns, if the pair is present or not in the array 'arr' whose
+     *         sum is {x}.
+     */
     static boolean pairInSortedRotated(int arr[], int n, int x) {
 
         int i;

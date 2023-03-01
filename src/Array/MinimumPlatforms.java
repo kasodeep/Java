@@ -4,6 +4,13 @@ import java.util.Arrays;
 
 public class MinimumPlatforms {
 
+    /**
+     * 
+     * @param arr - It represents the arrival time for the trains.
+     * @param dep - It represents the departure time for the trains.
+     * @return - It represents the minimum number of platforms a station must
+     *         possess.
+     */
     static int findTotalPlatforms(int arr[], int dep[]) {
 
         Arrays.sort(arr);

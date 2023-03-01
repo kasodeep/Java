@@ -1,9 +1,16 @@
 package Array;
 
-import java.util.*;
+import java.util.HashMap;
 
 public class PairSum {
 
+    /**
+     * 
+     * @param arr - It is the array under consideration.
+     * @param n   - It is the length of the array 'arr'.
+     * @param sum - It represents the value which is sum of two array numbers.
+     * @return - It returns the number of pairs whose sum is equal to 'sum'.
+     */
     static int getPairsCount(int arr[], int n, int sum) {
 
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
