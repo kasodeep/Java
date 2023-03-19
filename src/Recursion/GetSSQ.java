@@ -4,9 +4,14 @@ import java.util.ArrayList;
 
 public class GetSSQ {
 
+    /**
+     * 
+     * @param s - It is the string which is to be used for getting SSQ
+     * @return - It returns the ArrayList containing all the subsequences
+     */
     static ArrayList<String> getSubSequence(String s) {
 
-        // base case
+        // Base Case
         ArrayList<String> ans = new ArrayList<>();
         if (s.length() == 0) {
             ans.add("");
@@ -25,6 +30,11 @@ public class GetSSQ {
         return ans;
     }
 
+    /**
+     * 
+     * @param s          - It is the string which is to be used for getting SSQ
+     * @param currAnswer - It is the current answer, initially zero
+     */
     static void printSubSequence(String s, String currAnswer) {
 
         // base case
@@ -36,14 +46,18 @@ public class GetSSQ {
         char curr = s.charAt(0);
         String remString = s.substring(1);
 
-        printSubSequence(remString, currAnswer + curr); // Add the curr
-        printSubSequence(remString, currAnswer); // Do not add the curr
+        // Add the curr character
+        printSubSequence(remString, currAnswer + curr);
+
+        // Do not add the curr character
+        printSubSequence(remString, currAnswer);
 
     }
 
     public static void main(String[] args) {
-        // ArrayList<String> ans = getSubSequence("abc");
-        // System.out.println(ans.toString());
+        ArrayList<String> ans = getSubSequence("abc");
+        System.out.println(ans.toString());
+
         printSubSequence("abc", "");
     }
 }

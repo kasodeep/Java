@@ -19,6 +19,7 @@ public class SpecialString {
          System.out.println(ans);
          return;
       }
+
       printSpecialString(remainingChars - 1, ans + "*", numberOfStars + 1, numberOfDashes);
       if (numberOfDashes + 1 <= numberOfStars)
          printSpecialString(remainingChars - 1, ans + "-", numberOfStars, numberOfDashes + 1);
