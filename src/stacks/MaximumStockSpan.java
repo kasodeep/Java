@@ -4,32 +4,22 @@ import java.util.Stack;
 
 public class MaximumStockSpan {
 
-   static class Pair {
-      int index;
-      int val;
-
-      Pair(int index, int val) {
-         this.index = index;
-         this.val = val;
-      }
-   }
-
    public static int[] maxSpan(int[] arr) {
       int n = arr.length;
       int[] res = new int[n];
 
-      Stack<Pair> st = new Stack<>();
-      st.push(new Pair(0, arr[0]));
+      Stack<Integer> st = new Stack<>();
+      st.push(0);
       res[0] = 1;
 
       for (int i = 1; i < n; i++) {
-         while (!st.isEmpty() && st.peek().val < arr[i])
+         while (!st.isEmpty() && arr[st.peek()] < arr[i])
             st.pop();
          if (!st.isEmpty())
-            res[i] = i - st.peek().index;
+            res[i] = i - st.peek();
          else
             res[i] = i + 1;
-         st.push(new Pair(i, arr[i]));
+         st.push(i);
       }
 
       return res;
