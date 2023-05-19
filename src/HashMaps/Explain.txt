@@ -1,0 +1,50 @@
+Hash Functions are the functions that gives us the same output for a particluar input of desired size.A perfect hash function always produces the unique output for a unique input.
+H(inp1) = op1
+
+Hashing consist of storing key, value pairs in a HashTable of nodes. The index of the table is the index obtained by hashing the key.
+
+General Hash Functions: (k is the key, M is the size of the HashTable)
+1. Division Method -> h(k) = k % M
+
+2. Mid Square Method -> h(k) = h(k*k)
+      For 60, the square is 3600, the middle two numbers gives us 60 so that is index/hash.
+
+3. Digit Folding Method -> 
+   k = k1, k2, k3, k4, ... , kn (Divide into segments of equal size)
+   s = k1 + k2 + k3 + k4 + ... + kn (Take Sum -> s)
+   h(k) = s % M
+      d = 12345, s = 12 + 34 + 5 
+                   = 51
+
+4. Multiplication Method -> h(k) = floor(M * (k*A mod 1))
+   Choose a constant A. 0 < A < 1
+   k * A
+   Extract Fractional Part Of k * A
+   Multiply previous step result by M.
+   floor the value to an integer.
+
+COLLISIONS:
+   Sometimes, the hash function may produce the same output for different keys and hence we have a problem of collision.
+   To minimize this:
+      1)Good Hash Functions 
+      2)More Buckets Capacity
+      
+   Collision Resolution Techniques
+      Chaining (Open Hashing):
+         In this we create a LinkedList<Nodes> and store the nodes with same hash values of the keys in the list at that hash index.
+         One problem is that it gives time complexity has we are traversing the list in all the operations. To avoid this we use REHASHING.
+
+         Load Factor(Lambda): n/N (n -> Total Elements, N -> No of Buckets)
+            It is a factor that decides when to double the array size.
+            It is usually 0.75
+         
+         Threshold Value = Load Factor * Capacity
+            It is acceptable entries of elements before capacity id doubled.
+
+         ReHashing:
+            It is copying of the nodes from old table to a new table.
+
+      Open Addressing(Closed Hashing):
+         In this we check if the next index is empty(Linear Probing), or if the quadratic index is empty(Quadratic Probing)
+
+
