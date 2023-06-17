@@ -2,19 +2,9 @@ package Trees;
 
 /*
  * A height-balanced binary tree is a binary tree in which the depth of the two subtrees
- * of every node never differs by more than one
+ * of every node never differs by more than one.
  */
 public class HeightBalanced {
-
-   static class Node {
-      int val;
-      Node left;
-      Node right;
-
-      Node(int val) {
-         this.val = val;
-      }
-   }
 
    public static int height(Node root) {
       if (root == null)

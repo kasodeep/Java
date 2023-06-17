@@ -1,19 +1,10 @@
 package Trees;
 
 /*
- * Travelling each anf every element atleast once.
+ * Travelling each anf every element at least once.
+ * The space complexity for traversals of any binary tree is O(h), h is height.
  */
 public class Traversals {
-
-   static class Node {
-      int val;
-      Node left;
-      Node right;
-
-      Node(int val) {
-         this.val = val;
-      }
-   }
 
    /*
     * To do preorder traversal that is work -> left -> right.

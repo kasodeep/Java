@@ -4,30 +4,23 @@ public class Diameter {
 
    int max = 0;
 
-   class Node {
-      int val;
-      Node left;
-      Node right;
-
-      Node(int val) {
-         this.val = val;
-      }
-   }
-
+   /* Function to find the Diameter of a Binary Tree.
+   *  Diameter is the longest path between two nodes. It may or may not pass through root node.*/
    public int diameterOfBinaryTree(Node root) {
       solve(root);
       return max;
    }
 
+   /* Helper function. */
    public int solve(Node root) {
       if (root == null)
          return 0;
+
       int left = solve(root.left);
       int right = solve(root.right);
 
       if (max < right + left)
          max = right + left;
-
       return right > left ? (right + 1) : (left + 1);
    }
 

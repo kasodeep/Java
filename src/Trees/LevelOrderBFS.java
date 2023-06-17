@@ -5,16 +5,6 @@ import java.util.Queue;
 
 public class LevelOrderBFS {
 
-   static class Node {
-      int val;
-      Node left;
-      Node right;
-
-      Node(int val) {
-         this.val = val;
-      }
-   }
-
    /*
     * Breadth First Search algorithm to find and print the elements in level order.
     */

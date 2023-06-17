@@ -10,19 +10,9 @@ package Trees;
  * 5) Size: No of nodes in the tree
  * 6) Edges: Size - 1
  * 7) Level: The depth of the tree is known as level
- * 8) Heigth Level - 1
+ * 8) Height Level - 1
  */
 public class Basics {
-
-   static class Node {
-      int val;
-      Node left;
-      Node right;
-
-      Node(int val) {
-         this.val = val;
-      }
-   }
 
    /*
     * Function to find the height of a binary tree.

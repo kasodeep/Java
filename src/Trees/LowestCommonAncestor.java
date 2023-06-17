@@ -2,16 +2,6 @@ package Trees;
 
 public class LowestCommonAncestor {
 
-   static class Node {
-      int val;
-      Node left;
-      Node right;
-
-      Node(int val) {
-         this.val = val;
-      }
-   }
-
    public boolean contains(Node root, Node node) {
       if (root == null)
          return false;

@@ -5,16 +5,6 @@ import java.util.List;
 
 public class RootToLeaf {
 
-   class Node {
-      int val;
-      Node left;
-      Node right;
-
-      Node(int val) {
-         this.val = val;
-      }
-   }
-
    public void helper(Node root, List<String> list, String s) {
       if (root == null)
          return;
