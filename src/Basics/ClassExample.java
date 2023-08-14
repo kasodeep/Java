@@ -1,9 +1,8 @@
 package Basics;
 
 /*
-    Class : A user defined blue print consisting of attributes and methods.
+    Class : A user defined blue-print consisting of attributes and methods.
     Body - The body of class which consists of attributes, objects, methods.
-
     Objects : They are the instance of a class.
     Object has three characteristics - 
  	* Identity - Unique name of the object
@@ -12,15 +11,10 @@ package Basics;
  */
 
 /*
-
- *  i) Private :The methods and/or data members declared as private are accessible only within the class where they are declared.
- 
+ * i) Private :The methods and/or data members declared as private are accessible only within the class where they are declared.
  * ii) Public : The methods that are declared public are accessible from everywhere in the program. There is no restriction on the scope of public data members.
-  
- *  iii) Protected :  The  methods  declared  as  protected  are accessible within  the  same  package  or  subclasses  in different  packages.
-  
- * v) Default : When no access modifier is specified for a  method – It is said to be having the default access modifier by default. Default access modifiers are accessible only within the same package.
-
+ * iii) Protected :  The  methods  declared  as  protected  are accessible within  the  same  package  or  subclasses  in different  packages.
+ * iv) Default : When no access modifier is specified for a  method – It is said to be having the default access modifier by default. Default access modifiers are accessible only within the same package.
  */
 
 public class ClassExample {

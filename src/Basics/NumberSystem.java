@@ -5,29 +5,29 @@ import java.util.Scanner;
 public class NumberSystem {
 
     public static int decimalToBinary(int n) {
-        int binarynum = 0;
+        int binaryNum = 0;
         int power = 1;
 
         while (n != 0) {
             int rem = n % 2;
-            binarynum += rem * power;
+            binaryNum += rem * power;
             power *= 10;
             n /= 2;
         }
-        return binarynum;
+        return binaryNum;
     }
 
     public static int binaryToDecimal(int x) {
-        int decimalnum = 0;
+        int decimalNum = 0;
         int power = 1;
 
         while (x != 0) {
             int rem = x % 10;
-            decimalnum += rem * power;
+            decimalNum += rem * power;
             power *= 2;
             x /= 10;
         }
-        return decimalnum;
+        return decimalNum;
     }
 
     public static void main(String[] args) {

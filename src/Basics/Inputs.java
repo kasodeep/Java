@@ -2,8 +2,7 @@ package Basics;
 
 import java.util.Scanner;
 
-// There is an InputMismatchEception in Scanner Class.
-
+// There is an InputMismatchException in Scanner Class.
 public class Inputs {
 
     public static void main(String[] args) {

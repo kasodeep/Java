@@ -3,11 +3,11 @@ package Basics;
 import java.util.Scanner;
 
 /*
-    * Bitwise Operators :
-    * &(AND) , |(OR) , ^(XOR) , ~(1'Complements) 
-    * <<(Left Shift) - Means times 2
-    * >>(Right Shift) - Means divide 2
-*/
+ * Bitwise Operators :
+ * & (AND) , | (OR) , ^ (XOR) , ~ (1'Complements)
+ * << (Left Shift)
+ * >> (Right Shift)
+ */
 
 public class Operators {
 
@@ -35,7 +35,6 @@ public class Operators {
             count++;
         }
         System.out.print(count);
-
         sc.close();
     }
 }

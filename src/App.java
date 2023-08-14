@@ -1,5 +1,5 @@
 /*
-  Public : This is a visibility or access specifier that defines the components visibility.
+  Public : This is a visibility or access specifier that defines the component's visibility.
   Static : The keyword 'static' indicates that the method that follows this keyword can be invoked without the object or the dot(.) operator. 
   String[] args : Command Line Argument that are stored in string arrays.
  */

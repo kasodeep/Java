@@ -16,7 +16,6 @@ public class ArrayListDemo {
     public static void main(String[] args) {
 
         ArrayList<String> arrayList = new ArrayList<>();
-        System.out.println(arrayList.size());
 
         arrayList.add("P");
         arrayList.add("Q");
@@ -27,10 +26,9 @@ public class ArrayListDemo {
 
         arrayList.remove("P");
         arrayList.remove(2);
-        System.out.println(arrayList.get(4));
 
         Collections.reverse(arrayList);
-        Collections.sort(arrayList, Collections.reverseOrder());
+        arrayList.sort(Collections.reverseOrder());
         Collections.swap(arrayList, 2, 4);
 
     }
