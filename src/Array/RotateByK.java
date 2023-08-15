@@ -3,9 +3,8 @@ package Array;
 public class RotateByK {
 
     /**
-     * 
      * @param a - It is the array under consideration.
-     * @param k - It is the steps which the array mustt be rotated.
+     * @param k - It is the steps which the array must be rotated.
      */
     public static void rotate(int[] a, int k) {
 
@@ -19,7 +18,7 @@ public class RotateByK {
 
     private static void reverse(int[] a, int i, int j) {
 
-        int temp = 0;
+        int temp;
         while (i < j) {
             temp = a[i];
             a[i] = a[j];
@@ -29,10 +28,9 @@ public class RotateByK {
         }
     }
 
-    // Time Complexity - O(n), Auxillary Space - O(1)
+    // Time Complexity - O(n), Auxiliary Space - O(1)
     public static void main(String[] args) {
-
-        int arr[] = { 1, 2, 3, 4, 5 };
+        int[] arr = {1, 2, 3, 4, 5};
         int k = 2;
         rotate(arr, k);
     }

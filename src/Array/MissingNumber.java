@@ -3,11 +3,10 @@ package Array;
 public class MissingNumber {
 
     /**
-     * 
      * @param arr  - It is the array in which a number is missing from 1-n..
      * @param size - It is the size of the array.
      */
-    static void findMissing(int arr[], int size) {
+    static void findMissing(int[] arr, int size) {
 
         int i;
         for (i = 0; i < size; i++) {
@@ -26,10 +25,10 @@ public class MissingNumber {
         System.out.println(ans);
     }
 
-    // Time Complexity - O(n), Auxillary Space - O(1)
+    // Time Complexity - O(n), Auxiliary Space - O(1)
     public static void main(String[] args) {
 
-        int arr[] = { 1, 3, 7, 5, 6, 2 };
+        int[] arr = {1, 3, 7, 5, 6, 2};
         int n = arr.length;
         findMissing(arr, n);
     }

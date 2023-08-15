@@ -5,15 +5,14 @@ import java.util.HashSet;
 public class FirstRepeating {
 
     /**
-     * 
      * @param arr - It is the array under consideration.
      * @param n   - It is the length of the array.
      * @return - It returns the first repeated element of the array.
      */
-    static int firstRepeated(int arr[], int n) {
+    static int firstRepeated(int[] arr, int n) {
 
         int num = -1;
-        HashSet<Integer> set = new HashSet<Integer>();
+        HashSet<Integer> set = new HashSet<>();
 
         for (int i = 0; i < n; i++) {
             if (set.contains(arr[i])) {
@@ -26,10 +25,10 @@ public class FirstRepeating {
         return num;
     }
 
-    // Time Complexity - O(n), Auxillary Space - O(1)
+    // Time Complexity - O(n), Auxiliary Space - O(1)
     public static void main(String[] args) {
 
-        int arr[] = { 1, 5, 3, 4, 3, 5, 6 };
+        int[] arr = {1, 5, 3, 4, 3, 5, 6};
         int n = arr.length;
         System.out.println(firstRepeated(arr, n));
     }

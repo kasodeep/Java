@@ -5,15 +5,14 @@ import java.util.HashMap;
 public class PairSum {
 
     /**
-     * 
      * @param arr - It is the array under consideration.
      * @param n   - It is the length of the array 'arr'.
      * @param sum - It represents the value which is sum of two array numbers.
      * @return - It returns the number of pairs whose sum is equal to 'sum'.
      */
-    static int getPairsCount(int arr[], int n, int sum) {
+    static int getPairsCount(int[] arr, int n, int sum) {
 
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         int count = 0;
 
         for (int i = 0; i < n; i++) {
@@ -30,10 +29,10 @@ public class PairSum {
         return count;
     }
 
-    // Time Complexity - O(n), Auxillary Space - O(1)
+    // Time Complexity - O(n), Auxiliary Space - O(1)
     public static void main(String[] args) {
 
-        int arr[] = { 1, 5, 7, -1, 5 };
+        int[] arr = {1, 5, 7, -1, 5};
         int n = arr.length;
         int sum = 6;
         System.out.println("Count of pairs is: " + getPairsCount(arr, n, sum));

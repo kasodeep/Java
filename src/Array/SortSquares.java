@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class SortSquares {
 
     /**
-     * 
      * @param a - It is the array which has -ve to +ve values.
      * @return - It returns the ans array in which squares are sorted.
      */
@@ -23,13 +22,12 @@ public class SortSquares {
                 ans[k++] = (a[i++]);
             }
         }
-        reverse(ans, 0, ans.length - 1);
+        reverse(ans);
         return ans;
     }
 
-    static void reverse(int[] a, int i, int j) {
-
-        int temp = 0;
+    static void reverse(int[] a) {
+        int temp, i = 0, j = a.length - 1;
         while (i < j) {
             temp = a[i];
             a[i] = a[j];
@@ -39,11 +37,11 @@ public class SortSquares {
         }
     }
 
-    // Time Complexity - O(n), Auxillary Space - O(n)
+    // Time Complexity - O(n), Auxiliary Space - O(n)
     public static void main(String[] args) {
 
-        int[] a = { -10, -3, 2, 5, 6 };
-        int ans[] = sortedSquares(a);
+        int[] a = {-10, -3, 2, 5, 6};
+        int[] ans = sortedSquares(a);
         System.out.println(Arrays.toString(ans));
     }
 }

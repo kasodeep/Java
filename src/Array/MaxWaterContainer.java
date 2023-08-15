@@ -5,7 +5,7 @@ public class MaxWaterContainer {
     /**
      * 
      * @param height - It is the array which represents the height of column.
-     * @return - It returns the maximum water which can be accomodated.
+     * @return - It returns the maximum water which can be accommodated.
      */
     static int maxArea(int[] height) {
 
@@ -31,7 +31,7 @@ public class MaxWaterContainer {
 
     public static void main(String[] args) {
 
-        int arr[] = { 1, 8, 3, 5, 6, 7, 8, 9, 7 };
+        int[] arr = { 1, 8, 3, 5, 6, 7, 8, 9, 7 };
         System.err.println(maxArea(arr));
     }
 }

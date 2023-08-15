@@ -1,21 +1,26 @@
 package Array;
 
 /*
-    Array have 0 based indexing.
-    They have contiugous memory allocation.
-    They can multi-dimensional.
-    Arrays are stored in Heap Memory and the address of the first variable is stored in Stack Memory.
+ * Array have 0 based indexing.
+ * They have contiguous memory allocation.
+ * They can be multidimensional.
+ * Arrays are stored in Heap Memory and the address of the first variable is stored in Stack Memory.
  */
 
+/*
+ * Operations: Length of the Array.
+ * Traversing: For each and For loop.
+ *
+ * */
 public class ArrayDemo {
 
     static void oneDimensional() {
 
-        int ages[] = new int[4];
+        int[] ages = new int[4];
         System.out.println(ages.length);
 
-        // Array Literal
-        String names[] = { "Suresh", "Ramesh", "Kajol", "Ravi" };
+        // Array Literal.
+        String[] names = {"Suresh", "Ramesh", "Kajol", "Ravi"};
         for (String name : names) {
             System.out.println(name);
         }
@@ -23,10 +28,10 @@ public class ArrayDemo {
 
     static void multiDimensional() {
 
-        int nums[][] = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums[i].length; j++) {
-                System.out.print(nums[j] + " ");
+        int[][] arr = {{1, 2}, {3, 4}, {5, 6}};
+        for (int[] num : arr) {
+            for (int i : num) {
+                System.out.print(i + " ");
             }
             System.out.println();
         }
@@ -34,7 +39,7 @@ public class ArrayDemo {
 
     static void peakElement() {
 
-        int arr[] = { 1, 1, 3, 4, 2, 3, 5, 7, 0 };
+        int[] arr = {1, 1, 3, 4, 2, 3, 5, 7, 0};
         for (int i = 1; i < arr.length - 1; i++) {
             if (arr[i - 1] < arr[i] && arr[i] > arr[i + 1]) {
                 System.out.println(arr[i]);
@@ -46,5 +51,6 @@ public class ArrayDemo {
     public static void main(String[] args) {
         oneDimensional();
         multiDimensional();
+        peakElement();
     }
 }
