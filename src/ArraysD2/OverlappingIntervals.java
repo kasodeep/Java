@@ -1,12 +1,12 @@
 package ArraysD2;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class OverlappingIntervals {
 
     static int getCount(int[][] matrix, int n) {
-
-        Arrays.sort(matrix, (a, b) -> a[0] - b[0]);
+        Arrays.sort(matrix, Comparator.comparingInt(a -> a[0]));
         int count = 0, i = 0;
 
         while (i < n) {

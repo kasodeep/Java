@@ -3,7 +3,6 @@ package ArraysD2;
 public class CountIsland {
 
     static void DFS(int[][] M, int i, int j, int ROW, int COL) {
-
         if (i < 0 || j < 0 || i > (ROW - 1) || j > (COL - 1) || M[i][j] != 1) {
             return;
         }
@@ -37,15 +36,13 @@ public class CountIsland {
         return count;
     }
 
-    // Time Complexity - O(R*C), Auxillary Space - O(R*C)
+    // Time Complexity - O(R*C), Auxiliary Space - O(R*C)
     public static void main(String[] args) {
-
-        int[][] M = { { 1, 1, 0, 0, 0 },
-                { 0, 1, 0, 0, 1 },
-                { 1, 0, 0, 1, 1 },
-                { 0, 0, 0, 0, 0 },
-                { 1, 0, 1, 0, 1 } };
-
+        int[][] M = {{1, 1, 0, 0, 0},
+                {0, 1, 0, 0, 1},
+                {1, 0, 0, 1, 1},
+                {0, 0, 0, 0, 0},
+                {1, 0, 1, 0, 1}};
         System.out.print("Number of islands is: " + countIslands(M));
     }
 }

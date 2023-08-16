@@ -3,7 +3,6 @@ package ArraysD2;
 public class GenerateSpiral {
 
     static int[][] generateSpiralMatrix(int n) {
-
         int[][] matrix = new int[n][n];
         int topRow = 0, bottomRow = n - 1, leftCol = 0, rightCol = n - 1;
         int totalElements = 1;

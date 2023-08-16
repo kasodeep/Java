@@ -3,7 +3,6 @@ package ArraysD2;
 public class PrintSpiral {
 
     static void printSpiralOrder(int[][] matrix, int r, int c) {
-
         int topRow = 0, bottomRow = r - 1, leftCol = 0, rightCol = c - 1;
         int totalElements = 0;
 
