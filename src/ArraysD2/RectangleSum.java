@@ -19,21 +19,34 @@ public class RectangleSum {
         }
     }
 
-    static int sum(int[][] matrix, int l1, int r1, int l2, int r2) {
+    static int sum(int[][] matrix, int startRow, int startColumn, int endRow, int endColumn) {
         prefixSum(matrix);
         int left = 0, up = 0, leftUp = 0;
 
-        if (l1 >= 1)
-            up = matrix[l1 - 1][r2];
-        if (r1 >= 1)
-            left = matrix[l2][r1 - 1];
-        if (l1 >= 1 && r1 >= 1)
-            leftUp = matrix[l1 - 1][r1 - 1];
-        return matrix[l2][r2] - left - up + leftUp;
+        if (startRow >= 1)
+            up = matrix[startRow - 1][endColumn];
+
+        if (startColumn >= 1)
+            left = matrix[endRow][startColumn - 1];
+
+        if (startRow >= 1 && startColumn >= 1)
+            leftUp = matrix[startRow - 1][startColumn - 1];
+        return matrix[endRow][endColumn] - left - up + leftUp;
+    }
+
+    static int sumTwo(int[][] matrix, int startRow, int startColumn, int endRow, int endColumn) {
+        int sum = 0;
+        while (startRow <= endRow) {
+            int j = startColumn;
+            while (j <= endColumn) {
+                sum += matrix[startRow][j++];
+            }
+            startRow++;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
 
     }
-
 }
