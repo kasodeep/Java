@@ -17,7 +17,7 @@ public class PairInSortedRotated {
                 break;
 
         // Smallest element Index
-        int smallest = i + 1;
+        int smallest = (i + 1) % n;
 
         // Largest element Index
         int largest = i;
