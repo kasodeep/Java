@@ -1,0 +1,51 @@
+
+ for(int i = 1; i <= N; i += i) :
+    i+=i is same as i*=2.
+Therefore Time Complexity - O(logN) to base 2.
+
+for(int i = 1; i <= N; i *= 2)
+    for(int j = 1; j <= i; j++)
+Therefore Time Complexity - O(N)
+        Explanation : 
+            Iteration i : 1 , 2 , 4 , 8 , .... , 2^k
+                      j[] : [1,1] , [1,2] , [1,4] , [1,8] , .... , [1,2^k]
+           Iterations j : 1 , 2 , 4 , 8 , ... , 2^k
+
+           i <= N
+           2^k <= N
+           k <= logN
+           Total Iterations is equal to Iterations of j:
+           1 + 2 + 4 + 8 + .... + 2^k = 2^k - 1
+
+for(int i = 1; i <= N; i *= 2)
+    for(int j = N; j > i; j–-)
+Therefore Time Complexity - O(N*logN)
+        Explanation : 
+            Iteration i : 1 , 2 , 4 , 8 , .... , 2^k
+                      j[] : [N,1] , [N,2] , [N,4] , [N,8] , .... , [N,2^k]
+           Iterations j : N - 1 , N - 2 , N - 4 , N - 8 , .... , N - 2^k
+
+           Total Iterations is equal to Iterations of j:
+           (N - 1) + (N - 2) + (N - 4) + (N - 8) + .... + (N - 2^k)
+           = kN - 2^k + 1
+           = N*logN - N(ignore)
+
+for(int i = 2; i <= N; i *= i)
+Therefore Time Complexity - O(log(logN))
+         Explanation : 
+            Iteration i : 2 , 4 , 16 , 256 , .... , 2^k
+             Also k is getting incremented in powers of 2 : 2^t < k
+                                                            2^k < N
+
+for(int i = N; i > 0; i /= 2)
+    for(int j = 0; j < i; j++)
+Therefore Time Complexity - O(N)
+        Explanation : 
+            Iteration i : N , N/2 , N/4 , N/8 , .... , N/2^k
+                      j[] : [0,N - 1] , [0,N/2 - 1] , [0,N/4 - 1] , [0,N/8 - 1] , .... , [0,N/2^k - 1]
+           Iterations j : N , N/2 , N/4 , N/8 , .... , N/2^k
+
+           Total Iterations is equal to Iterations of j:
+           N + N/2 + N/4 + N/8 + .... + N/2^k 
+           = N - 1
+           = N
