@@ -1,26 +1,17 @@
 package Recursion;
 
 public class CheckPrime {
-    
-    static boolean isPrime(int n, int i){
 
-        // Self-Work
-        if(n%i == 0){
-            return false;
-        }
+    static boolean isPrime(int n, int i) {
+        if (n == 2) return true;
+        if (n % i == 0) return false;
 
-        // Base-Case
-        if(i*i <= n)
-            return true;
-            
-        // Recursion
-        return isPrime(n, i++);
+        if (i * i > n) return true;
+        return isPrime(n, i + 1);
     }
 
     public static void main(String[] args) {
-        
-        // Not Handling 2
-        int n = 97;
+        int n = 4;
         System.out.println(isPrime(n, 2));
     }
 }

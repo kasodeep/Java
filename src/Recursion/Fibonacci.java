@@ -2,9 +2,8 @@ package Recursion;
 
 public class Fibonacci {
 
-    // Time Complexity - O(2^N), Auxillary Space - O()
+    // Time Complexity - O(2^N), Auxiliary Space - O(2^N)
     static int fib(int n) {
-
         // Base Case
         if (n == 0 || n == 1)
             return n;

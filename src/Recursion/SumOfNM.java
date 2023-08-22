@@ -1,33 +1,28 @@
 package Recursion;
 
 public class SumOfNM {
-    
-    public static int rec(int n, int m) {
 
+    public static int rec(int n, int m) {
         // Base Case
         if (m == 1)
-            return sumofn(n);
+            return sumOfN(n);
 
         // Self-Work
         int sum = rec(n, m - 1);
-        return sumofn(sum);
-}
+        return sumOfN(sum);
+    }
 
-    public static int sumofn(int n){
-
+    public static int sumOfN(int n) {
         // Base Case
-        int ans = 0;
-        if(n == 1){
-            ans++;
-            return ans;
+        if (n == 1) {
+            return 1;
         }
 
         // Self-Work
-        ans += n + sumofn(n-1);
-        return ans;
-}
+        return n + sumOfN(n - 1);
+    }
 
     public static void main(String[] args) {
-        
+        System.out.println(rec(3, 2));
     }
 }

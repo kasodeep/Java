@@ -1,18 +1,17 @@
 package Recursion;
 
 /*
- ­1) A precondition that is used to stop this recursive call (Halting Condition).
- 2) A function that is capable of calling itself ( recursive call).
+ 1) A precondition that is used to stop this recursive call (Halting Condition).
+ 2) A function that is capable of calling itself (recursive call).
  3) Call Stack : It is created during recursion calls and causes Stack Overflow Error.
  */
-
 public class Basics {
 
     static void printNumbers(int n) {
 
         // Base Case
         if (n == 1) {
-            System.out.println(1);
+            System.out.print(1 + " ");
             return;
         }
 
@@ -35,11 +34,13 @@ public class Basics {
         System.out.print(n + " ");
 
         // Assumption
-        printNumbers(n - 1);
+        printNumbersReverse(n - 1);
 
     }
 
     public static void main(String[] args) {
-
+        printNumbers(6);
+        System.out.println();
+        printNumbersReverse(10);
     }
 }

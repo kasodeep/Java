@@ -2,15 +2,14 @@ package Recursion;
 
 public class Factorial {
 
-    // Time Complexity - O(n), Auxillary Space - O(1)
+    // Time Complexity - O(n), Auxiliary Space - O(n)
     static int factorial(int n) {
-
         // Base Case
-        if (n == 0)
+        if (n == 0 || n == 1)
             return 1;
 
         // Self-Work and Assumption
-        return factorial(n) * factorial(n - 1);
+        return n * factorial(n - 1);
     }
 
     public static void main(String[] args) {

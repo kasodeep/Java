@@ -2,9 +2,8 @@ package Recursion;
 
 public class PowerOf {
 
-    // Time Complexity - O(q)
+    // Time Complexity - O(q), Auxiliary Space - O(q).
     static int pow(int p, int q) {
-
         // Base Case
         if (q == 0)
             return 1;
@@ -13,9 +12,8 @@ public class PowerOf {
         return pow(p, q - 1) * p;
     }
 
-    // Time Complexity - O(logq)
+    // Time Complexity - O(log * q), Auxiliary Space - O(log * q).
     static int POW(int p, int q) {
-
         // Base Case
         if (q == 0)
             return 1;

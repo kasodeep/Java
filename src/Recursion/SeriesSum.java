@@ -3,7 +3,6 @@ package Recursion;
 public class SeriesSum {
 
     static int seriesSum(int n) {
-
         // Base Case
         if (n == 0)
             return 0;
@@ -17,6 +16,6 @@ public class SeriesSum {
     }
 
     public static void main(String[] args) {
-
+        System.out.println(seriesSum(10));
     }
 }
