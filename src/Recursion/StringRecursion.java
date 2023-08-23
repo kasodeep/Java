@@ -2,40 +2,15 @@ package Recursion;
 
 public class StringRecursion {
 
-    // String small+curr takes linear time Time-Complexity-O(N^2)
-    static String removeA(String s, int idx) {
-
-        // Base Case
-        if (idx == s.length())
-            return "";
-
-        // Recursion
-        String smallAns = removeA(s, idx + 1);
-
-        // Self-Work
-        char currChar = s.charAt(idx);
-        if (currChar != 'a') {
-            return currChar + smallAns;
-        } else {
-            return smallAns;
-        }
-    }
-
-    static String removeA2(String s) {
-
+    static String removeOccurrences(String s, char ch) {
         // Base Case
         if (s.length() == 0)
             return "";
 
-        // Recursion
-        String smallAns = removeA2(s.substring(1));
-
-        // Self-Work
-        char currChar = s.charAt(0);
-        if (currChar != 'a') {
-            return currChar + smallAns;
+        if (s.charAt(0) != ch) {
+            return s.charAt(0) + removeOccurrences(s.substring(1), ch);
         } else {
-            return smallAns;
+            return removeOccurrences(s.substring(1), ch);
         }
     }
 
@@ -46,6 +21,10 @@ public class StringRecursion {
     }
 
     public static void main(String[] args) {
+        String s = "abcdass";
+        String string = "idblbdi";
 
+        System.out.println(isPalindrome(string, 0, string.length() - 1));
+        System.out.println(removeOccurrences(s, 'c'));
     }
 }

@@ -2,16 +2,13 @@ package Recursion;
 
 import java.util.ArrayList;
 
-public class GetSSQ {
+public class AllSubsequences {
 
     /**
-     * 
      * @param s - It is the string which is to be used for getting SSQ
      * @return - It returns the ArrayList containing all the subsequences
      */
     static ArrayList<String> getSubSequence(String s) {
-
-        // Base Case
         ArrayList<String> ans = new ArrayList<>();
         if (s.length() == 0) {
             ans.add("");
@@ -31,15 +28,14 @@ public class GetSSQ {
     }
 
     /**
-     * 
-     * @param s          - It is the string which is to be used for getting SSQ
+     * @param s - It is the string which is to be used for getting SSQ
      * @param currAnswer - It is the current answer, initially zero
      */
     static void printSubSequence(String s, String currAnswer) {
 
-        // base case
+        // Base case
         if (s.length() == 0) {
-            System.out.println(currAnswer);
+            System.out.print(currAnswer + " ");
             return;
         }
 
@@ -48,7 +44,6 @@ public class GetSSQ {
 
         // Add the curr character
         printSubSequence(remString, currAnswer + curr);
-
         // Do not add the curr character
         printSubSequence(remString, currAnswer);
 
@@ -56,8 +51,7 @@ public class GetSSQ {
 
     public static void main(String[] args) {
         ArrayList<String> ans = getSubSequence("abc");
-        System.out.println(ans.toString());
-
+        System.out.println(ans);
         printSubSequence("abc", "");
     }
 }
