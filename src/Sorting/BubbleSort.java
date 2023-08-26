@@ -1,9 +1,13 @@
 package Sorting;
 
+/**
+ * Time Complexity: Worst & Average - O(N^2), Best - O(N), Auxiliary Space: O(1)
+ * It is "Stable Sort" as it does not change the order of the duplicate items.
+ * It is also "In Place" Algorithm.
+ */
 public class BubbleSort {
 
-    static void sort(int[] arr) {
-
+    static void bubbleSort(int[] arr) {
         int n = arr.length;
 
         // Outer For Loop
@@ -27,13 +31,9 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
+        int[] arr = {7, 4, 5, 1, 2};
+        bubbleSort(arr);
 
-        // Time Complexity: Worst & Average -O(N^2), Best - O(N)
-        // Auxillary Space: O(1)
-        // It is "Stable Sort" as it does not change the order of the duplicate items.
-        // It is also "In Place".
-        int[] arr = { 7, 4, 5, 1, 2 };
-        sort(arr);
         for (int i : arr) {
             System.out.print(i + " ");
         }

@@ -1,5 +1,11 @@
 package Sorting;
 
+/**
+ * Time Complexity: Worst & Average & Best - O(N^2), Auxiliary Space: O(1)
+ * It is not "Stable Sort" as it does change the order of the duplicate items.
+ * It takes O(N) swaps while the other techniques take O(N^2) swaps.
+ * It is also "In Place".
+ */
 public class SelectionSort {
 
     static void selectionSort(int[] arr) {
@@ -16,7 +22,6 @@ public class SelectionSort {
                     min = j;
                 }
             }
-
             int temp = arr[i];
             arr[i] = arr[min];
             arr[min] = temp;
@@ -24,13 +29,9 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-
-        // Time Complexity: Worst & Average & Best - O(N^2)
-        // Auxillary Space: O(1)
-        // It is "Stable Sort" as it does not change the order of the duplicate items.
-        // It is also "In Place".
-        int[] arr = { 7, 4, 5, 1, 2 };
+        int[] arr = {7, 4, 5, 1, 2};
         selectionSort(arr);
+
         for (int i : arr) {
             System.out.print(i + " ");
         }
