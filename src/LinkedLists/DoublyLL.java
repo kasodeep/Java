@@ -1,160 +1,166 @@
 package LinkedLists;
 
-// Limitations of a Singly Linked List :
-// Get <- O(n), More space is required, Cannot access back elements.
-public class DoublyLL {
+/**
+ * Limitations of a Singly Linked List :
+ * Get <- O(n), More space is required, Cannot access back elements.
+ */
+public class DoublyLL<T> {
 
-   Node head;
-   Node tail;
-   int size;
+    Node<T> head;
+    Node<T> tail;
+    int size;
 
-   class Node {
-      int data;
-      Node next;
-      Node prev;
+    // Initialization
+    DoublyLL() {
+        head = new Node<>(-1);
+        tail = new Node<>(-1);
+        size = 0;
+        head.next = tail;
+        tail.prev = head;
+    }
 
-      Node(int data) {
-         this.data = data;
-      }
-   }
+    public static void main(String[] args) {
+        DoublyLL<Integer> list = new DoublyLL<>();
+        list.insertAtBegin(3);
+        list.insertAtEnd(9);
+        list.insertAtEnd(4);
+        list.insertAtBegin(6);
+        list.insertAt(3, 2);
+        list.printList();
+        list.deleteAt(2);
+        list.printListRev();
+        System.out.println(list.size);
+        System.out.println(list.isPalindrome());
+    }
 
-   DoublyLL() {
-      head = new Node(-1);
-      tail = new Node(-1);
-      size = 0;
-      head.next = tail;
-      tail.prev = head;
-   }
+    /**
+     * @param data - It the data to be inserted in the linked list.
+     */
+    public void insertAtBegin(int data) {
+        if (head.data == -1) {
+            head.data = data;
+        } else {
+            Node<T> t = new Node<>(data);
+            t.next = head;
+            head.prev = t;
+            head = t;
+        }
+        size++;
+    }
 
-   public void insertAtBegin(int data) {
+    /**
+     * @param data - It the data to be inserted in the linked list.
+     */
+    public void insertAtEnd(int data) {
+        if (tail.data == -1) {
+            tail.data = data;
+        } else {
+            Node<T> t = new Node<>(data);
+            t.prev = tail;
+            tail.next = t;
+            tail = t;
+        }
+        size++;
+    }
 
-      if (head.data == -1) {
-         head.data = data;
-      } else {
-         Node t = new Node(data);
-         t.next = head;
-         head.prev = t;
-         head = t;
-      }
-      size++;
-   }
+    /**
+     * @param index - It is the place where new node is to be inserted.
+     * @param data  - It is the data of the new node.
+     *              Time Complexity - O(index), Space Complexity - O(1)
+     */
+    public void insertAt(int index, int data) {
+        if (size < index || index < 0)
+            throw new IndexOutOfBoundsException("Please Enter Valid Index");
 
-   public void insertAtEnd(int data) {
+        Node<T> temp = head;
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
 
-      if (tail.data == -1) {
-         tail.data = data;
-      } else {
-         Node t = new Node(data);
-         t.prev = tail;
-         tail.next = t;
-         tail = t;
-      }
-      size++;
-   }
+        Node<T> add = new Node<>(data);
+        add.next = temp.next;
+        temp.next.prev = add;
+        temp.next = add;
+        add.prev = temp;
+        size++;
+    }
 
-   /**
-    * 
-    * @param index - It is the place where new node is to be inserted.
-    * @param data  - It is the data of the new node.
-    *              Time Complexiy - O(index), Space Complexity - O(1)
-    */
-   public void insertAt(int index, int data) {
+    /**
+     * @param index - It is the place where the node is to be deleted.
+     *              Time Complexity - O(index), Space Complexity - O(1)
+     */
+    public void deleteAt(int index) {
+        if (size < index || index < 0)
+            throw new IndexOutOfBoundsException("Please Enter Valid Index");
 
-      if (size < index || index < 0)
-         return;
+        Node<T> temp = head;
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        temp.next.prev = temp;
+        size--;
+    }
 
-      Node temp = head;
-      for (int i = 1; i < index; i++) {
-         temp = temp.next;
-      }
-      Node add = new Node(data);
-      add.next = temp.next;
-      temp.next.prev = add;
-      temp.next = add;
-      add.prev = temp;
-      size++;
-   }
+    // Function to print the List
+    public void printList() {
+        if (size == 0)
+            return;
 
-   public void deleteAt(int index) {
+        if (head.next.data == -1) {
+            System.out.println(head.data);
+            return;
+        }
 
-      if (size < index || index < 0)
-         return;
+        if (tail.prev.data == -1) {
+            System.out.println(tail.data);
+            return;
+        }
 
-      Node temp = head;
-      for (int i = 1; i < index; i++) {
-         temp = temp.next;
-      }
-      temp.next = temp.next.next;
-      temp.next.prev = temp;
-      size--;
-   }
+        Node<T> temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
 
-   // Function to print the List
-   public void printList() {
+    public boolean isPalindrome() {
+        Node<T> end = head;
+        Node<T> start = head;
+        while (end.next != null) {
+            end = end.next;
+        }
 
-      if (size == 0)
-         return;
+        while (start != end) {
+            if (start.data != end.data)
+                return false;
+            start = start.next;
+            end = end.prev;
+        }
+        return true;
+    }
 
-      if (head.next.data == -1) {
-         System.out.println(head.data);
-         return;
-      }
+    public void printListRev() {
+        Node<T> temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
 
-      if (tail.prev.data == -1) {
-         System.out.println(tail.data);
-         return;
-      }
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.prev;
+        }
+        System.out.println();
+    }
 
-      Node temp = head;
-      while (temp != null) {
-         System.out.print(temp.data + " ");
-         temp = temp.next;
-      }
-      System.out.println();
-   }
+    static class Node<T> {
+        int data;
+        Node<T> next;
+        Node<T> prev;
 
-   public boolean isPalindrome() {
-      Node end = head;
-      Node start = head;
-      while (end.next != null) {
-         end = end.next;
-      }
-
-      while (start != end) {
-         if (start.data != end.data)
-            return false;
-         start = start.next;
-         end = end.prev;
-      }
-
-      return true;
-   }
-
-   // Function to print rev if only head is given
-   public void printListRev() {
-      Node temp = head;
-      while (temp.next != null) {
-         temp = temp.next;
-      }
-
-      while (temp != null) {
-         System.out.print(temp.data + " ");
-         temp = temp.prev;
-      }
-      System.out.println();
-   }
-
-   public static void main(String[] args) {
-      DoublyLL list = new DoublyLL();
-      list.insertAtBegin(3);
-      list.insertAtEnd(9);
-      list.insertAtEnd(4);
-      list.insertAtBegin(6);
-      list.insertAt(3, 2);
-      list.printList();
-      // list.deleteAt(2);
-      // list.printListRev();
-      System.out.println(list.size);
-      System.out.println(list.isPalindrome());
-   }
+        Node(int data) {
+            this.data = data;
+        }
+    }
 }
