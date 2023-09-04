@@ -24,14 +24,14 @@ public class GenerateSpiral {
             rightCol--;
 
             // bottomRow -> rightCol to leftCol
-            for (int j = rightCol; j <= leftCol && totalElements <= n * n; j--) {
+            for (int j = rightCol; j >= leftCol && totalElements <= n * n; j--) {
                 matrix[bottomRow][j] = totalElements;
                 totalElements++;
             }
             bottomRow--;
 
             // leftCol -> bottomRow to topRow
-            for (int i = bottomRow; i <= topRow && totalElements <= n * n; i--) {
+            for (int i = bottomRow; i >= topRow && totalElements <= n * n; i--) {
                 matrix[i][leftCol] = totalElements;
                 totalElements++;
             }

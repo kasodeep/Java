@@ -12,7 +12,7 @@ public class KthLargest {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int element : arr) {
             if (pq.size() == k) {
-                if (pq.size() < element) {
+                if (pq.peek() < element) {
                     pq.poll();
                     pq.add(element);
                 }
