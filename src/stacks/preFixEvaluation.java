@@ -4,34 +4,47 @@ import java.util.Stack;
 
 /**
  * preFix : operator + val + val
- * Travel in baclward direction only.
- * Also v1 is first poped.
+ * Travel in backward direction only.
+ * Also, v1 is first popped.
  */
 public class preFixEvaluation {
-   public static void main(String[] args) {
 
-      String str = "-9/*+5346";
-      Stack<Integer> val = new Stack<>();
+    private static int perform(char ch, int v1, int v2) {
+        switch (ch) {
+            case '-' -> {
+                return v1 - v2;
+            }
+            case '+' -> {
+                return v1 + v2;
+            }
+            case '*' -> {
+                return v1 * v2;
+            }
+            case '/' -> {
+                return v1 / v2;
+            }
+            default -> {
+                return -1;
+            }
+        }
+    }
 
-      for (int i = str.length() - 1; i >= 0; i--) {
-         char ch = str.charAt(i);
-         int ascii = (int) ch;
+    public static void main(String[] args) {
 
-         if (ascii >= 48 && ascii <= 57)
-            val.push(ascii - 48);
-         else {
-            int v1 = val.pop();
-            int v2 = val.pop();
-            if (ch == '-')
-               val.push(v1 - v2);
-            if (ch == '+')
-               val.push(v1 + v2);
-            if (ch == '*')
-               val.push(v1 * v2);
-            if (ch == '/')
-               val.push(v1 / v2);
-         }
-      }
-      System.out.println(val.peek());
-   }
+        String str = "-9/*+5346";
+        Stack<Integer> val = new Stack<>();
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            char ch = str.charAt(i);
+
+            if ((int) ch >= 48 && (int) ch <= 57)
+                val.push((int) ch - 48);
+            else {
+                int v1 = val.pop();
+                int v2 = val.pop();
+                val.push(perform(ch, v1, v2));
+            }
+        }
+        System.out.println(val.peek());
+    }
 }

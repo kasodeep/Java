@@ -1,76 +1,92 @@
 package stacks;
 
-// Adv : size or space taken is less / display is better 
-// DisAdv : fixed size / overflow
+import java.lang.reflect.Array;
+import java.util.EmptyStackException;
+
+/**
+ * Adv : size or space taken is less / display is better.
+ * DisAdv : fixed size / overflow
+ */
 public class ArrayImplementation {
 
-   public static class Stack {
-      private int[] arr;
-      private int idx;
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>(Integer.class);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
 
-      // We can also set our own size without user input.
-      Stack(int size) {
-         arr = new int[size];
-         idx = 0;
-      }
+        System.out.println(stack.peek());
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());
 
-      void push(int x) {
-         if (isFull()) {
-            System.out.println("Stakc is Full!");
-            return;
-         }
-         arr[idx] = x;
-         idx++;
-      }
+        System.out.println(stack.size());
+        System.out.println(stack.isEmpty());
+    }
 
-      int peek() {
-         if (idx == 0) {
-            System.out.println("Stack is Empty");
-            return -1;
-         }
-         return arr[idx - 1];
-      }
+    public static class Stack<T> {
+        private final T[] arr;
+        private int currentIndex;
 
-      int pop() {
-         if (idx == 0) {
-            System.out.println("Stack is Empty");
-            return -1;
-         }
-         int top = arr[idx - 1];
-         arr[idx - 1] = 0;
-         idx--;
-         return top;
-      }
+        /**
+         * Creates stack of default size 5.
+         */
+        @SuppressWarnings("unchecked")
+        Stack(Class<T> clazz) {
+            arr = (T[]) Array.newInstance(clazz, 5);
+            currentIndex = 0;
+        }
 
-      void display() {
-         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-         }
-         System.out.println();
-      }
+        @SuppressWarnings("unchecked")
+        Stack(Class<T> clazz, int size) {
+            arr = (T[]) Array.newInstance(clazz, size);
+            currentIndex = 0;
+        }
 
-      int size() {
-         return idx;
-      }
+        void push(T x) {
+            if (isFull()) {
+                throw new IndexOutOfBoundsException("Stack is Full");
+            }
+            arr[currentIndex] = x;
+            currentIndex++;
+        }
 
-      boolean isEmpty() {
-         if (idx == 0)
-            return true;
-         return false;
-      }
+        T peek() {
+            if (currentIndex == 0) {
+                throw new EmptyStackException();
+            }
+            return arr[currentIndex - 1];
+        }
 
-      boolean isFull() {
-         if (idx == arr.length)
-            return true;
-         return false;
-      }
+        T pop() {
+            if (currentIndex == 0) {
+                throw new EmptyStackException();
+            }
+            T top = arr[currentIndex - 1];
+            currentIndex--;
+            return top;
+        }
 
-      int capacity() {
-         return arr.length;
-      }
-   }
+        void display() {
+            for (T num : arr) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
 
-   public static void main(String[] args) {
+        int size() {
+            return currentIndex;
+        }
 
-   }
+        boolean isEmpty() {
+            return currentIndex == 0;
+        }
+
+        boolean isFull() {
+            return currentIndex == arr.length;
+        }
+
+        int capacity() {
+            return arr.length;
+        }
+    }
 }

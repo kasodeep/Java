@@ -2,9 +2,9 @@ package stacks;
 
 import java.util.Stack;
 
-public class NextGreater {
+public class NextSmaller {
 
-    public static int[] nextGreater(int[] arr) {
+    public static int[] nextSmaller(int[] arr) {
         int n = arr.length;
         int[] res = new int[n];
 
@@ -13,7 +13,7 @@ public class NextGreater {
         res[n - 1] = -1;
 
         for (int i = n - 2; i >= 0; i--) {
-            while (!st.isEmpty() && st.peek() <= arr[i])
+            while (!st.isEmpty() && st.peek() >= arr[i])
                 st.pop();
             if (st.size() == 0)
                 res[i] = -1;
@@ -26,7 +26,7 @@ public class NextGreater {
 
     public static void main(String[] args) {
         int[] arr = {1, 5, 3, 2, 1, 6, 3, 4};
-        int[] res = nextGreater(arr);
+        int[] res = nextSmaller(arr);
 
         for (int i : res) {
             System.out.print(i + " ");
