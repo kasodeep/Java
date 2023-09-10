@@ -1,70 +1,77 @@
 package queue;
 
+import java.util.EmptyStackException;
+
 /**
  * Linked List Implementation of Queue.
- * Advantages -> size is unlimited, Works like a LL.
+ * Advantages -> Size is unlimited, Works like a LL.
  */
 public class LLImplementation {
 
-   public static class Node {
-      int data;
-      Node next;
+    public static void main(String[] args) {
+        QueueLinkedList<String> queue = new QueueLinkedList<>();
+        queue.add("John");
+        queue.add("Seth");
+        queue.add("Becky Lynch");
 
-      Node(int data) {
-         this.data = data;
-      }
-   }
+        System.out.println(queue.peek());
+        queue.remove();
+        queue.display();
+    }
 
-   public static class QueueLinkedList {
-      private Node head = null;
-      private Node tail = null;
-      int size = 0;
+    public static class Node<T> {
+        T data;
+        Node<T> next;
 
-      // Add Function
-      public void add(int x) {
-         Node temp = new Node(x);
-         if (size == 0) {
-            head = tail = temp;
-         } else {
-            tail.next = temp;
-            tail = temp;
-         }
-         size++;
-      }
+        Node(T data) {
+            this.data = data;
+        }
+    }
 
-      // Remove Function
-      public int remove() {
-         if (size == 0) {
-            System.out.println(("Queue is Empty"));
-            return -1;
-         }
-         int x = head.data;
-         head = head.next;
-         size--;
-         return x;
-      }
+    public static class QueueLinkedList<T> {
+        int size = 0;
+        private Node<T> head = null;
+        private Node<T> tail = null;
 
-      // Peek Function
-      public int peek() {
-         if (size == 0) {
-            System.out.println(("Queue is Empty"));
-            return -1;
-         }
-         return head.data;
-      }
+        // Add Function
+        public void add(T x) {
+            Node<T> temp = new Node<>(x);
+            if (size == 0) {
+                head = tail = temp;
+            } else {
+                tail.next = temp;
+                tail = temp;
+            }
+            size++;
+        }
 
-      // Function to Display
-      public void display() {
-         Node temp = head;
-         while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-         }
-         System.out.println();
-      }
-   }
+        // Remove Function
+        public T remove() {
+            if (size == 0) {
+                throw new EmptyStackException();
+            }
+            T x = head.data;
+            head = head.next;
+            size--;
+            return x;
+        }
 
-   public static void main(String[] args) {
+        // Peek Function
+        public T peek() {
+            if (size == 0) {
+                throw new EmptyStackException();
+            }
+            return head.data;
+        }
 
-   }
+        // Function to Display
+        public void display() {
+            Node<T> temp = head;
+            while (temp != null) {
+                System.out.print(temp.data + ",");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
+    }
 }

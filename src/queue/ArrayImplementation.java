@@ -1,71 +1,84 @@
 package queue;
 
+import java.lang.reflect.Array;
+import java.util.EmptyStackException;
+
 /**
  * Array Implementation of Queue.
- * Disadvantages -> size issue,
+ * Disadvantages -> size issue.
  */
 public class ArrayImplementation {
 
-   public static class QueueArray {
-      private int f = -1;
-      private int r = -1;
-      int size = 0;
-      private int[] arr = new int[100];
+    public static void main(String[] args) {
+        QueueArray<Integer> q = new QueueArray<>(Integer.class, 5);
+        q.add(2);
+        q.add(5);
+        q.add(8);
+        System.out.println(q.remove());
+        q.display();
+    }
 
-      // Add Function
-      public void add(int val) {
-         if (r == arr.length - 1) {
-            System.out.println("Queue is Full!");
-            return;
-         }
+    public static class QueueArray<T> {
+        private final T[] arr;
+        int size = 0;
+        private int front = -1;
+        private int rear = -1;
 
-         if (f == -1) {
-            f = r = 0;
-            arr[r] = val;
-         } else {
-            arr[++r] = val;
-         }
-         size++;
-      }
+        @SuppressWarnings("unchecked")
+        public QueueArray(Class<T> clazz) {
+            arr = (T[]) Array.newInstance(clazz, 100);
+        }
 
-      // Remove Function
-      public int remove() {
-         if (size == 0) {
-            System.out.println("Queue is Empty!");
-         }
-         f++;
-         size--;
-         return arr[f - 1];
-      }
+        @SuppressWarnings("unchecked")
+        public QueueArray(Class<T> clazz, int size) {
+            arr = (T[]) Array.newInstance(clazz, size);
+        }
 
-      // Return the First Element
-      public int peek() {
-         if (size == 0) {
-            System.out.println("Queue is Empty!");
-         }
-         return arr[f];
-      }
-
-      // Display the Queue from r to f.
-      public void display() {
-         if (size == 0) {
-            System.out.println("Queue is Empty!");
-         } else {
-            for (int i = f; i <= r; i++) {
-               System.out.print(arr[i] + " ");
+        // Add Function
+        public void add(T val) {
+            if (rear == arr.length - 1) {
+                System.out.println("Queue is Full!");
+                return;
             }
-            System.out.println();
-         }
-      }
 
-   }
+            if (front == -1) {
+                front = rear = 0;
+                arr[rear] = val;
+            } else {
+                arr[++rear] = val;
+            }
+            size++;
+        }
 
-   public static void main(String[] args) {
-      QueueArray q = new QueueArray();
-      q.add(2);
-      q.add(5);
-      q.add(8);
-      q.remove();
-      q.display();
-   }
+        // Remove Function
+        public T remove() {
+            if (size == 0) {
+                throw new EmptyStackException();
+            }
+            front++;
+            size--;
+            return arr[front - 1];
+        }
+
+        // Return the First Element
+        public T peek() {
+            if (size == 0) {
+                throw new EmptyStackException();
+            }
+            return arr[front];
+        }
+
+        // Display the Queue from rear to front.
+        public void display() {
+            if (size == 0) {
+                System.out.println("Queue is Empty!");
+            } else {
+                for (int i = front; i <= rear; i++) {
+                    System.out.print(arr[i] + " ");
+                }
+                System.out.println();
+            }
+        }
+
+    }
 }
