@@ -1,16 +1,36 @@
 package queue;
 
+/**
+ * Traffic system: In computer controlled traffic system, circular queues are used to switch on the traffic lights one by one repeatedly as per the time set.
+ * CPU Scheduling: Operating systems often maintain a queue of processes that are ready to execute or that are waiting for a particular event to occur.
+ */
 public class CircularQueue {
 
     public static void main(String[] args) throws Exception {
+        CircularQueueArray queueArray = new CircularQueueArray(4);
+        queueArray.add(10);
+        queueArray.add(20);
+        queueArray.add(30);
+        queueArray.add(40);
 
+        queueArray.display();
+        queueArray.remove();
+        queueArray.display();
+        queueArray.add(10);
+        queueArray.display();
     }
 
     public static class CircularQueueArray {
-        private final int[] arr = new int[100];
-        int size = 0;
-        private int rear = -1;
-        private int front = -1;
+        private final int[] arr;
+        int size;
+        private int rear;
+        private int front;
+
+        public CircularQueueArray(int size) {
+            arr = new int[size];
+            front = -1;
+            rear = -1;
+        }
 
         // Add Function
         public void add(int x) throws Exception {
@@ -19,11 +39,9 @@ public class CircularQueue {
             } else if (size == 0) {
                 front = rear = 0;
                 arr[0] = x;
-            } else if (rear < arr.length - 1) {
-                arr[++rear] = x;
-            } else if (rear == arr.length - 1) {
-                rear = 0;
-                arr[0] = x;
+            } else {
+                rear = (rear + 1) % arr.length;
+                arr[rear] = x;
             }
             size++;
         }
@@ -34,10 +52,7 @@ public class CircularQueue {
                 throw new Exception("Queue is Empty!");
             } else {
                 int val = arr[front];
-                if (front == arr.length - 1)
-                    front = 0;
-                else
-                    front++;
+                front = (front + 1) % arr.length;
                 size--;
                 return val;
             }

@@ -53,6 +53,26 @@ public class LargestHistogram {
         return max;
     }
 
+    public static long getMaxArea(long[] hist, long n) {
+        Stack<Integer> st = new Stack<>();
+        long maxArea = 0;
+
+        for (int i = 0; i <= n; i++) {
+            while (!st.isEmpty() && (i == n || hist[st.peek()] >= hist[i])) {
+                long height = hist[st.pop()];
+                long width;
+
+                if (st.isEmpty()) width = i;
+                else width = i - st.peek() - 1;
+
+                long area = width * height;
+                maxArea = Math.max(area, maxArea);
+            }
+            st.push(i);
+        }
+        return maxArea;
+    }
+
     public static void main(String[] args) {
         int[] heights = {2, 1, 5, 6, 2, 3};
         System.out.println(largestRectangleArea(heights));
