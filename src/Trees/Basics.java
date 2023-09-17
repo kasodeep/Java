@@ -1,16 +1,16 @@
 package Trees;
 
-/*
+/**
+ * A tree is one of the data structures that represents hierarchical data.
  * Every tree has a node, it has a left subtree and a right subtree.
  * 1) Leaf Node: No children
  * 2) Internal Node: !leaf and !root
  * 3) Ancestor Node: Parent and Parent's parent
  * 4) Descendant Node: Child and Child's child
- * 
  * 5) Size: No of nodes in the tree
  * 6) Edges: Size - 1
- * 7) Level: The depth of the tree is known as level
- * 8) Height Level - 1
+ * 7) Level: The depth of the tree is known as level.
+ * 8) Height: Level - 1
  */
 public class Basics {
 

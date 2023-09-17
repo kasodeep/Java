@@ -2,8 +2,8 @@ package Trees;
 
 public class InvertBinaryTree {
 
-    public static Node invertTree(Node root){
-        if(root == null)  return null;
+    public static Node invertTree(Node root) {
+        if (root == null) return null;
         Node temp = root.left;
 
         root.left = invertTree(root.right);

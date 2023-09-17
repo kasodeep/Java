@@ -53,7 +53,7 @@ public class RightAndLeftView {
 
         List<Integer> right = rightSideView(root);
         List<Integer> left = leftSideView(root);
-        System.out.println(right.toString());
-        System.out.println(left.toString());
+        System.out.println(right);
+        System.out.println(left);
     }
 }
