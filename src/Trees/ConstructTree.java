@@ -4,10 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /*
-* Constructing a binary tree based on the given array as it is of prime importance.
-* */
+ * Constructing a binary tree based on the given array as it is of prime importance.
+ * */
 public class ConstructTree {
-    public static Node construct(String[] arr){
+    public static Node construct(String[] arr) {
         int x = Integer.parseInt(arr[0]);
         int n = arr.length;
 
@@ -16,21 +16,22 @@ public class ConstructTree {
         q.add(root);
 
         int i = 1;
-        while(i < n - 1){
+        while (i < n - 1) {
             Node temp = q.remove();
             Node left = new Node(10);
             Node right = new Node(10);
-            if(arr[i].equals("")){
+
+            if (arr[i].equals("")) {
                 left = null;
-            } else{
+            } else {
                 left.val = Integer.parseInt(arr[i]);
                 q.add(left);
             }
 
-            if(arr[i + 1].equals("")){
+            if (arr[i + 1].equals("")) {
                 right = null;
-            }else{
-                 right.val = Integer.parseInt(arr[i + 1]);
+            } else {
+                right.val = Integer.parseInt(arr[i + 1]);
                 q.add(right);
             }
 
@@ -38,7 +39,7 @@ public class ConstructTree {
             temp.right = right;
             i += 2;
         }
-         return root;
+        return root;
     }
 
     private static void boundaryDisplay(Node root) {
@@ -48,17 +49,17 @@ public class ConstructTree {
     }
 
     private static void rightBoundary(Node root) {
-        if(root == null || (root.left == null && root.right == null)) return;
+        if (root == null || (root.left == null && root.right == null)) return;
 
-        if(root.right != null) rightBoundary(root.right);
+        if (root.right != null) rightBoundary(root.right);
         else rightBoundary(root.left);
 
         System.out.print(root.val + " ");
     }
 
     private static void bottomBoundary(Node root) {
-        if(root == null) return;
-        if(root.left == null && root.right == null) {
+        if (root == null) return;
+        if (root.left == null && root.right == null) {
             System.out.print(root.val + " ");
             return;
         }
@@ -68,10 +69,10 @@ public class ConstructTree {
     }
 
     private static void leftBoundary(Node root) {
-        if(root == null || (root.left == null && root.right == null)) return;
+        if (root == null || (root.left == null && root.right == null)) return;
         System.out.print(root.val + " ");
 
-        if(root.left != null) leftBoundary(root.left);
+        if (root.left != null) leftBoundary(root.left);
         else leftBoundary(root.right);
     }
 

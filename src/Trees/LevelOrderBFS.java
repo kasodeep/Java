@@ -2,6 +2,7 @@ package Trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class LevelOrderBFS {
 
@@ -23,6 +24,29 @@ public class LevelOrderBFS {
 
             System.out.print(temp.val + " ");
             q.remove();
+        }
+    }
+
+    public static void reverseLevelOrder(Node root) {
+        Stack<Node> stack = new Stack<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node temp = queue.poll();
+            stack.push(temp);
+
+            if (temp.right != null) {
+                queue.add(temp.right);
+            }
+            if (temp.left != null) {
+                queue.add(temp.left);
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            Node temp = stack.pop();
+            System.out.print(temp.val + " ");
         }
     }
 

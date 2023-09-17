@@ -2,23 +2,23 @@ package Trees;
 
 public class PreInTree {
 
-    public static Node helper(int[] preorder, int prelo, int prehi, int[] inorder, int inlo, int inhi) {
+    public static Node helper(int[] preorder, int preLow, int preHigh, int[] inorder, int inLow, int inHigh) {
         // Base Case
-        if (prelo > prehi) return null;
+        if (preLow > preHigh) return null;
 
         // First element is always the root, and we find its position in inorder.
-        Node root = new Node(preorder[prelo]);
-        int i = inlo;
-        while (inorder[i] != preorder[prelo]) i++;
+        Node root = new Node(preorder[preLow]);
+        int i = inLow;
+        while (inorder[i] != preorder[preLow]) i++;
 
         // Making the Recursive calls.
-        int leftsize = i - inlo;
-        root.left = helper(preorder, prelo + 1, prelo + leftsize, inorder, inlo, i - 1);
-        root.right = helper(preorder, prelo + leftsize + 1, prehi, inorder, i + 1, inhi);
+        int leftSize = i - inLow;
+        root.left = helper(preorder, preLow + 1, preLow + leftSize, inorder, inLow, i - 1);
+        root.right = helper(preorder, preLow + leftSize + 1, preHigh, inorder, i + 1, inHigh);
         return root;
     }
 
-    // Time Complexity - O(n * logn)[Best], O(n^2)[Worst]
+    // Time Complexity - O(n * log(n)) [Best], O(n^2) [Worst]
     public static void main(String[] args) {
         int[] preorder = {3, 9, 20, 15, 7};
         int[] inorder = {9, 3, 15, 20, 7};
