@@ -34,12 +34,12 @@ public class FlattenTree {
         Node curr = root;
         while (curr != null) {
             if (curr.left != null) {
-                Node pred = curr.left;
-                while (pred.right != null) {
-                    pred = pred.right;
+                Node predecessor = curr.left;
+                while (predecessor.right != null) {
+                    predecessor = predecessor.right;
                 }
 
-                pred.right = curr.right;
+                predecessor.right = curr.right;
                 curr.right = curr.left;
                 curr.left = null;
             }

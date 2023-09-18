@@ -1,11 +1,10 @@
 package Trees;
 
-public class PathSums {
+public class PathSum1 {
 
     public static boolean hasPathSum(Node root, int targetSum) {
         if (root == null) return false;
 
-        // Root to Leaf path.
         if (root.left == null && root.right == null) {
             if (root.val == targetSum) return true;
         }
