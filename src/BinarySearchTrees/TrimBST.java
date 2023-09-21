@@ -2,18 +2,18 @@ package BinarySearchTrees;
 
 public class TrimBST {
 
-    public static void helper(Node root, int low, int high){
-        if(root == null) return;
+    public static void helper(Node root, int low, int high) {
+        if (root == null) return;
 
-        while(root.left != null){
-            if(root.left.val < low) root.left = root.left.right;
-            else if(root.left.val > high) root.left = root.left.left;
+        while (root.left != null) {
+            if (root.left.val < low) root.left = root.left.right;
+            else if (root.left.val > high) root.left = root.left.left;
             else break;
         }
 
-        while(root.right != null){
-            if(root.right.val < low) root.right = root.right.right;
-            else if(root.right.val > high) root.right = root.right.left;
+        while (root.right != null) {
+            if (root.right.val < low) root.right = root.right.right;
+            else if (root.right.val > high) root.right = root.right.left;
             else break;
         }
 
@@ -28,6 +28,5 @@ public class TrimBST {
         Node parent = new Node(Integer.MAX_VALUE);
         parent.left = root;
         helper(parent, 20, 50);
-//        Answer will be parent's left.
     }
 }

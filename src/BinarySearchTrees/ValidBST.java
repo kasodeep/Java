@@ -22,7 +22,7 @@ public class ValidBST {
     public static void main(String[] args) {
         String[] arr = {"50", "20", "60", "17", "34", "55", "89", "10", "", "28", "", "", "", "70", "", "", "14"};
         Node root = Construct.construct(arr);
-        
+
         inorder(root);
         System.out.println(flag);
     }

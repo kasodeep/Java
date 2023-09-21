@@ -5,7 +5,7 @@ public class Node {
     Node left;
     Node right;
 
-    Node(int val){
+    Node(int val) {
         this.val = val;
     }
 }

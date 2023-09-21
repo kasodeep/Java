@@ -9,20 +9,21 @@ public class Basics {
 
     /**
      * Inorder always prints the sorted values. Important!!
+     *
      * @param root - It is the root of the binary tree to do traversal.
      */
-    public static void inorder(Node root){
-        if(root == null) return;
+    public static void inorder(Node root) {
+        if (root == null) return;
         inorder(root.left);
         System.out.print(root.val + " ");
         inorder(root.right);
     }
 
     /**
-     * Advantages : Efficient Searching O(logn)
+     * Advantages : Efficient Searching O(log * n)
      * Efficient Insertion and Deletion
      * Usage in TreeMaps, PriorityQueues.
-     * */
+     */
     public static void main(String[] args) {
         String[] arr = {"50", "20", "60", "17", "34", "55", "89", "10", "", "28", "", "", "", "70", "", "", "14"};
         Node root = Construct.construct(arr);

@@ -4,6 +4,7 @@ public class Delete {
 
     /**
      * Delete function to delete the given node with the constraint of binary tree.
+     * Predecessor is the one whose value is greater than the node to be deleted.
      */
     public static void delete(Node root, int target) {
         if (root == null) return;
@@ -17,7 +18,7 @@ public class Delete {
                 if (l.left == null && l.right == null)
                     root.left = null;
 
-                // 1 Children
+                    // 1 Children
                 else if (l.left == null || l.right == null) {
                     if (l.left != null) root.left = l.left;
                     else root.left = l.right;
@@ -25,12 +26,12 @@ public class Delete {
 
                 // 2 Children
                 else {
-                    Node pred = l.left;
-                    while (pred.right != null) pred = pred.right;
-                    delete(root, pred.val);
-                    pred.left = l.left;
-                    pred.right = l.right;
-                    root.left = pred;
+                    Node predecessor = l.left;
+                    while (predecessor.right != null) predecessor = predecessor.right;
+                    delete(root, predecessor.val);
+                    predecessor.left = l.left;
+                    predecessor.right = l.right;
+                    root.left = predecessor;
                 }
             } else
                 delete(root.left, target);
@@ -50,12 +51,12 @@ public class Delete {
                 }
                 // 2 Children
                 else {
-                    Node pred = r.left;
-                    while (pred.right != null) pred = pred.right;
-                    delete(root, pred.val);
-                    pred.left = r.left;
-                    pred.right = r.right;
-                    root.right = pred;
+                    Node predecessor = r.left;
+                    while (predecessor.right != null) predecessor = predecessor.right;
+                    delete(root, predecessor.val);
+                    predecessor.left = r.left;
+                    predecessor.right = r.right;
+                    root.right = predecessor;
                 }
             } else
                 delete(root.right, target);

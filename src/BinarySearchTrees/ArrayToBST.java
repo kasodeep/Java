@@ -7,7 +7,7 @@ public class ArrayToBST {
 
     public static Node helper(int[] arr, int low, int high) {
         if (low > high) return null;
-        int mid = (low + high) / 2;
+        int mid = low + (high - low) / 2;
 
         Node root = new Node(arr[mid]);
         root.left = helper(arr, low, mid - 1);
@@ -18,6 +18,8 @@ public class ArrayToBST {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
         int n = arr.length;
-        helper(arr, 0, n - 1);
+
+        Node root = helper(arr, 0, n - 1);
+        Basics.inorder(root);
     }
 }
