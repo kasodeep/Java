@@ -10,7 +10,7 @@ public class SearchInsert {
         if (root.val > val) {
             if (root.left == null) root.left = new Node(val);
             else insertIntoBST(root.left, val);
-        } else {
+        } else if (root.val < val) {
             if (root.right == null) root.right = new Node(val);
             else insertIntoBST(root.right, val);
         }
