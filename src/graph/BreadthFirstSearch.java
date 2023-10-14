@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Go to immediate neighbors first.
- * It is also called indirect level order traversal.
+ * Go to immediate neighbors first. <br>
+ * It is also called indirect level order traversal. <br>
  * Graph also has disconnected components, which must be accounted.
  */
 public class BreadthFirstSearch {

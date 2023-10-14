@@ -1,5 +1,8 @@
 package graph;
 
+/**
+ * Edge class for storing edges of graph.
+ */
 public class Edge {
 
     int src;

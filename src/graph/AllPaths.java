@@ -23,12 +23,13 @@ public class AllPaths {
         }
     }
 
+    // Time Complexity - O(V * V)
     public static void main(String[] args) {
         int V = 7;
         @SuppressWarnings("unchecked") ArrayList<Edge>[] graph = new ArrayList[V];
         AdjacencyList.createGraph(graph);
+
         int src = 0, target = 5;
         allPaths(graph, src, new boolean[V], "0", target);
-
     }
 }
