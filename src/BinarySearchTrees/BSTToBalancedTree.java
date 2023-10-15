@@ -2,13 +2,10 @@ package BinarySearchTrees;
 
 import java.util.Vector;
 
-public class BSTToBalancedTree {
+public class
+BSTToBalancedTree {
 
-    public static void main(String[] args) {
-
-    }
-
-    Node buildBalancedTree(Node root) {
+    public static Node buildBalancedTree(Node root) {
         Vector<Node> nodes = new Vector<>();
         storeBSTNodes(root, nodes);
 
@@ -16,7 +13,7 @@ public class BSTToBalancedTree {
         return buildTreeUtil(nodes, 0, n - 1);
     }
 
-    void storeBSTNodes(Node root, Vector<Node> nodes) {
+    public static void storeBSTNodes(Node root, Vector<Node> nodes) {
         if (root == null)
             return;
 
@@ -25,7 +22,7 @@ public class BSTToBalancedTree {
         storeBSTNodes(root.right, nodes);
     }
 
-    Node buildTreeUtil(Vector<Node> nodes, int start, int end) {
+    public static Node buildTreeUtil(Vector<Node> nodes, int start, int end) {
         if (start > end)
             return null;
         int mid = (start + end) / 2;
@@ -34,5 +31,9 @@ public class BSTToBalancedTree {
         node.left = buildTreeUtil(nodes, start, mid - 1);
         node.right = buildTreeUtil(nodes, mid + 1, end);
         return node;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
