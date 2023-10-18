@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public class TarjansAlgorithm {
 
+    // Time Complexity = O(V + E)
     public static void getBridge(ArrayList<Edge>[] graph, int V) {
         int[] dt = new int[V];
         int[] low = new int[V];
@@ -43,7 +44,7 @@ public class TarjansAlgorithm {
     }
 
     public static void main(String[] args) {
-        int V = 6;
+        int V = 5;
         @SuppressWarnings("unchecked") ArrayList<Edge>[] graph = new ArrayList[V];
         createGraph(graph);
         getBridge(graph, V);
@@ -66,12 +67,6 @@ public class TarjansAlgorithm {
 
         graph[3].add(new Edge(3, 0));
         graph[3].add(new Edge(3, 4));
-        graph[3].add(new Edge(3, 5));
-
         graph[4].add(new Edge(4, 3));
-        graph[4].add(new Edge(4, 5));
-
-        graph[5].add(new Edge(5, 3));
-        graph[5].add(new Edge(5, 4));
     }
 }
