@@ -1,4 +1,4 @@
-package Daily.LeetCode;
+package graph;
 
 import java.util.*;
 
@@ -53,3 +53,5 @@ public class ParallelCourses3 {
 
     }
 }
+
+
