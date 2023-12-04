@@ -3,10 +3,10 @@ package Heaps;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
+/**
  * 1) Insert at the last.
  * 2) Make sure that the new node is at correct position.
- * */
+ */
 public class InsertionMaxHeap {
 
     public static void insert(List<Integer> heap, int element) {

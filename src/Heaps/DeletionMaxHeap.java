@@ -3,11 +3,11 @@ package Heaps;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
+/**
  * 1) Swap first and last.
  * 2) Delete last element.
  * 3) Push down till correct position.
- * */
+ */
 public class DeletionMaxHeap {
 
     public static void delete(List<Integer> heap) {
@@ -33,7 +33,7 @@ public class DeletionMaxHeap {
         if (biggest == i) return;
 
         Basics.swap(heap, i, biggest);
-        pushDown(heap, biggest, n);
+//        pushDown(heap, biggest, n);
     }
 
     public static void main(String[] args) {

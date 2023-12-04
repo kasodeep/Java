@@ -11,18 +11,20 @@ public class HeapSort {
 
         for (int i = n; i > 0; i--) {
             Basics.swap(arr, 0, i);
-            DeletionMinHeap.pushDown(arr, 0, i);
+            DeletionMaxHeap.pushDown(arr, 0, i);
         }
     }
 
     // Time Complexity - O(N * logN)
     public static void main(String[] args) {
         List<Integer> heap = new ArrayList<>();
+        heap.add(60);
+        heap.add(10);
+        heap.add(80);
+        heap.add(50);
         heap.add(5);
-        heap.add(42);
-        heap.add(13);
-        heap.add(26);
-        heap.add(3);
+        heap.add(20);
+        heap.add(70);
         System.out.println(heap);
         heapSort(heap);
         System.out.println(heap);

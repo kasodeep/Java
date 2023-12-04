@@ -3,11 +3,11 @@ package Heaps;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
+/**
  * 1) Swap first and last.
  * 2) Delete last element.
  * 3) Push down till correct position.
- * */
+ */
 public class DeletionMinHeap {
 
     public static void delete(List<Integer> heap) {
