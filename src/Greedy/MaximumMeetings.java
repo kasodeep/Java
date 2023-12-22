@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Find the maximum number od meetings accommodated in a room.
+ * Find the maximum number of meetings accommodated in a room.
  */
 public class MaximumMeetings {
 
@@ -19,6 +19,7 @@ public class MaximumMeetings {
         }
 
         List<Integer> result = new ArrayList<>();
+        meetings.sort(new ItemComparator());
         result.add(meetings.get(0).no);
         Meeting previous = meetings.get(0);
 
