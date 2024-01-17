@@ -1,4 +1,4 @@
-package Daily.GfG;
+package Array;
 
 import java.util.Arrays;
 
