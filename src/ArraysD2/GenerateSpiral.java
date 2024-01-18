@@ -40,8 +40,4 @@ public class GenerateSpiral {
 
         return matrix;
     }
-
-    public static void main(String[] args) {
-
-    }
 }
