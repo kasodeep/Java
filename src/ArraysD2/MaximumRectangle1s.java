@@ -3,48 +3,50 @@ package ArraysD2;
 import java.util.*;
 
 public class MaximumRectangle1s {
+    
+    public static int maxHist(int[] arr, int n) {
+        Stack<Integer> s = new Stack<>();
+        s.push(-1);
+        int max_area = arr[0];
 
-    static int maxHist(int R, int C, int[] row) {
-        Stack<Integer> result = new Stack<>();
-        int top_val;
-        int max_area = 0;
-        int area;
-
-        int i = 0;
-        while (i < C) {
-            if (result.empty() || row[result.peek()] <= row[i])
-                result.push(i++);
-            else {
-                top_val = row[result.pop()];
-
-                // No need to do i + 1, as 'i' is already ahead.
-                area = top_val * i;
-
-                if (!result.empty())
-                    area = top_val * (i - result.peek() - 1);
-                max_area = Math.max(area, max_area);
-            }
+        int[] left_smaller = new int[n];
+        int[] right_smaller = new int[n];
+        for (int i = 0; i < n; i++) {
+            left_smaller[i] = -1;
+            right_smaller[i] = n;
         }
 
-        while (!result.empty()) {
-            top_val = row[result.pop()];
-            area = top_val * i;
+        int i = 0;
+        while (i < n) {
+            while (!s.empty() && s.peek() != -1 && arr[i] < arr[s.peek()]) {
+                right_smaller[s.peek()] = i;
+                s.pop();
+            }
 
-            if (!result.empty())
-                area = top_val * (i - result.peek() - 1);
-            max_area = Math.max(area, max_area);
+            if (i > 0 && arr[i] == arr[i - 1]) {
+                left_smaller[i] = left_smaller[i - 1];
+            } else {
+                left_smaller[i] = s.peek();
+            }
+            s.push(i);
+            i++;
+        }
+
+        for (i = 0; i < n; i++) {
+            max_area = Math.max(max_area, arr[i] * (right_smaller[i] - left_smaller[i] - 1));
         }
         return max_area;
     }
 
+
     static int maxRectangle(int R, int C, int[][] A) {
-        int result = maxHist(R, C, A[0]);
+        int result = maxHist(A[0], C);
 
         for (int i = 1; i < R; i++) {
             for (int j = 0; j < C; j++)
                 if (A[i][j] == 1)
                     A[i][j] += A[i - 1][j];
-            result = Math.max(result, maxHist(R, C, A[i]));
+            result = Math.max(result, maxHist(A[i], C));
         }
         return result;
     }
