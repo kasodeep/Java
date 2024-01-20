@@ -1,13 +1,10 @@
-package Array.Questions;
+package Array;
 
 public class TrappingRainWater {
 
     public static int trap(int[] height) {
         int leftMax = 0, rightMax = 0, left = 0, right = height.length - 1, water = 0;
-
-        if (height.length == 0) {
-            return 0;
-        }
+        if (height.length == 0) return 0;
 
         while (left < right) {
             if (height[left] < height[right]) {

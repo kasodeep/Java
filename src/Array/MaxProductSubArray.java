@@ -1,4 +1,4 @@
-package Array.Questions;
+package Array;
 
 public class MaxProductSubArray {
 

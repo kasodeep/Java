@@ -1,4 +1,4 @@
-package Array.Questions;
+package Array;
 
 import java.util.HashSet;
 
