@@ -4,11 +4,11 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
- * val < min. Therefore val - min < 0.
+ * Proof: val < min. Therefore val - min < 0.
  * val + (val - min) < val
  * 2 * val - min < val.
  * Because we are adding a -ve number to value.
- * */
+ */
 public class MinStack {
     Stack<Long> st;
     long min = -1;

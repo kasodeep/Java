@@ -8,8 +8,7 @@ public class InsertBottom {
         if (S.size() == 0) S.push(N);
         else {
 
-            int X = S.peek();
-            S.pop();
+            int X = S.pop();
             S = recur(S, N);
             S.push(X);
         }

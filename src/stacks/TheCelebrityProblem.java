@@ -13,9 +13,9 @@ public class TheCelebrityProblem {
             int v1 = st.pop();
             int v2 = st.pop();
 
-            if (M[v1][v2] == 0) { // v1 might be a hero.
+            if (M[v1][v2] == 0) { // v1 might be a Hero.
                 st.push(v1);
-            } else if (M[v2][v1] == 0) { // v2 might be a hero.
+            } else if (M[v2][v1] == 0) { // v2 might be a Hero.
                 st.push(v2);
             }
         }
@@ -35,7 +35,6 @@ public class TheCelebrityProblem {
             if (M[i][potential] == 0)
                 return -1;
         }
-
         return potential;
     }
 }

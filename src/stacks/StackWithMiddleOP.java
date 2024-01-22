@@ -3,42 +3,30 @@ package stacks;
 public class StackWithMiddleOP {
 
     public static void main(String[] args) {
-        myStack ms = new myStack();
-        ms.push(11);
-        ms.push(22);
-        ms.push(33);
-        ms.push(44);
-        ms.push(55);
-        ms.push(66);
-        ms.push(77);
-        ms.push(88);
-        ms.push(99);
-
-        System.out.println("Popped : " + ms.pop());
-        System.out.println("Popped : " + ms.pop());
-        System.out.println("Middle Element : " + ms.findMiddle());
-        ms.deleteMiddleElement();
-        System.out.println("New Middle Element : " + ms.findMiddle());
+        
     }
 
-    static class DLLNode {
+    /**
+     * Static Class Node.
+     * */
+    static class Node {
         int data;
-        DLLNode prev;
-        DLLNode next;
+        Node prev;
+        Node next;
 
-        DLLNode(int data) {
+        Node(int data) {
             this.data = data;
         }
     }
 
     public static class myStack {
-        DLLNode head;
-        DLLNode mid;
+        Node head;
+        Node mid;
         int size;
 
         /* Function to push an element to the stack */
         void push(int new_data) {
-            DLLNode new_node = new DLLNode(new_data);
+            Node new_node = new Node(new_data);
             if (size == 0) {
                 head = new_node;
                 mid = new_node;

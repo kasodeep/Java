@@ -1,53 +1,88 @@
 package queue;
 
 
-import java.util.Deque;
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.HashMap;
 
-public class LRUCache {
+class LRUCache {
+    static int capacity;
 
-    private final int CACHE_SIZE;
+    static HashMap<Integer, Node> cache;
 
-    private final Deque<Integer> doublyQueue;
+    static Node head;
 
-    private final HashSet<Integer> hashSet;
+    static Node tail;
 
-    LRUCache(int capacity) {
-        doublyQueue = new LinkedList<>();
-        hashSet = new HashSet<>();
-        CACHE_SIZE = capacity;
+    LRUCache(int cap) {
+        capacity = cap;
+        cache = new HashMap<>(cap);
+        head = null;
+        tail = null;
     }
 
-    /* add -> First, remove -> Last. */
-    public static void main(String[] args) {
-        LRUCache cache = new LRUCache(4);
-        cache.refer(1);
-        cache.refer(2);
-        cache.refer(3);
-        cache.refer(1);
-        cache.refer(4);
-        cache.refer(5);
-        cache.display();
-    }
-
-    public void refer(int page) {
-        if (!hashSet.contains(page)) {
-            if (doublyQueue.size() == CACHE_SIZE) {
-                int last = doublyQueue.removeLast();
-                hashSet.remove(last);
-            }
-        } else {
-            doublyQueue.remove(page);
+    public static int get(int key) {
+        if (cache.containsKey(key)) {
+            Node node = cache.get(key);
+            moveToFront(node);
+            return node.value;
         }
-        doublyQueue.push(page);
-        hashSet.add(page);
+        return -1;
     }
 
-    public void display() {
-        for (Integer integer : doublyQueue) {
-            System.out.print(integer + " ");
+    public static void set(int key, int value) {
+        if (cache.containsKey(key)) {
+            Node node = cache.get(key);
+            node.value = value;
+            moveToFront(node);
+            return;
+        }
+
+        Node node = new Node(key, value);
+        if (cache.size() == capacity) {
+            cache.remove(tail.key);
+            remove(tail);
+        }
+
+        addToFront(node);
+        cache.put(key, node);
+    }
+
+    static void moveToFront(Node node) {
+        remove(node);
+        addToFront(node);
+    }
+
+    static void remove(Node node) {
+        Node nextNode = node.next;
+        Node prevNode = node.prev;
+
+        if (prevNode != null) prevNode.next = nextNode;
+        else head = nextNode;
+
+        if (nextNode != null) nextNode.prev = prevNode;
+        else tail = prevNode;
+    }
+
+    static void addToFront(Node node) {
+        node.next = head;
+        node.prev = null;
+
+        if (head != null) head.prev = node;
+        if (tail == null) tail = node;
+        head = node;
+    }
+
+    static class Node {
+        int key;
+        int value;
+        Node next;
+        Node prev;
+
+        Node(int key, int value) {
+            this.key = key;
+            this.value = value;
         }
     }
 }
+
+
 
