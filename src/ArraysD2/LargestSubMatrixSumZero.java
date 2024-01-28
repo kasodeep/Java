@@ -2,15 +2,13 @@ package ArraysD2;
 
 import java.util.ArrayList;
 
-public class SubMatrixSumZero {
+public class LargestSubMatrixSumZero {
 
     public static ArrayList<ArrayList<Integer>> sumZeroMatrix(int[][] a) {
         int n = a.length;
         int m = a[0].length;
-
         int[][] prefixSum = new int[n][m];
 
-        // Calculating the Prefix Sum.
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 prefixSum[i][j] = a[i][j];
@@ -49,11 +47,6 @@ public class SubMatrixSumZero {
                 }
             }
         }
-
         return result;
-    }
-
-    public static void main(String[] args) {
-
     }
 }
