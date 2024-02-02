@@ -1,6 +1,6 @@
-package dp;
+package dp.knapsack01;
 
-public class MinimumSunPartition {
+public class MinimumSumPartition {
 
     public static int minDifference(int[] arr, int n) {
         int sum = 0;

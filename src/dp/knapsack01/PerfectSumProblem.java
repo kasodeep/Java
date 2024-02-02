@@ -1,4 +1,4 @@
-package dp;
+package dp.knapsack01;
 
 public class PerfectSumProblem {
 
