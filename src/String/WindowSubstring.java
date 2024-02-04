@@ -1,39 +1,24 @@
 package String;
 
-import java.util.HashMap;
-
 public class WindowSubstring {
 
     public static String minWindow(String s, String t) {
-        HashMap<Character, Integer> map = new HashMap<>();
-        for (char c : t.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
+        int[] map = new int[123];
+        int left = 0, right = 0, count = t.length(), sub_len = Integer.MAX_VALUE, start = 0;
 
-        int counter = t.length(), begin = 0, end = 0, d = Integer.MAX_VALUE, head = 0;
-        while (end < s.length()) {
-            if (map.containsKey(s.charAt(end))) {
-                if (map.get(s.charAt(end)) > 0) counter--;
-                map.put(s.charAt(end), map.get(s.charAt(end)) - 1);
-            }
+        for (char c : t.toCharArray()) map[c]++;
+        char[] ch = s.toCharArray();
 
-            end++;
-            while (counter == 0) {
-                if (end - begin < d) d = end - (head = begin);
+        while (right < s.length()) {
+            if (map[ch[right++]]-- > 0) count--;
 
-                if (map.containsKey(s.charAt(begin))) {
-                    map.put(s.charAt(begin), map.get(s.charAt(begin)) + 1);
-                    if (map.get(s.charAt(begin)) > 0) counter++;
-                }
-                begin++;
+            while (count == 0) {
+                if ((right - left) < sub_len) sub_len = right - (start = left);
+                if (map[ch[left++]]++ == 0) count++;
             }
         }
-        return d == Integer.MAX_VALUE ? "" : s.substring(head, head + d);
-    }
 
-    public static void main(String[] args) {
-        String s = "ADOBECODEBANC";
-        String t = "ABC";
-        System.out.println(minWindow(s, t));
+        return sub_len == Integer.MAX_VALUE ? "" : s.substring(start, start + sub_len);
     }
 }
+
