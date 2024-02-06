@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // This code is push efficient.
-class MyStack {
+public class MyStack {
 
     Queue<Integer> q = new LinkedList<>();
 

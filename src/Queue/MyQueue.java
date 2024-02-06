@@ -3,7 +3,7 @@ package Queue;
 import java.util.Stack;
 
 // This code is push efficient.
-class MyQueue {
+public class MyQueue {
 
     Stack<Integer> st = new Stack<>();
     Stack<Integer> helper = new Stack<>();

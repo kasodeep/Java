@@ -3,7 +3,7 @@ package Queue;
 
 import java.util.HashMap;
 
-class LRUCache {
+public class LRUCache {
     static int capacity;
 
     static HashMap<Integer, Node> cache;
