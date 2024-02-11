@@ -3,15 +3,12 @@ package Trees;
 public class PreInTree {
 
     public static Node helper(int[] preorder, int preLow, int preHigh, int[] inorder, int inLow, int inHigh) {
-        // Base Case
         if (preLow > preHigh) return null;
 
-        // First element is always the root, and we find its position in inorder.
         Node root = new Node(preorder[preLow]);
         int i = inLow;
         while (inorder[i] != preorder[preLow]) i++;
 
-        // Making the Recursive calls.
         int leftSize = i - inLow;
         root.left = helper(preorder, preLow + 1, preLow + leftSize, inorder, inLow, i - 1);
         root.right = helper(preorder, preLow + leftSize + 1, preHigh, inorder, i + 1, inHigh);

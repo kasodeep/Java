@@ -4,10 +4,8 @@ import java.util.*;
 
 public class BottomView {
 
-
     static void printBottomView(Node root) {
-        if (root == null)
-            return;
+        if (root == null) return;
         HashMap<Integer, Integer> hash = new HashMap<>();
         int leftmost = 0;
 
@@ -22,16 +20,12 @@ public class BottomView {
             hash.put(index, temp.val);
             leftmost = Math.min(index, leftmost);
 
-            if (temp.left != null) {
-                q.add(new Pair(temp.left, index - 1));
-            }
-            if (temp.right != null) {
-                q.add(new Pair(temp.right, index + 1));
-            }
+            if (temp.left != null) q.add(new Pair(temp.left, index - 1));
+            if (temp.right != null) q.add(new Pair(temp.right, index + 1));
         }
 
         while (hash.containsKey(leftmost)) {
-            System.out.print(hash.getOrDefault(leftmost++, 0) + " ");
+            System.out.print(hash.get(leftmost++) + " ");
         }
     }
 

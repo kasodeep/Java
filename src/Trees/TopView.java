@@ -30,24 +30,14 @@ public class TopView {
                 r = hd;
             }
 
-            if (node.left != null) {
-                q.add(new Pair(node.left, hd - 1));
-            }
-            if (node.right != null) {
-                q.add(new Pair(node.right, hd + 1));
-            }
-
+            if (node.left != null) q.add(new Pair(node.left, hd - 1));
+            if (node.right != null) q.add(new Pair(node.right, hd + 1));
             q.poll();
         }
 
-        while (!left.isEmpty()) {
-            System.out.print(left.peek() + " ");
-            left.pop();
-        }
+        while (!left.isEmpty()) System.out.print(left.pop() + " ");
         System.out.print(root.val + " ");
-        for (int num : right) {
-            System.out.print(num + " ");
-        }
+        for (int num : right) System.out.print(num + " ");
     }
 
     public static void main(String[] args) {

@@ -19,20 +19,20 @@ public class SumTree {
         return f;
     }
 
-    public int sum(Node root) {
+    int sumTree(Node root) {
         if (root == null) return 0;
-        int oldLeft = root.left != null ? root.left.val : 0;
-        int oldRight = root.right != null ? root.right.val : 0;
 
-        int left = sum(root.left);
-        int right = sum(root.right);
+        int leftSum = sumTree(root.left);
+        int rightSum = sumTree(root.right);
 
-        root.val = oldLeft + oldRight + left + right;
-        return root.val;
+        int x = root.val;
+        int tSum = leftSum + rightSum;
+
+        root.val = tSum;
+        return tSum + x;
     }
 
     public void toSumTree(Node root) {
-        if (root == null) return;
-        sum(root);
+        sumTree(root);
     }
 }

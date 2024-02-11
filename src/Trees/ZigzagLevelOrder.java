@@ -64,17 +64,12 @@ public class ZigzagLevelOrder {
             for (int i = 0; i < size; i++) {
                 Node temp = q.remove();
                 part.add(temp.val);
-                if (temp.left != null) {
-                    q.add(temp.left);
-                }
-                if (temp.right != null) {
-                    q.add(temp.right);
-                }
+
+                if (temp.left != null) q.add(temp.left);
+                if (temp.right != null) q.add(temp.right);
             }
 
-            if (flag % 2 == 0) {
-                Collections.reverse(part);
-            }
+            if (flag % 2 == 0) Collections.reverse(part);
             ans.add(part);
             flag++;
         }
