@@ -3,12 +3,12 @@ package Trees;
 public class BoundaryTraversal {
 
     static void printLeftBoundary(Node root) {
-        if (root == null) {
-            return;
-        }
+        if (root == null) return;
+
         if (root.left != null || root.right != null) {
             System.out.print(root.val + " ");
         }
+
         if (root.left != null) {
             printLeftBoundary(root.left);
         } else {
@@ -16,22 +16,22 @@ public class BoundaryTraversal {
         }
     }
 
-    // Function to print the right boundary nodes of a binary tree
+    // Function to print the right boundary nodes of a binary tree.
     static void printRightBoundary(Node root) {
-        if (root == null) {
-            return;
-        }
+        if (root == null) return;
+
         if (root.right != null) {
             printRightBoundary(root.right);
         } else {
             printRightBoundary(root.left);
         }
+
         if (root.left != null || root.right != null) {
             System.out.print(root.val + " ");
         }
     }
 
-    // Function to print the leaves of a binary tree
+    // Function to print the leaves of a binary tree.
     static void printLeaves(Node root) {
         if (root == null) {
             return;
@@ -43,7 +43,7 @@ public class BoundaryTraversal {
         printLeaves(root.right);
     }
 
-    // Function to print the boundary nodes of a binary tree in anticlockwise order
+    // Function to print the boundary nodes of a binary tree in anticlockwise order.
     static void printBoundary(Node root) {
         if (root == null) {
             return;

@@ -7,11 +7,9 @@ public class NoAdjacentMaxSum {
     static HashMap<Node, Integer> map = new HashMap<>();
 
     static int maxSum(Node root) {
-        if (root == null)
-            return 0;
+        if (root == null) return 0;
 
-        if (map.containsKey(root))
-            return map.get(root);
+        if (map.containsKey(root)) return map.get(root);
         int inc = root.val;
 
         if (root.left != null) inc += maxSum(root.left.left) + maxSum(root.left.right);
@@ -23,14 +21,7 @@ public class NoAdjacentMaxSum {
     }
 
     public static void main(String[] args) {
-        Node root = new Node(10);
-        root.left = new Node(1);
-        root.left.left = new Node(2);
-        root.left.left.left = new Node(1);
-        root.left.right = new Node(3);
-        root.left.right.left = new Node(4);
-        root.left.right.right = new Node(5);
-        System.out.println(maxSum(root));
+
     }
 }
 

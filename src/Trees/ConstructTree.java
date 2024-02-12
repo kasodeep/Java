@@ -3,9 +3,9 @@ package Trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/*
+/**
  * Constructing a binary tree based on the given array as it is of prime importance.
- * */
+ */
 public class ConstructTree {
 
     public static Node construct(String[] arr) {

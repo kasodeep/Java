@@ -4,25 +4,19 @@ public class LargestSubTreeSum {
 
     static int ans = Integer.MIN_VALUE;
 
-    static int dfs(Node root) {
-        if (root == null)
-            return 0;
-        if (root.left == null && root.right == null)
-            return root.val;
+    public static int dfs(Node root) {
+        if (root == null) return 0;
 
         int sumLeft = dfs(root.left);
         int sumRight = dfs(root.right);
         int sum = sumLeft + sumRight + root.val;
 
-        ans = Math.max(ans, Math.max(Math.max(sumLeft, sumRight), sum));
+        if (sum > ans) ans = sum;
         return sum;
     }
 
-    static int findLargestSubtreeSum(Node root) {
-        if (root == null)
-            return 0;
-        if (root.left == null && root.right == null)
-            return root.val;
+    public static int findLargestSubtreeSum(Node root) {
+        ans = Integer.MIN_VALUE;
         dfs(root);
         return ans;
     }

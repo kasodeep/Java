@@ -42,13 +42,10 @@ public class GraphTreeOrNot {
 
         public static boolean isConnected() {
             boolean[] visited = new boolean[V];
-            for (int i = 0; i < V; i++)
-                visited[i] = false;
-
             dfsTraversal(0, visited, -1);
+
             for (int u = 0; u < V; u++)
-                if (!visited[u])
-                    return false;
+                if (!visited[u]) return false;
             return true;
         }
 

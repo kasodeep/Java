@@ -2,6 +2,9 @@ package Trees;
 
 import java.util.*;
 
+/**
+ * Try to print the right ones and add left ones in queue.
+ */
 public class DiagonalTraversal {
 
     public static void diagonalTraversal(Node root) {

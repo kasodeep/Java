@@ -5,9 +5,7 @@ public class ConstructTreeBrackets {
     static int start = 0;
 
     static Node constructTree(String s) {
-        if (s.length() == 0 || s == null || start >= s.length()) {
-            return null;
-        }
+        if (s.length() == 0 || s == null || start >= s.length()) return null;
 
         boolean neg = false;
         if (s.charAt(start) == '-') {
@@ -22,11 +20,10 @@ public class ConstructTreeBrackets {
             start++;
         }
 
-        if (neg)
-            num = -num;
+        if (neg) num = -num;
         Node node = new Node(num);
 
-        if(num == 0){
+        if (num == 0) {
             start++;
             return null;
         }
@@ -35,7 +32,7 @@ public class ConstructTreeBrackets {
             return node;
         }
 
-        // Left Node
+        // Left Node.
         if (start < s.length() && s.charAt(start) == '(') {
             start++;
             node.left = constructTree(s);
@@ -56,6 +53,7 @@ public class ConstructTreeBrackets {
             start++;
             return node;
         }
+
         return node;
     }
 
