@@ -2,6 +2,9 @@ package Trees;
 
 import java.util.*;
 
+/**
+ * Important.
+ * */
 public class AllDuplicateTrees {
 
     Map<String, Integer> map = new HashMap<>();
@@ -18,10 +21,7 @@ public class AllDuplicateTrees {
         String right = helper(root.right);
         String curr = root.val + " " + left + " " + right;
 
-        if (map.getOrDefault(curr, 0) == 1) {
-            result.add(root);
-        }
-
+        if (map.getOrDefault(curr, 0) == 1) result.add(root);
         map.put(curr, map.getOrDefault(curr, 0) + 1);
         return curr;
     }

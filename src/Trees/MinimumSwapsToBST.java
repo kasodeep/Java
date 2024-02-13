@@ -2,6 +2,11 @@ package Trees;
 
 import java.util.*;
 
+/**
+ * This can be easily done by visualizing the problem as a graph.
+ * We will have N nodes and an edge directed from node i to node j if the element at the i’th index must be present at the j’th index in the sorted array.
+ * Now a cycle with size N will have N - 1 swaps to sort.
+ */
 public class MinimumSwapsToBST {
 
     static void inorder(int[] a, Vector<Integer> v, int n, int index) {
@@ -17,14 +22,12 @@ public class MinimumSwapsToBST {
         int len = arr.size();
 
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < len; i++)
-            map.put(arr.get(i), i);
+        for (int i = 0; i < len; i++) map.put(arr.get(i), i);
         Collections.sort(arr);
 
         boolean[] visited = new boolean[len];
-        Arrays.fill(visited, false);
-
         int ans = 0;
+
         for (int i = 0; i < len; i++) {
             if (visited[i] || map.get(arr.get(i)) == i)
                 continue;

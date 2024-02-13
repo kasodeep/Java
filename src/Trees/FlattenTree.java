@@ -1,9 +1,12 @@
 package Trees;
 
+/**
+ * Morris Traversal, one of the craziest trick!
+ */
 public class FlattenTree {
 
     /* In this approach we are using recursion to flatten a tree.
-     * It causes us to use O(H) extra space in terms of recursion calls;
+     * It causes us to use O(H) extra space in terms of recursion calls.
      * We have to store values in preorder format.
      * Time Complexity of this approach is O(N).
      */

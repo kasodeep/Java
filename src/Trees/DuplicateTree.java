@@ -3,49 +3,29 @@ package Trees;
 import java.util.HashSet;
 
 public class DuplicateTree {
-    static char MARKER = '$';
 
-    public static String dupSubUtil(Node root, HashSet<String> subtrees) {
-        String s = "";
-        if (root == null)
-            return s + MARKER;
+    static HashSet<String> set = new HashSet<>();
+    static boolean flag = false;
 
-        String lStr = dupSubUtil(root.left, subtrees);
-        if (lStr.equals(s))
-            return s;
+    public static String helper(Node root) {
+        if (root == null) return "";
 
-        String rStr = dupSubUtil(root.right, subtrees);
-        if (rStr.equals(s))
-            return s;
+        String left = helper(root.left);
+        String right = helper(root.right);
+        String curr = root.val + " " + left + " " + right;
 
-        s = s + root.val + "%" + lStr + "%" + rStr;
-        if (s.length() > 7 && subtrees.contains(s))
-            return "";
-
-        subtrees.add(s);
-        return s;
+        if (set.contains(curr) && curr.length() > 5) flag = true;
+        set.add(curr);
+        return curr;
     }
 
-    public static String dupSub(Node root) {
-        HashSet<String> subtrees = new HashSet<>();
-        return dupSubUtil(root, subtrees);
+    static int dupSub(Node root) {
+        helper(root);
+        return flag ? 1 : 0;
     }
 
     public static void main(String[] args) {
 
-        Node root = new Node('A');
-        root.left = new Node('B');
-        root.right = new Node('C');
-        root.left.left = new Node('D');
-        root.left.right = new Node('E');
-        root.right.right = new Node('B');
-        root.right.right.right = new Node('E');
-        root.right.right.left = new Node('D');
-        String str = dupSub(root);
-        if (str.equals(""))
-            System.out.print("Yes");
-        else
-            System.out.print("No");
     }
 }
 

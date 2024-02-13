@@ -2,6 +2,9 @@ package Trees;
 
 import java.util.*;
 
+/**
+ * Very Useful Concept, to represent Trees as Strings.
+ */
 public class SerializeDeserialize {
 
     public static String serialize(Node root) {
