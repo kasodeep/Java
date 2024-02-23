@@ -3,60 +3,25 @@ package LinkedLists;
 public class AddTwoNumbers {
 
     public static Node<Integer> addTwoNumbers(Node<Integer> l1, Node<Integer> l2) {
+        Node<Integer> head = new Node<>(0);
+        Node<Integer> l3 = head;
         int carry = 0;
-        Node<Integer> result = new Node<>(-1);
-        Node<Integer> mainTemp = result;
 
-        while (l1 != null && l2 != null) {
-            int total = l1.data + l2.data + carry;
-            Node<Integer> temp = new Node<>(total % 10);
-            carry = total / 10;
+        while (l1 != null || l2 != null) {
+            int l1_data = (l1 != null) ? l1.data : 0;
+            int l2_data = (l2 != null) ? l2.data : 0;
 
-            if (mainTemp == null) {
-                mainTemp = temp;
-            } else {
-                mainTemp.next = temp;
-                mainTemp = mainTemp.next;
-            }
-            l1 = l1.next;
-            l2 = l2.next;
+            int currentSum = l1_data + l2_data + carry;
+            carry = currentSum / 10;
+            int lastDigit = currentSum % 10;
+
+            l3.next = new Node<>(lastDigit);
+            if (l1 != null) l1 = l1.next;
+            if (l2 != null) l2 = l2.next;
+            l3 = l3.next;
         }
 
-        while (l1 != null) {
-            int total = l1.data + carry;
-            Node<Integer> temp = new Node<>(total % 10);
-            carry = total / 10;
-
-            if (mainTemp == null) {
-                mainTemp = temp;
-            } else {
-                mainTemp.next = temp;
-                mainTemp = mainTemp.next;
-            }
-            l1 = l1.next;
-        }
-
-        while (l2 != null) {
-            int total = l2.data + carry;
-            Node<Integer> temp = new Node<>(total % 10);
-            carry = total / 10;
-
-            if (mainTemp == null) {
-                mainTemp = temp;
-            } else {
-                mainTemp.next = temp;
-                mainTemp = mainTemp.next;
-            }
-            l2 = l2.next;
-        }
-
-        if (carry != 0) {
-            mainTemp.next = new Node<>(carry);
-        }
-        return result.next;
-    }
-
-    public static void main(String[] args) {
-
+        if (carry > 0) l3.next = new Node<>(carry);
+        return head.next;
     }
 }
