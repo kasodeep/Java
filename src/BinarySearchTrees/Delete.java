@@ -18,7 +18,7 @@ public class Delete {
                 if (l.left == null && l.right == null)
                     root.left = null;
 
-                    // 1 Children
+                // 1 Children
                 else if (l.left == null || l.right == null) {
                     if (l.left != null) root.left = l.left;
                     else root.left = l.right;
@@ -28,6 +28,8 @@ public class Delete {
                 else {
                     Node predecessor = l.left;
                     while (predecessor.right != null) predecessor = predecessor.right;
+
+                    // Craziest Stuff!
                     delete(root, predecessor.val);
                     predecessor.left = l.left;
                     predecessor.right = l.right;
@@ -67,7 +69,6 @@ public class Delete {
         String[] arr = {"50", "20", "60", "17", "34", "55", "89", "10", "", "28", "", "", "", "70", "", "", "14"};
         Node root = Construct.construct(arr);
 
-        //  Doing this to avoid error while deleting root node.
         Node temp = new Node(Integer.MAX_VALUE);
         temp.left = root;
         delete(temp, 50);

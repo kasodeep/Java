@@ -1,11 +1,12 @@
 package BinarySearchTrees;
 
+/**
+ * Insertion And Deletion are two most important parts of a BSt.
+ */
 public class SearchInsert {
 
     public static Node insertIntoBST(Node root, int val) {
-        if (root == null) {
-            return new Node(val);
-        }
+        if (root == null) return new Node(val);
 
         if (root.val > val) {
             if (root.left == null) root.left = new Node(val);

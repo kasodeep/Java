@@ -9,8 +9,6 @@ public class Basics {
 
     /**
      * Inorder always prints the sorted values. Important!!
-     *
-     * @param root - It is the root of the binary tree to do traversal.
      */
     public static void inorder(Node root) {
         if (root == null) return;
