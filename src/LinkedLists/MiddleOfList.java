@@ -2,9 +2,9 @@ package LinkedLists;
 
 public class MiddleOfList {
 
-    public static Node<Integer> middleNode(Node<Integer> head) {
-        Node<Integer> fast = head;
-        Node<Integer> slow = head;
+    public static Node middleNode(Node head) {
+        Node fast = head;
+        Node slow = head;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;

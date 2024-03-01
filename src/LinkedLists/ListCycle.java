@@ -2,17 +2,11 @@ package LinkedLists;
 
 public class ListCycle {
 
-    public static boolean hasCycle(Node<Integer> head) {
-        if (head == null || head.next == null) {
-            return false;
-        }
-
-        Node<Integer> fast = head;
-        Node<Integer> slow = head;
-        while (fast != null && slow != null) {
+    public static boolean hasCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+        while (fast != null && fast.next != null) {
             slow = slow.next;
-
-            if (fast.next == null) return false;
             fast = fast.next.next;
 
             if (fast == slow) return true;
@@ -20,31 +14,52 @@ public class ListCycle {
         return false;
     }
 
-    public static Node<Integer> detectCycle(Node<Integer> head) {
-        if (head == null || head.next == null) {
-            return null;
-        }
-        Node<Integer> slow = head;
-        Node<Integer> fast = head;
-        Node<Integer> temp = head;
+    /**
+     * x denotes the length of the linked list before starting the cycle.
+     * y denotes the distance from the start of the cycle to where slow and fast met.
+     * C denotes the length of the cycle
+     * when they meet, slow traveled (x + y) steps while fast traveled 2 * (x + y) steps, and the extra distance (x + y) must be a multiple of the circle length C
+     */
+    public static Node detectCycle(Node head) {
+        Node slow = head;
+        Node fast = head;
 
-        while (fast != null && slow != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
-
-            if (fast.next == null) return null;
             fast = fast.next.next;
-
-            if (fast == null || slow == null) {
-                return null;
-            }
             if (fast == slow) break;
         }
 
-        while (temp != slow && slow != null) {
-            temp = temp.next;
+        if (fast == null || fast.next == null) return null;
+        while (head != slow) {
+            head = head.next;
             slow = slow.next;
         }
-        return temp;
+        return slow;
+    }
+
+    public static void removeLoop(Node head) {
+        Node fast = head;
+        Node slow = head;
+        Node prev = fast;
+
+        while (fast != null && fast.next != null) {
+
+            // This because if they meet at the head.
+            prev = fast.next;
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (fast == slow) break;
+        }
+
+        if (fast == null || fast.next == null) return;
+        while (fast != head) {
+            prev = fast;
+            fast = fast.next;
+            head = head.next;
+        }
+        prev.next = null;
     }
 
     public static void main(String[] args) {

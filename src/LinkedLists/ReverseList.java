@@ -2,15 +2,15 @@ package LinkedLists;
 
 public class ReverseList {
 
-    public static Node<Integer> reverseList(Node<Integer> head) {
-        Node<Integer> prev = null;
-        Node<Integer> curr = head;
-        Node<Integer> agla;
+    public static Node reverseList(Node head) {
+        Node prev = null;
+        Node curr = head;
+        Node agla;
 
         while (curr != null) {
             agla = curr.next;
 
-            // Changing the direction
+            // Changing the direction.
             curr.next = prev;
             prev = curr;
             curr = agla;

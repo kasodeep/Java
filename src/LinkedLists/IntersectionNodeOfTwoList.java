@@ -1,10 +1,10 @@
 package LinkedLists;
 
-public class IntersectionOfList {
+public class IntersectionNodeOfTwoList {
 
-    public static Node<Integer> getIntersectionNode(Node<Integer> headA, Node<Integer> headB) {
-        Node<Integer> tempA = headA;
-        Node<Integer> tempB = headB;
+    public static Node getIntersectionNode(Node headA, Node headB) {
+        Node tempA = headA;
+        Node tempB = headB;
         int lengthA = 0, lengthB = 0;
 
         while (tempA != null) {

@@ -2,12 +2,12 @@ package LinkedLists;
 
 import java.util.HashSet;
 
-public class RemoveDuplicates {
+public class RemoveDuplicatesUnsorted {
 
-    static void removeDuplicate(Node<Integer> head) {
+    static void removeDuplicate(Node head) {
         HashSet<Integer> hs = new HashSet<>();
-        Node<Integer> current = head;
-        Node<Integer> prev = null;
+        Node current = head;
+        Node prev = null;
 
         while (current != null) {
             int currValue = current.data;

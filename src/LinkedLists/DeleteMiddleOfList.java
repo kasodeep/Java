@@ -2,11 +2,12 @@ package LinkedLists;
 
 public class DeleteMiddleOfList {
 
-    public static Node<Integer> deleteMiddle(Node<Integer> head) {
+    public static Node deleteMiddle(Node head) {
         if (head.next == null) return null;
-        Node<Integer> fast = head;
-        Node<Integer> slow = head;
+        Node fast = head;
+        Node slow = head;
 
+        // Double speed of Hare.
         while (fast.next.next != null && fast.next.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
