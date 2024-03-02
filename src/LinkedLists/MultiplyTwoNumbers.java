@@ -2,7 +2,7 @@ package LinkedLists;
 
 public class MultiplyTwoNumbers {
 
-    static long multiplyTwoLists(Node<Integer> first, Node<Integer> second) {
+    static long multiplyTwoLists(Node first, Node second) {
         long N = 1000000007;
         long num1 = 0, num2 = 0;
 

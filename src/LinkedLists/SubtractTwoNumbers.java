@@ -2,24 +2,18 @@ package LinkedLists;
 
 public class SubtractTwoNumbers {
 
-    static Node<Integer> removeLeadingZeros(Node<Integer> a) {
+    /**
+     * Removing the leading zeros from the number.
+     */
+    static Node removeLeadingZeros(Node a) {
         if (a != null && a.data == 0) return removeLeadingZeros(a.next);
         else return a;
     }
 
-    static Node<Integer> reverse(Node<Integer> head) {
-        Node<Integer> prev = null, curr = head, agla;
-        while (curr != null) {
-            agla = curr.next;
-            curr.next = prev;
-
-            prev = curr;
-            curr = agla;
-        }
-        return prev;
-    }
-
-    static int length(Node<Integer> head) {
+    /**
+     * Finding the length of the linked list.
+     */
+    static int length(Node head) {
         int count = 0;
         while (head != null) {
             count++;
@@ -28,9 +22,12 @@ public class SubtractTwoNumbers {
         return count;
     }
 
-    static Node<Integer> findLarger(Node<Integer> l1, int len1, Node<Integer> l2, int len2) {
-        Node<Integer> temp1 = l1;
-        Node<Integer> temp2 = l2;
+    /**
+     * Finding the larger and subtracting the number.
+     */
+    static Node findLarger(Node l1, int len1, Node l2, int len2) {
+        Node temp1 = l1;
+        Node temp2 = l2;
 
         if (len1 < len2) {
             temp1 = l2;
@@ -50,20 +47,20 @@ public class SubtractTwoNumbers {
                 temp2 = temp2.next;
             }
 
-            if (temp1 == null && temp2 == null) return new Node<>(0);
+            if (temp1 == null && temp2 == null) return new Node(0);
         }
         return subtract(temp1, temp2);
     }
 
-    static Node<Integer> subtract(Node<Integer> n1, Node<Integer> n2) {
-        Node<Integer> l1 = n1;
-        Node<Integer> l2 = n2;
+    static Node subtract(Node n1, Node n2) {
+        Node l1 = n1;
+        Node l2 = n2;
 
-        l1 = reverse(l1);
-        l2 = reverse(l2);
+        l1 = ReverseList.reverseList(l1);
+        l2 = ReverseList.reverseList(l2);
 
-        Node<Integer> res = new Node<>(-1);
-        Node<Integer> temp = res;
+        Node res = new Node(-1);
+        Node temp = res;
 
         int borrow = 0;
         int diff;
@@ -78,19 +75,22 @@ public class SubtractTwoNumbers {
                 borrow = 0;
             }
 
-            temp.next = new Node<>(diff);
+            temp.next = new Node(diff);
             temp = temp.next;
 
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
         }
 
-        res = reverse(res.next);
+        res = ReverseList.reverseList(res.next);
         res = removeLeadingZeros(res);
         return res;
     }
 
-    static Node<Integer> subLinkedList(Node<Integer> l1, Node<Integer> l2) {
+    /**
+     * Subtracting the larger from the smaller.
+     */
+    static Node subLinkedList(Node l1, Node l2) {
         l1 = removeLeadingZeros(l1);
         l2 = removeLeadingZeros(l2);
 

@@ -41,16 +41,6 @@ public class MergeKSortedLists {
         return head.next;
     }
 
-    static class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-
     static class NodeComparator implements Comparator<Node> {
         public int compare(Node k1, Node k2) {
             if (k1.data > k2.data)
@@ -60,5 +50,4 @@ public class MergeKSortedLists {
             return 0;
         }
     }
-
 }

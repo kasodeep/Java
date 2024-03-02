@@ -2,13 +2,13 @@ package LinkedLists;
 
 public class OddEvenList {
 
-    public static Node<Integer> oddEvenList(Node<Integer> head) {
-        Node<Integer> temp = head;
-        Node<Integer> odd = new Node<>(0);
-        Node<Integer> even = new Node<>(0);
+    public static Node oddEvenList(Node head) {
+        Node temp = head;
+        Node odd = new Node(0);
+        Node even = new Node(0);
 
-        Node<Integer> tempo = odd;
-        Node<Integer> tempe = even;
+        Node tempo = odd;
+        Node tempe = even;
 
         while (temp != null) {
             tempo.next = temp;
