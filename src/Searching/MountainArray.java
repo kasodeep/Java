@@ -2,20 +2,19 @@ package Searching;
 
 public class MountainArray {
 
+    // It also works for multiple peak elements.
     public static int peakIndex(int[] a) {
         int st = 0, end = a.length - 1;
-        int ans = -1;
 
         while (st <= end) {
             int mid = st + (end - st) / 2;
             if (a[mid] < a[mid + 1]) {
-                ans = mid + 1;
                 st = mid + 1;
             } else {
-                end = mid - 1;
+                end = mid;
             }
         }
-        return ans;
+        return st;
     }
 
     public static int findPeakElement(int[] a) {
