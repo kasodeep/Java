@@ -1,4 +1,4 @@
-package LinkedLists;
+package DoublyLinkedList;
 
 /**
  * Limitations of a Singly Linked List :
@@ -104,8 +104,7 @@ public class DoublyLL<T> {
 
     // Function to print the List
     public void printList() {
-        if (size == 0)
-            return;
+        if (size == 0) return;
 
         if (head.next.data == -1) {
             System.out.println(head.data);

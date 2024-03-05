@@ -2,12 +2,12 @@ package LinkedLists;
 
 public class QuickSort {
 
-    public static Node<Integer> partitionLast(Node<Integer> start, Node<Integer> end) {
+    public static Node partitionLast(Node start, Node end) {
         if (start == end || start == null || end == null)
             return start;
 
-        Node<Integer> pivot_prev = start;
-        Node<Integer> curr = start;
+        Node pivot_prev = start;
+        Node curr = start;
         int pivot = end.data;
 
         while (start != end) {
@@ -27,17 +27,14 @@ public class QuickSort {
         return pivot_prev;
     }
 
-    public static void sort(Node<Integer> start, Node<Integer> end) {
-        if (start == null || start == end || start == end.next)
-            return;
+    public static void sort(Node start, Node end) {
+        if (start == null || start == end || start == end.next) return;
 
-        Node<Integer> pivot_prev = partitionLast(start, end);
-        sort(start, pivot_prev);
+        Node pivot = partitionLast(start, end);
+        sort(start, pivot);
 
-        if (pivot_prev != null && pivot_prev == start)
-            sort(pivot_prev.next, end);
-        else if (pivot_prev != null && pivot_prev.next != null)
-            sort(pivot_prev.next.next, end);
+        if (pivot != null && pivot == start) sort(pivot.next, end);
+        else if (pivot != null && pivot.next != null) sort(pivot.next.next, end);
     }
 
     public static void main(String[] args) {
