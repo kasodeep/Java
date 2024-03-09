@@ -1,18 +1,19 @@
 package BinarySearchTrees;
 
+/**
+ * One of the most Important BST Question!
+ */
 public class MergeTwoBSTs {
 
     static void bstToDLL(Node root, Node[] head) {
-        if (root == null)
-            return;
-
-        bstToDLL(root.left, head);
-        if (head[0] == null) head[0] = root;
-        else {
-            root.left = head[0];
-            head[0].right = root;
-        }
+        if (root == null) return;
         bstToDLL(root.right, head);
+
+        root.right = head[0];
+        if (head[0] != null) head[0].left = root;
+
+        head[0] = root;
+        bstToDLL(root.left, head);
     }
 
     static Node mergeLinkedList(Node head1, Node head2) {
@@ -30,11 +31,8 @@ public class MergeTwoBSTs {
             temp = temp.right;
         }
 
-        if (head1 == null) {
-            temp.right = head2;
-        } else {
-            temp.right = head1;
-        }
+        if (head1 == null) temp.right = head2;
+        else temp.right = head1;
         return merged.right;
     }
 
@@ -52,13 +50,13 @@ public class MergeTwoBSTs {
     }
 
     static Node mergeTrees(Node root1, Node root2, int m, int n) {
+        // Converting 1st tree to list.
         Node[] head1 = new Node[1];
-        head1[0] = null;
         bstToDLL(root1, head1);
         head1[0].left = null;
 
+        // Converting 2nd tree to list.
         Node[] head2 = new Node[1];
-        head2[0] = null;
         bstToDLL(root2, head2);
         head2[0].left = null;
 

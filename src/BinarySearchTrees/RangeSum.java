@@ -2,20 +2,14 @@ package BinarySearchTrees;
 
 public class RangeSum {
 
-    int sum = 0;
+    int rangeSum(Node root, int low, int high) {
+        if (root == null) return 0;
 
-    public static void main(String[] args) {
+        int sum = 0;
+        if (root.val >= low && root.val <= high) sum += root.val;
 
-    }
-
-    void rangeSum(Node root, int low, int high) {
-        if (root == null)
-            return;
-        if (root.val >= low && root.val <= high)
-            sum += root.val;
-        if (root.val > low)
-            rangeSum(root.left, low, high);
-        if (root.val < high)
-            rangeSum(root.right, low, high);
+        if (root.val > low) sum += rangeSum(root.left, low, high);
+        if (root.val < high) sum += rangeSum(root.right, low, high);
+        return sum;
     }
 }

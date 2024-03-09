@@ -3,6 +3,7 @@ package BinarySearchTrees;
 /**
  * In a Binary Search Tree (BST), the inorder predecessor of a node is the node with the largest value smaller than
  * the given node, and the inorder successor of a node is the node with the smallest value larger than the given node.
+ * If key is not present then print the range between which the given key lies in the bst, otherwise print -1.
  */
 public class PredecessorSuccessor {
     public static void findPreSuc(Node root, int key, Node[] preSuc) {

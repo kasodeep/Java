@@ -1,8 +1,7 @@
 package BinarySearchTrees;
 
 /**
- * In this the val of the node is changed from its original value to the sum of the elements
- * greater than element.
+ * In this the val of the node is changed from its original value to the sum of the elements greater than element.
  */
 public class GreaterTree {
     static int sum = 0;

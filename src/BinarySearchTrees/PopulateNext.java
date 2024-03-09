@@ -1,23 +1,16 @@
 package BinarySearchTrees;
 
-public class SuccessorAll {
+public class PopulateNext {
 
-    Node node = null;
+    static Node node = null;
 
-    public static void main(String[] args) {
+    public static void populateNext(Node root) {
+        if (root == null) return;
 
-    }
-
-    public void populateNext(Node root) {
-        if (root == null)
-            return;
         populateNext(root.left);
-        if (node != null) {
-            node.next = root;
-        }
+        if (node != null) node.next = root;
         node = root;
         populateNext(root.right);
-
     }
 
     static class Node {

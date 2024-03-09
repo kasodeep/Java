@@ -14,12 +14,4 @@ public class ArrayToBST {
         root.right = helper(arr, mid + 1, high);
         return root;
     }
-
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7};
-        int n = arr.length;
-
-        Node root = helper(arr, 0, n - 1);
-        Basics.inorder(root);
-    }
 }

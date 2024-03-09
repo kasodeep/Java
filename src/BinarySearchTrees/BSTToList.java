@@ -2,28 +2,23 @@ package BinarySearchTrees;
 
 public class BSTToList {
 
-    static Node prev;
+    static void inorder(Node curr, Node[] head) {
+        if (curr == null) return;
 
-    static void Inorder(Node curr) {
-        if (curr == null)
-            return;
-        Inorder(curr.left);
+        inorder(curr.right, head);
+        curr.right = head[0];
+        if (head[0] != null) head[0].left = null;
+        head[0] = curr;
 
-        prev.left = null;
-        prev.right = curr;
-        prev = curr;
-
-        Inorder(curr.right);
+        inorder(curr.left, head);
     }
 
     static Node flatten(Node parent) {
-        Node dummy = new Node(-1);
-        prev = dummy;
-        Inorder(parent);
+        Node[] head = new Node[1];
+        inorder(parent, head);
+        head[0].left = null;
 
-        prev.left = null;
-        prev.right = null;
-        return dummy.right;
+        return head[0];
     }
 
     public static void main(String[] args) {
