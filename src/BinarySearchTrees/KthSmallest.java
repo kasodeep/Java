@@ -9,27 +9,21 @@ public class KthSmallest {
 
         // Morris Traversal.
         while (curr != null) {
-
-            // If left is null.
             if (curr.left == null) {
                 count++;
-                if (count == k)
-                    kSmall = curr.val;
+                if (count == k) kSmall = curr.val;
                 curr = curr.right;
             } else {
                 Node pre = curr.left;
                 while (pre.right != null && pre.right != curr)
                     pre = pre.right;
-
-                // Link curr to predecessor.
                 if (pre.right == null) {
                     pre.right = curr;
                     curr = curr.left;
                 } else {
                     pre.right = null;
                     count++;
-                    if (count == k)
-                        kSmall = curr.val;
+                    if (count == k) kSmall = curr.val;
                     curr = curr.right;
                 }
             }

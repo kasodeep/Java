@@ -3,6 +3,9 @@ package BinarySearchTrees;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Crazy Traversal Technique!
+ * */
 public class MorrisTraversals {
 
     public static List<Integer> morris(Node root) {
@@ -10,21 +13,21 @@ public class MorrisTraversals {
         List<Integer> arr = new ArrayList<>();
 
         while (curr != null) {
-            if (curr.left != null) { // Find Predecessor
+            if (curr.left != null) { // Find Predecessor.
                 Node pre = curr.left;
                 while (pre.right != null && pre.right != curr) {
                     pre = pre.right;
                 }
-                if (pre.right == null) { // Connect Predecessor With Current
+                if (pre.right == null) { // Connect Predecessor With Current.
                     pre.right = curr;
                     curr = curr.left;
                 }
-                if (pre.right == curr) { // Unlink Predecessor With Current
+                if (pre.right == curr) { // Unlink Predecessor With Current.
                     pre.right = null;
                     arr.add(curr.val);
                     curr = curr.right;
                 }
-            } else { // No Predecessor
+            } else { // No Predecessor.
                 arr.add(curr.val);
                 curr = curr.right;
             }

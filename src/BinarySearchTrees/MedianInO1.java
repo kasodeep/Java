@@ -2,12 +2,13 @@ package BinarySearchTrees;
 
 public class MedianInO1 {
 
+    /**
+     * Function to count the number of nodes, using Morris Traversals.
+     */
     static int countNodes(Node root) {
         Node current, pre;
         int count = 0;
-
-        if (root == null)
-            return count;
+        if (root == null) return count;
 
         current = root;
         while (current != null) {
@@ -32,9 +33,11 @@ public class MedianInO1 {
         return count;
     }
 
+    /**
+     * Finding the median using Morris Traversal.
+     */
     public static float findMedian(Node root) {
-        if (root == null)
-            return 0;
+        if (root == null) return 0;
 
         int count = countNodes(root);
         int currCount = 0;
