@@ -7,7 +7,7 @@ public class MaximumRectangle1s {
     public static int maxHist(int[] arr, int n) {
         Stack<Integer> s = new Stack<>();
         s.push(-1);
-        int max_area = arr[0];
+        int maxArea = arr[0];
 
         int[] left_smaller = new int[n];
         int[] right_smaller = new int[n];
@@ -33,9 +33,9 @@ public class MaximumRectangle1s {
         }
 
         for (i = 0; i < n; i++) {
-            max_area = Math.max(max_area, arr[i] * (right_smaller[i] - left_smaller[i] - 1));
+            maxArea = Math.max(maxArea, arr[i] * (right_smaller[i] - left_smaller[i] - 1));
         }
-        return max_area;
+        return maxArea;
     }
 
 
@@ -44,8 +44,7 @@ public class MaximumRectangle1s {
 
         for (int i = 1; i < R; i++) {
             for (int j = 0; j < C; j++)
-                if (A[i][j] == 1)
-                    A[i][j] += A[i - 1][j];
+                if (A[i][j] == 1) A[i][j] += A[i - 1][j];
             result = Math.max(result, maxHist(A[i], C));
         }
         return result;

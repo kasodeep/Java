@@ -4,16 +4,6 @@ public class WordSearch {
 
     static private boolean[][] visited;
 
-    public static void main(String[] args) {
-        char[][] board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
-        String word = "ABCCED";
-        if (exist(board, word)) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
-    }
-
     public static boolean exist(char[][] board, String word) {
         int m = board.length;
         int n = board[0].length;

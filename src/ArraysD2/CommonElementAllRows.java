@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class CommonElementAllRows {
 
-    static void findCommon(int[][] mat, int M, int N) {
+    public static void findCommon(int[][] mat, int M, int N) {
         Map<Integer, Integer> mp = new HashMap<>();
         for (int j = 0; j < N; j++) mp.put(mat[0][j], 1);
 
@@ -17,10 +17,5 @@ public class CommonElementAllRows {
                     System.out.print(mat[i][j] + " ");
             }
         }
-    }
-
-    // Time Complexity - O(N^2), Auxiliary Space - O(N);
-    public static void main(String[] args) {
-
     }
 }

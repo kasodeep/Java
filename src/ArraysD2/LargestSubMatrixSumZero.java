@@ -14,6 +14,8 @@ public class LargestSubMatrixSumZero {
                 prefixSum[i][j] = a[i][j];
                 if (i > 0) prefixSum[i][j] += prefixSum[i - 1][j];
                 if (j > 0) prefixSum[i][j] += prefixSum[i][j - 1];
+
+                // Subtract, because we calculated twice.
                 if (i > 0 && j > 0) prefixSum[i][j] -= prefixSum[i - 1][j - 1];
             }
         }
