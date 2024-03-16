@@ -1,6 +1,9 @@
 package dp.knapsack01;
 
-public class PerfectSumProblem {
+/**
+ * The task is to count all subsets of the given array with a sum equal to a given sum.
+ * */
+public class SubsetSumCount {
 
     static final int mod = 1000000007;
 

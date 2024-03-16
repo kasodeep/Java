@@ -1,5 +1,8 @@
 package dp.knapsack01;
 
+/**
+ * We need to find a subset with sum equal to sum.
+ */
 public class SubsetSum {
 
     static boolean isSubsetSum(int[] set, int n, int sum) {

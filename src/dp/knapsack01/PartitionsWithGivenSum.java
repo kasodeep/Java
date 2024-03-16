@@ -1,5 +1,8 @@
 package dp.knapsack01;
 
+/**
+ * Can we partition such that the two arrays have difference equal to d
+ */
 public class PartitionsWithGivenSum {
 
     static int mod = 1000000007;

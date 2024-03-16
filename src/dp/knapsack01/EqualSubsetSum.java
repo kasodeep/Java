@@ -2,7 +2,10 @@ package dp.knapsack01;
 
 import java.util.Arrays;
 
-public class EqualPartitionSum {
+/**
+ * Find the two subsets of the array that have the same sum.
+ */
+public class EqualSubsetSum {
 
     static int[][] dp;
 

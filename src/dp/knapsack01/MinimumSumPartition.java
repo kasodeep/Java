@@ -1,5 +1,8 @@
 package dp.knapsack01;
 
+/**
+ * Find all the subsets with minimum sum difference.
+ */
 public class MinimumSumPartition {
 
     public static int minDifference(int[] arr, int n) {
@@ -7,6 +10,7 @@ public class MinimumSumPartition {
         for (int i = 0; i < n; i++) sum += arr[i];
 
         boolean[][] t = new boolean[n + 1][sum + 1];
+
         for (int i = 0; i <= n; i++) t[i][0] = true;
         for (int i = 1; i <= sum; i++) t[0][i] = false;
 
