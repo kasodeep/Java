@@ -4,18 +4,18 @@ import static LinkedLists.ReverseList.reverseList;
 
 public class TwinSum {
 
-    public static int pairSum(Node<Integer> head) {
-        Node<Integer> fast = head;
-        Node<Integer> slow = head;
+    public static int pairSum(Node head) {
+        Node fast = head;
+        Node slow = head;
 
         while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        Node<Integer> half = reverseList(slow.next);
-        Node<Integer> temp1 = head;
-        Node<Integer> temp2 = half;
+        Node half = reverseList(slow.next);
+        Node temp1 = head;
+        Node temp2 = half;
         int ans = 0;
 
         while (temp2 != null) {

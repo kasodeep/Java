@@ -2,8 +2,8 @@ package LinkedLists;
 
 public class SwapNodes {
 
-    public static Node<Integer> swapNodes(Node<Integer> head, int k) {
-        Node<Integer> x = head, y = head, t = head;
+    public static Node swapNodes(Node head, int k) {
+        Node x = head, y = head, t = head;
 
         while (k > 1) {
             x = x.next;

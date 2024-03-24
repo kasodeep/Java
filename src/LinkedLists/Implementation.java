@@ -5,37 +5,18 @@ package LinkedLists;
  */
 public class Implementation {
 
-    public static void main(String[] args) {
-        linkedList<String> list = new linkedList<>();
-        list.insertAtBegin("Parth");
-        list.insertAtBegin("Deep");
-        list.insertAtEnd("Kesha");
-        list.insertAtBegin("Shruti");
-        list.insertAtEnd("Tej");
+    public static class linkedList {
 
-        list.insertAt(2, "Het");
-        list.insertAt(0, "Dada");
-        list.deleteAt(2);
-        System.out.println(list.getAt(2));
-        list.display();
-
-        list.clear();
-        list.add("Deep");
-        list.display();
-    }
-
-    public static class linkedList<T> {
-
-        Node<T> head = null;
-        Node<T> tail = null;
+        Node head = null;
+        Node tail = null;
         int size = 0;
 
         /**
          * @param data - It the data to be inserted in the linked list.
          *             O(1) - > tail is Given, O(n) -> head is Given.
          */
-        void insertAtEnd(T data) {
-            Node<T> temp = new Node<>(data);
+        void insertAtEnd(int data) {
+            Node temp = new Node(data);
             if (head == null) {
                 head = temp;
             } else {
@@ -49,8 +30,8 @@ public class Implementation {
          * @param data - It the data to be inserted in the linked list.
          *             O(n) - > tail is Given, O(1) -> head is Given.
          */
-        void insertAtBegin(T data) {
-            Node<T> temp = new Node<>(data);
+        void insertAtBegin(int data) {
+            Node temp = new Node(data);
             if (head == null) {
                 tail = temp;
             } else {
@@ -65,9 +46,9 @@ public class Implementation {
          * @param data  - It is the data of the new node.
          *              Time Complexity - O(n), Space Complexity - O(1)
          */
-        void insertAt(int index, T data) {
-            Node<T> node = new Node<>(data);
-            Node<T> temp = head;
+        void insertAt(int index, int data) {
+            Node node = new Node(data);
+            Node temp = head;
 
             if (index == 0) {
                 insertAtBegin(data);
@@ -92,7 +73,7 @@ public class Implementation {
          *
          * @param index - It is the index of the element to be returned.
          */
-        T getAt(int index) {
+        int getAt(int index) {
             if (index == 0) {
                 return head.data;
             } else if (index == size) {
@@ -101,7 +82,7 @@ public class Implementation {
                 throw new IndexOutOfBoundsException("Please Enter Valid Index.");
             }
 
-            Node<T> temp = head;
+            Node temp = head;
             for (int i = 0; i < index; i++) {
                 temp = temp.next;
             }
@@ -121,7 +102,7 @@ public class Implementation {
                 return;
             }
 
-            Node<T> temp = head;
+            Node temp = head;
             for (int i = 0; i < index - 1; i++) {
                 temp = temp.next;
             }
@@ -132,7 +113,7 @@ public class Implementation {
          * Utility function to print the linkedList.
          */
         void display() {
-            Node<T> temp = head;
+            Node temp = head;
             System.out.print("[ ");
 
             while (temp != null) {
@@ -145,7 +126,7 @@ public class Implementation {
         /**
          * Function to add the element at last.
          */
-        void add(T data) {
+        void add(int data) {
             insertAtEnd(data);
         }
 
