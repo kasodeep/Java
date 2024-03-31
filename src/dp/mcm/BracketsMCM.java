@@ -1,4 +1,4 @@
-package dp;
+package dp.mcm;
 
 public class BracketsMCM {
 
