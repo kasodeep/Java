@@ -1,19 +1,33 @@
 package dp;
 
+import java.util.Arrays;
+
 public class BuyingAndSellingKTimes {
 
-    static int maxProfit(int K, int N, int[] A) {
-        int profit = 0;
-        int[][] dp = new int[K + 1][N];
+    public static int maximumProfit(int[] prices, int n, int k) {
+        int[][][] dp = new int[n][2][k + 1];
 
-        for (int i = 1; i <= K; i++) {
-            int maxV = Integer.MIN_VALUE;
-            for (int j = 1; j < N; j++) {
-                dp[i][j] = dp[i][j - 1];
-                if (dp[i - 1][j - 1] - A[j - 1] > maxV) maxV = dp[i - 1][j - 1] - A[j - 1];
-                dp[i][j] = Math.max(dp[i][j], maxV + A[j]);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 2; j++) {
+                Arrays.fill(dp[i][j], -1);
             }
         }
-        return dp[K][N - 1];
+
+        return getAns(prices, n, 0, 0, k, dp);
+    }
+
+    public static int getAns(int[] prices, int n, int ind, int buy, int cap, int[][][] dp) {
+        if (ind == n || cap == 0) return 0;
+        if (dp[ind][buy][cap] != -1) return dp[ind][buy][cap];
+
+        int profit;
+        if (buy == 0) {
+            profit = Math.max(getAns(prices, n, ind + 1, 0, cap, dp), -prices[ind] + getAns(prices, n, ind + 1, 1, cap, dp));
+        } else {
+            profit = Math.max(getAns(prices, n, ind + 1, 1, cap, dp), prices[ind] + getAns(prices, n, ind + 1, 0, cap - 1, dp));
+        }
+
+        dp[ind][buy][cap] = profit;
+        return profit;
     }
 }
