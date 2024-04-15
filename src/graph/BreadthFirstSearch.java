@@ -11,34 +11,24 @@ import java.util.Queue;
  */
 public class BreadthFirstSearch {
 
-    // Providing start for disconnected components.
-    public static void bfs(ArrayList<Edge>[] graph, boolean[] isVisited, int start) {
+    // Time Complexity - O(V + E)
+    public static ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         Queue<Integer> q = new LinkedList<>();
-        q.add(start);
+        ArrayList<Integer> list = new ArrayList<>();
+
+        boolean[] isVisited = new boolean[V];
+        q.add(0);
 
         while (!q.isEmpty()) {
             int curr = q.remove();
             if (!isVisited[curr]) {
-                System.out.print(curr + " ");
+                list.add(curr);
                 isVisited[curr] = true;
 
-                for (int i = 0; i < graph[curr].size(); i++) {
-                    Edge e = graph[curr].get(i);
-                    q.add(e.dest);
-                }
+                ArrayList<Integer> neighbours = adj.get(curr);
+                for (int dest : neighbours) q.add(dest);
             }
         }
-    }
-
-    // Time Complexity - O(V + E)
-    public static void main(String[] args) {
-        int V = 7;
-        @SuppressWarnings("unchecked") ArrayList<Edge>[] graph = new ArrayList[V];
-        AdjacencyList.createGraph(graph);
-
-        boolean[] isVisited = new boolean[V];
-        for (int i = 0; i < V; i++) {
-            if (!isVisited[i]) bfs(graph, isVisited, i);
-        }
+        return list;
     }
 }

@@ -7,26 +7,21 @@ import java.util.ArrayList;
  */
 public class DepthFirstSearch {
 
-    public static void dfs(ArrayList<Edge>[] graph, boolean[] isVisited, int curr) {
-        System.out.print(curr + " ");
-        isVisited[curr] = true;
+    // Time Complexity - O(V + E)
+    public static ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
+        ArrayList<Integer> list = new ArrayList<>();
+        boolean[] isVisited = new boolean[V];
 
-        for (int i = 0; i < graph[curr].size(); i++) {
-            Edge e = graph[curr].get(i);
-            if (!isVisited[e.dest])
-                dfs(graph, isVisited, e.dest);
-        }
+        solve(adj, isVisited, 0, list);
+        return list;
     }
 
-    // Time Complexity - O(V + E)
-    public static void main(String[] args) {
-        int V = 7;
-        @SuppressWarnings("unchecked") ArrayList<Edge>[] graph = new ArrayList[V];
-        AdjacencyList.createGraph(graph);
+    public static void solve(ArrayList<ArrayList<Integer>> adj, boolean[] isVisited, int curr, ArrayList<Integer> list) {
+        list.add(curr);
+        isVisited[curr] = true;
 
-        boolean[] isVisited = new boolean[V];
-        for (int i = 0; i < V; i++) {
-            if (!isVisited[i]) dfs(graph, isVisited, i);
-        }
+        ArrayList<Integer> neighbours = adj.get(curr);
+        for (int dest : neighbours)
+            if (!isVisited[dest]) solve(adj, isVisited, dest, list);
     }
 }
