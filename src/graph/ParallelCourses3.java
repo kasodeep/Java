@@ -5,16 +5,14 @@ import java.util.*;
 public class ParallelCourses3 {
 
     public static int minimumTime(int n, int[][] relations, int[] time) {
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        for (int i = 0; i < n; i++) {
-            graph.put(i, new ArrayList<>());
-        }
-
+        ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
         int[] indegree = new int[n];
+
+        for (int i = 0; i < n; i++) graph.add(new ArrayList<>());
+
         for (int[] edge : relations) {
             int x = edge[0] - 1;
             int y = edge[1] - 1;
-
             graph.get(x).add(y);
             indegree[y]++;
         }
@@ -35,7 +33,6 @@ public class ParallelCourses3 {
             for (int neighbor : graph.get(node)) {
                 maxTime[neighbor] = Math.max(maxTime[neighbor], maxTime[node] + time[neighbor]);
                 indegree[neighbor]--;
-
                 if (indegree[neighbor] == 0) {
                     queue.add(neighbor);
                 }
@@ -47,10 +44,6 @@ public class ParallelCourses3 {
             ans = Math.max(ans, maxTime[node]);
         }
         return ans;
-    }
-
-    public static void main(String[] args) {
-
     }
 }
 

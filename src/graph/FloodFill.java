@@ -18,8 +18,4 @@ public class FloodFill {
         fill(image, sr, sc - 1, color, cur);
         fill(image, sr, sc + 1, color, cur);
     }
-
-    public static void main(String[] args) {
-
-    }
 }
