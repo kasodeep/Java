@@ -14,8 +14,8 @@ import java.util.PriorityQueue;
 public class DijkstrasAlgorithm {
 
     // Time Complexity - O(E + E * logV)
-    static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S) {
-        PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(p -> p.dist));
+    static int[] dijkstra(int V, ArrayList<ArrayList<Pair>> adj, int S) {
+        PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(p -> p.weight));
         boolean[] isVisited = new boolean[V];
 
         int[] dist = new int[V];
@@ -25,18 +25,19 @@ public class DijkstrasAlgorithm {
 
         pq.add(new Pair(S, 0));
         while (!pq.isEmpty()) {
-            Pair curr = pq.poll();
+            Pair p = pq.poll();
+            int curr = p.vertex;
 
-            if (!isVisited[curr.node]) {
-                isVisited[curr.node] = true;
+            if (!isVisited[curr]) {
+                isVisited[curr] = true;
 
-                for (int i = 0; i < adj.get(curr.node).size(); i++) {
-                    ArrayList<Integer> e = adj.get(curr.node).get(i);
+                for (int i = 0; i < adj.get(curr).size(); i++) {
+                    Pair n = adj.get(curr).get(i);
 
                     // Relaxation.
-                    if (dist[curr.node] + e.get(1) < dist[e.get(0)])
-                        dist[e.get(0)] = dist[curr.node] + e.get(1);
-                    pq.add(new Pair(e.get(0), dist[e.get(0)]));
+                    if (dist[curr] + n.weight < dist[n.vertex])
+                        dist[n.vertex] = dist[curr] + n.weight;
+                    pq.add(new Pair(n.vertex, dist[n.weight]));
                 }
             }
         }
@@ -45,12 +46,12 @@ public class DijkstrasAlgorithm {
     }
 
     public static class Pair {
-        int node;
-        int dist;
+        int vertex;
+        int weight;
 
-        public Pair(int node, int dist) {
-            this.node = node;
-            this.dist = dist;
+        public Pair(int vertex, int weight) {
+            this.vertex = vertex;
+            this.weight = weight;
         }
     }
 }

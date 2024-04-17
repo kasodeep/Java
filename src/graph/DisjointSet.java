@@ -8,13 +8,13 @@ public class DisjointSet {
     public DisjointSet(int n) {
         rank = new int[n];
         parent = new int[n];
+
         this.n = n;
         makeSet();
     }
 
     private void makeSet() {
         for (int i = 0; i < n; i++) {
-            // Initially, all elements are in their own set.
             parent[i] = i;
         }
     }
@@ -25,12 +25,8 @@ public class DisjointSet {
     }
 
     void union(int x, int y) {
-        // Find representatives of two sets
         int xRoot = find(x), yRoot = find(y);
-
-        // Elements are in the same set, no need to unite anything.
-        if (xRoot == yRoot)
-            return;
+        if (xRoot == yRoot) return;
 
         if (rank[xRoot] < rank[yRoot])
             parent[xRoot] = yRoot;
