@@ -1,6 +1,7 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -13,77 +14,43 @@ import java.util.PriorityQueue;
 public class DijkstrasAlgorithm {
 
     // Time Complexity - O(E + E * logV)
-    public static void dijkstra(ArrayList<EdgeW>[] graph, int src, int V) {
-        PriorityQueue<Pair> pq = new PriorityQueue<>();
+    static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S) {
+        PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(p -> p.dist));
         boolean[] isVisited = new boolean[V];
 
         int[] dist = new int[V];
         for (int i = 0; i < V; i++) {
-            if (i != src) dist[i] = Integer.MAX_VALUE;
+            if (i != S) dist[i] = Integer.MAX_VALUE;
         }
 
-        pq.add(new Pair(src, 0));
+        pq.add(new Pair(S, 0));
         while (!pq.isEmpty()) {
             Pair curr = pq.poll();
 
             if (!isVisited[curr.node]) {
                 isVisited[curr.node] = true;
 
-                for (int i = 0; i < graph[curr.node].size(); i++) {
-                    EdgeW e = graph[curr.node].get(i);
+                for (int i = 0; i < adj.get(curr.node).size(); i++) {
+                    ArrayList<Integer> e = adj.get(curr.node).get(i);
 
                     // Relaxation.
-                    if (dist[e.src] + e.wt < dist[e.dest]) dist[e.dest] = dist[e.src] + e.wt;
-                    pq.add(new Pair(e.dest, dist[e.dest]));
+                    if (dist[curr.node] + e.get(1) < dist[e.get(0)])
+                        dist[e.get(0)] = dist[curr.node] + e.get(1);
+                    pq.add(new Pair(e.get(0), dist[e.get(0)]));
                 }
             }
         }
 
-        for (int i = 0; i < V; i++) {
-            System.out.print(dist[i] + " ");
-        }
-        System.out.println();
+        return dist;
     }
 
-    public static void main(String[] args) {
-        int V = 6;
-        @SuppressWarnings("unchecked") ArrayList<EdgeW>[] graph = new ArrayList[V];
-        createGraph(graph);
-        dijkstra(graph, 0, V);
-    }
-
-    private static void createGraph(ArrayList<EdgeW>[] graph) {
-        for (int i = 0; i < graph.length; i++) {
-            graph[i] = new ArrayList<>();
-        }
-
-        graph[0].add(new EdgeW(0, 1, 2));
-        graph[0].add(new EdgeW(0, 2, 4));
-
-        graph[1].add(new EdgeW(1, 3, 7));
-        graph[1].add(new EdgeW(1, 2, 1));
-
-        graph[2].add(new EdgeW(2, 4, 3));
-        graph[3].add(new EdgeW(3, 5, 1));
-
-        graph[4].add(new EdgeW(4, 3, 2));
-        graph[4].add(new EdgeW(4, 5, 5));
-    }
-
-    public static class Pair implements Comparable<Pair> {
-
+    public static class Pair {
         int node;
-
         int dist;
 
         public Pair(int node, int dist) {
             this.node = node;
             this.dist = dist;
-        }
-
-        @Override
-        public int compareTo(Pair p2) {
-            return this.dist - p2.dist;
         }
     }
 }
