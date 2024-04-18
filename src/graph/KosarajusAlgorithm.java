@@ -14,7 +14,7 @@ import java.util.Stack;
  */
 public class KosarajusAlgorithm {
 
-    public static void kosarajuAlgo(ArrayList<Edge>[] graph, int V) {
+    public static void kosarajuAlgo(ArrayList<ArrayList<Integer>> graph, int V) {
         Stack<Integer> st = new Stack<>();
         boolean[] isVisited = new boolean[V];
 
@@ -24,16 +24,15 @@ public class KosarajusAlgorithm {
         }
 
         // Step 2 - Time Complexity - O(V + E)
-        @SuppressWarnings("unchecked") ArrayList<Edge>[] transpose = new ArrayList[V];
-        for (int i = 0; i < transpose.length; i++) {
+        ArrayList<ArrayList<Integer>> transpose = new ArrayList<>();
+        for (int i = 0; i < V; i++) {
             isVisited[i] = false;
-            transpose[i] = new ArrayList<>();
+            transpose.add(new ArrayList<>());
         }
 
         for (int i = 0; i < V; i++) {
-            for (int j = 0; j < graph[i].size(); j++) {
-                Edge e = graph[i].get(j);
-                transpose[e.dest].add(new Edge(e.dest, e.src));
+            for (int dest : graph.get(i)) {
+                transpose.get(dest).add(i);
             }
         }
 
@@ -41,29 +40,10 @@ public class KosarajusAlgorithm {
         while (!st.isEmpty()) {
             int curr = st.pop();
             if (!isVisited[curr]) {
-                DepthFirstSearch.dfs(transpose, isVisited, curr);
-                System.out.println();
+                ArrayList<Integer> list = new ArrayList<>();
+                DepthFirstSearch.solve(transpose, isVisited, curr, list);
+                System.out.println(list);
             }
         }
-    }
-
-    public static void main(String[] args) {
-        int V = 5;
-        @SuppressWarnings("unchecked") ArrayList<Edge>[] graph = new ArrayList[V];
-        createGraphDirected(graph);
-        kosarajuAlgo(graph, V);
-    }
-
-    private static void createGraphDirected(ArrayList<Edge>[] graph) {
-        for (int i = 0; i < graph.length; i++) {
-            graph[i] = new ArrayList<>();
-        }
-
-        graph[0].add(new Edge(0, 2));
-        graph[0].add(new Edge(0, 3));
-
-        graph[1].add(new Edge(1, 0));
-        graph[2].add(new Edge(2, 1));
-        graph[3].add(new Edge(3, 4));
     }
 }
