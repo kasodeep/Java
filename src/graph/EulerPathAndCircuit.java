@@ -32,8 +32,4 @@ public class EulerPathAndCircuit {
         for (int num : arr) sum += num;
         return sum;
     }
-
-    public static void main(String[] args) {
-
-    }
 }
