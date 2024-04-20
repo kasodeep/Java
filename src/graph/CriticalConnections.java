@@ -34,23 +34,24 @@ public class CriticalConnections {
         vis[curr] = true;
         dt[curr] = low[curr] = ++time;
 
-        for (int node : adj.get(curr)) {
-            if (node == parent) continue;
+        for (int dest : adj.get(curr)) {
+            if (dest == parent) continue;
 
-            if (!vis[node]) {
-                dfs(adj, vis, dt, low, node, curr, ans);
-                low[curr] = Math.min(low[curr], low[node]);
+            if (!vis[dest]) {
+                dfs(adj, vis, dt, low, dest, curr, ans);
+                low[curr] = Math.min(low[curr], low[dest]);
 
                 // Bridge condition.
-                if (low[node] > dt[curr]) {
+                if (dt[curr] < low[dest]) {
                     ArrayList<Integer> bridge = new ArrayList<>();
                     bridge.add(curr);
-                    bridge.add(node);
+                    bridge.add(dest);
+
                     Collections.sort(bridge);
                     ans.add(bridge);
                 }
             } else {
-                low[curr] = Math.min(low[curr], dt[node]);
+                low[curr] = Math.min(low[curr], dt[dest]);
             }
         }
     }
