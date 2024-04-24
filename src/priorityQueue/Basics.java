@@ -6,7 +6,6 @@ import java.util.PriorityQueue;
 public class Basics {
 
     public static void main(String[] args) {
-
         // DEFAULT: Min Heap.
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         PriorityQueue<Integer> temp = new PriorityQueue<>(20);
@@ -24,9 +23,9 @@ public class Basics {
         PriorityQueue<Student> studentPQ = new PriorityQueue<>(new StudentComparator());
         Student student1 = new Student("Deep", 29, 93);
         Student student2 = new Student("Parth", 30, 85);
+
         studentPQ.add(student1);
         studentPQ.add(student2);
-        int tree = 3;
         System.out.println(studentPQ);
     }
 
@@ -43,16 +42,11 @@ public class Basics {
 
         @Override
         public String toString() {
-            return "Student{ " +
-                    "name='" + name + '\'' +
-                    ", rollNo=" + rollNo +
-                    ", marks=" + marks +
-                    '}';
+            return "Student{ " + "name='" + name + '\'' + ", rollNo=" + rollNo + ", marks=" + marks + '}';
         }
     }
 
     private static class StudentComparator implements Comparator<Student> {
-
         // Max Heap: return 1;
         // Min Heap: return -1;
         public int compare(Student s1, Student s2) {

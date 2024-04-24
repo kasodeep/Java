@@ -20,6 +20,7 @@ public class K1thAndK2th {
 
         pq.remove();
         int sum = 0;
+
         while (pq.size() != k1) sum += pq.remove();
         System.out.println(sum);
     }

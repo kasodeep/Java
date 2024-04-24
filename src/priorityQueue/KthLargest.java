@@ -20,6 +20,5 @@ public class KthLargest {
             }
             pq.add(element);
         }
-        System.out.println(pq.peek());
     }
 }

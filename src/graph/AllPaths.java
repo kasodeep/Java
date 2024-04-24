@@ -7,29 +7,19 @@ import java.util.ArrayList;
  */
 public class AllPaths {
 
-    public static void allPaths(ArrayList<Edge>[] graph, int curr, boolean[] isVisited, String path, int target) {
+    // Time Complexity - O(V * V)
+    public static void allPaths(ArrayList<ArrayList<Integer>> graph, int curr, boolean[] isVisited, String path, int target) {
         if (curr == target) {
             System.out.println(path);
             return;
         }
 
-        for (int i = 0; i < graph[curr].size(); i++) {
-            Edge e = graph[curr].get(i);
-            if (!isVisited[e.dest]) {
+        for (int dest : graph.get(curr)) {
+            if (!isVisited[dest]) {
                 isVisited[curr] = true;
-                allPaths(graph, e.dest, isVisited, path + " " + e.dest, target);
+                allPaths(graph, dest, isVisited, path + " " + dest, target);
                 isVisited[curr] = false;
             }
         }
-    }
-
-    // Time Complexity - O(V * V)
-    public static void main(String[] args) {
-        int V = 7;
-        @SuppressWarnings("unchecked") ArrayList<Edge>[] graph = new ArrayList[V];
-        AdjacencyList.createGraph(graph);
-
-        int src = 0, target = 5;
-        allPaths(graph, src, new boolean[V], "0", target);
     }
 }

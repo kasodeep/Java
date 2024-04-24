@@ -18,9 +18,7 @@ public class KOperations {
             pq.add(f * s);
         }
 
-        while(pq.size() != 1){
-            pq.remove();
-        }
+        while (pq.size() != 1) pq.remove();
         System.out.println(pq.peek());
     }
 }

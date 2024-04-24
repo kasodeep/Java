@@ -1,32 +1,33 @@
 package Heaps;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class HeapSort {
 
-    public static void heapSort(List<Integer> arr) {
-        Heapify.heapify(arr);
-        int n = arr.size() - 1;
+    public static void heapify(int[] arr, int n, int i) {
+        int largest = i;
+        int l = 2 * i + 1;
+        int r = 2 * i + 2;
 
-        for (int i = n; i > 0; i--) {
-            Basics.swap(arr, 0, i);
-            DeletionMaxHeap.pushDown(arr, 0, i);
+        if (l < n && arr[l] > arr[largest]) largest = l;
+        if (r < n && arr[r] > arr[largest]) largest = r;
+
+        if (largest != i) {
+            int swap = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = swap;
+
+            heapify(arr, n, largest);
         }
     }
 
-    // Time Complexity - O(N * logN)
-    public static void main(String[] args) {
-        List<Integer> heap = new ArrayList<>();
-        heap.add(60);
-        heap.add(10);
-        heap.add(80);
-        heap.add(50);
-        heap.add(5);
-        heap.add(20);
-        heap.add(70);
-        System.out.println(heap);
-        heapSort(heap);
-        System.out.println(heap);
+    public static void heapSort(int[] arr, int n) {
+        for (int i = n / 2 - 1; i >= 0; i--)
+            heapify(arr, n, i);
+
+        for (int i = n - 1; i > 0; i--) {
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+            heapify(arr, i, 0);
+        }
     }
 }
