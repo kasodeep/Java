@@ -3,6 +3,9 @@ package priorityQueue;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
+/**
+ * Important question to be considered.
+ */
 public class MergeKSortedArrays {
 
     public static ArrayList<Integer> mergeKArrays(int[][] arr, int K) {
