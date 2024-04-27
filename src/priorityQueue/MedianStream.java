@@ -1,61 +1,34 @@
 package priorityQueue;
 
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.PriorityQueue;
 
 /*
  * Very Important Question For Interview.
- * Another Solution on Leet-Code.
  * */
 public class MedianStream {
 
-    private static void add(PriorityQueue<Integer> leftPq, PriorityQueue<Integer> rightPq, int element) {
-        if (leftPq.isEmpty()) {
-            leftPq.add(element);
-            return;
-        }
+    private static final PriorityQueue<Integer> small = new PriorityQueue<>(Collections.reverseOrder());
+    private static final PriorityQueue<Integer> large = new PriorityQueue<>();
+    private static boolean even = true;
 
-        if (element < leftPq.peek()) {
-            if (leftPq.size() == rightPq.size()) {
-                leftPq.add(element);
-            } else {
-                rightPq.add(leftPq.remove());
-                leftPq.add(element);
-            }
+    //Function to insert heap.
+    public static void insertHeap(int num) {
+        if (even) {
+            large.offer(num);
+            small.offer(large.poll());
         } else {
-            if (rightPq.size() == leftPq.size()) {
-                leftPq.add(rightPq.remove());
-                rightPq.add(element);
-            } else {
-                rightPq.add(element);
-            }
+            small.offer(num);
+            large.offer(small.poll());
         }
+        even = !even;
     }
 
-    private static double median(PriorityQueue<Integer> leftPq, PriorityQueue<Integer> rightPq) {
-        if (leftPq.isEmpty()) return -1;
-
-        if (leftPq.size() == rightPq.size()) {
-            return (double) (leftPq.peek() + rightPq.peek()) / 2;
-        } else {
-            return leftPq.peek();
-        }
-    }
-
-    // Time Complexity - O(logN), Auxiliary Space - O(N)
-    public static void main(String[] args) {
-        PriorityQueue<Integer> leftPq = new PriorityQueue<>(Comparator.reverseOrder());
-        PriorityQueue<Integer> rightPq = new PriorityQueue<>();
-
-        add(leftPq, rightPq, 15);
-        add(leftPq, rightPq, 12);
-        System.out.println(median(leftPq, rightPq));
-
-        add(leftPq, rightPq, 17);
-        add(leftPq, rightPq, 20);
-        System.out.println(median(leftPq, rightPq));
-
-        add(leftPq, rightPq, 25);
-        System.out.println(median(leftPq, rightPq));
+    //Function to return Median.
+    public static double getMedian() {
+        if (even)
+            return (small.peek() + large.peek()) / 2.0;
+        else
+            return small.peek();
     }
 }
