@@ -2,58 +2,49 @@ package Trees;
 
 import java.util.*;
 
-/**
- * Very Useful Concept, to represent Trees as Strings.
- */
 public class SerializeDeserialize {
 
-    public static String serialize(Node root) {
-        if (root == null) return null;
+    public static ArrayList<Integer> serialize(Node root) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Queue<Node> q = new LinkedList<>();
 
-        Stack<Node> s = new Stack<>();
-        s.push(root);
-        List<String> l = new ArrayList<>();
+        q.add(root);
+        while (q.size() > 0) {
+            Node curr = q.poll();
+            if (curr == null) list.add(0);
+            else list.add(curr.val);
 
-        while (!s.isEmpty()) {
-            Node t = s.pop();
-
-            if (t == null) {
-                l.add("#");
-            } else {
-                l.add(String.valueOf(t.val));
-                s.push(t.right);
-                s.push(t.left);
+            if (curr != null) {
+                q.add(curr.left);
+                q.add(curr.right);
             }
         }
-        return String.join(",", l);
+        return list;
     }
 
-    public static Node deserialize(String data) {
-        if (data == null)
-            return null;
-        String[] arr = data.split(",");
-        return helper(arr, 0);
-    }
+    public static Node deSerialize(ArrayList<Integer> a) {
+        Node root = new Node(a.get(0));
+        Queue<Node> q = new LinkedList<>();
 
-    public static Node helper(String[] arr, int t) {
-        if (arr[t].equals("#"))
-            return null;
+        q.add(root);
+        int i = 1;
 
-        Node root = new Node(Integer.parseInt(arr[t]));
-        root.left = helper(arr, t + 1);
-        root.right = helper(arr, t + 2);
-        return root;
-    }
+        while (!q.isEmpty() && i < a.size()) {
+            Node p = q.remove();
+            if (a.get(i) == 0) p.left = null;
+            else {
+                p.left = new Node(a.get(i));
+                q.add(p.left);
+            }
 
-    static void inorder(Node root) {
-        if (root != null) {
-            inorder(root.left);
-            System.out.print(root.val + " ");
-            inorder(root.right);
+            i++;
+            if (a.get(i) == 0) p.right = null;
+            else {
+                p.right = new Node(a.get(i));
+                q.add(p.right);
+            }
+            i++;
         }
-    }
-
-    public static void main(String[] args) {
-
+        return root;
     }
 }
