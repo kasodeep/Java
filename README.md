@@ -43,6 +43,29 @@
 * [Palindromic Partitioning](https://github.com/kasodeep/Java/blob/master/src/dp/mcm/PalindromicPartitioning.java)
 * [Scrambled String Problem](https://github.com/kasodeep/Java/blob/master/src/dp/mcm/ScrambledStringProblem.java)
 
+### **GRID PROBLEMS**:
+* [Gold Mine Problem](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/GoldMineProblem.java)
+* [Matrices Square Count](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MatricesSquareCount.java)
+* [Maximum Sum Path Row](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MaxSumPathRow.java)
+* [Minimum Points To Reach](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MinimumPointsToReach.java)
+* [Mobile Numeric Keypad](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MobileNumericKeypad.java)
 
+### **RANDOM PROBLEMS**:
+* [Assembly Line Scheduling](https://github.com/kasodeep/Java/blob/master/src/dp/AssemblyLineScheduling.java)
+* [Buying and Selling K Times](https://github.com/kasodeep/Java/blob/master/src/dp/BuyingAndSellingKTimes.java)
+* [Expression Matching](https://github.com/kasodeep/Java/blob/master/src/dp/ExpressionMatching.java)
+* [Geek Game Of Coins](https://github.com/kasodeep/Java/blob/master/src/dp/GeekGameOfCoins.java)
+* [K Inverse Pairs](https://github.com/kasodeep/Java/blob/master/src/dp/KInversePairs.java)
+* [Longest Alternating Subsequence](https://github.com/kasodeep/Java/blob/master/src/dp/LongestAlternatingSubsequence.java)
+* [Max Difference Ones Zeros](https://github.com/kasodeep/Java/blob/master/src/dp/MaxDifferenceOnesZeros.java)
+* [nCr](https://github.com/kasodeep/Java/blob/master/src/dp/nCr.java)
+* [nPr](https://github.com/kasodeep/Java/blob/master/src/dp/nPr.java)
+* [Optimal Strategy For A Game](https://github.com/kasodeep/Java/blob/master/src/dp/OptimalStrategyForAGame.java)
+* [Painting The Fence](https://github.com/kasodeep/Java/blob/master/src/dp/PaintingTheFence.java)
+* [Smallest Sum Kadane](https://github.com/kasodeep/Java/blob/master/src/dp/SmallestSumKadane.java)
+* [String Compression Two](https://github.com/kasodeep/Java/blob/master/src/dp/StringCompressionTwo.java)
+* [Student Attendance 2](https://github.com/kasodeep/Java/blob/master/src/dp/StudentAttendance2.java)
+* [Wild Pattern Matching](https://github.com/kasodeep/Java/blob/master/src/dp/WildPatternMatching.java)
 
+### Try to solve __DIGIT DP & BIT-MASKING FROM CP PRACTICE (cses)__.
 

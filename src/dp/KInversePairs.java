@@ -2,23 +2,28 @@ package dp;
 
 public class KInversePairs {
 
-    public static int kInversePairs(int n, int k) {
-        int[][] dp = new int[n + 1][k + 1];
-        dp[0][0] = 1;
-        int mod = 1000000007;
+    private Integer[][] dp;
 
-        for (int i = 1; i <= n; i++) {
-            int val = 0;
+    public int kInversePairs(int n, int k) {
+        dp = new Integer[n + 1][k + 1];
+        return getInversions(n, k);
+    }
 
-            for (int j = 0; j <= k; j++) {
-                val += dp[i - 1][j];
-                if (j >= i) val -= dp[i - 1][j - i];
-                if (val < 0) val += mod;
+    private int getInversions(int n, int k) {
+        if (n == 0) return 0;
+        if (k == 0) return 1;
 
-                val = (val % mod);
-                dp[i][j] = val;
-            }
+        if (dp[n][k] != null) {
+            return dp[n][k];
         }
-        return dp[n][k];
+
+        int result = 0;
+
+        for (int inversion = 0; inversion <= Math.min(k, n - 1); inversion++) {
+            result += getInversions(n - 1, k - inversion);
+            int MOD = (int) (1e9 + 7);
+            result %= MOD;
+        }
+        return dp[n][k] = result;
     }
 }
