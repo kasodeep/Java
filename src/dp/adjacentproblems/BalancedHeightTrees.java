@@ -1,5 +1,12 @@
 package dp.adjacentproblems;
 
+/**
+ * Since the height difference should be less than 1.
+ * The possible heights of left anf right tree are as follows:
+ * (h - 1) * (h - 2)
+ * (h - 2) * (h - 1)
+ * (h - 1) * (h - 1)
+ */
 public class BalancedHeightTrees {
 
     static long countBT(int h) {

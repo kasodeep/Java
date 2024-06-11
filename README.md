@@ -1,10 +1,12 @@
 # The complete DSA for placement (Goal: Shh!🤫 It's a secret):
+
 - The topics covered have notes associated which will be published at the appropriate time.
 - All the topics have Easy, Medium & Hard level questions across various sites such as leetcode, geeksforgeeks, etc.
 
 ## DP (Glorified Recursion with Caching):
 
 ### **0/1 KNAPSACK**:
+
 * [Traditional 0/1](https://github.com/kasodeep/Java/blob/master/src/dp/knapsack01/KnapsackZeroOne.java)
 * [Subset Sum](https://github.com/kasodeep/Java/blob/master/src/dp/knapsack01/SubsetSum.java)
 * [Subset Sum Count](https://github.com/kasodeep/Java/blob/master/src/dp/knapsack01/SubsetSumCount.java)
@@ -13,6 +15,7 @@
 * [Minimum Sum Partition (Hard)](https://github.com/kasodeep/Java/blob/master/src/dp/knapsack01/MinimumSumPartition.java)
 
 ### **UNBOUNDED KNAPSACK**:
+
 * [Traditional](https://github.com/kasodeep/Java/blob/master/src/dp/unboundedknapsack/Knapsack.java)
 * [Coin Change Problem](https://github.com/kasodeep/Java/blob/master/src/dp/unboundedknapsack/CoinChangeProblem.java)
 * [Minimum Number Coin Change](https://github.com/kasodeep/Java/blob/master/src/dp/unboundedknapsack/MinNumberCoinChange.java)
@@ -20,6 +23,7 @@
 * [Maximize Cut Segments](https://github.com/kasodeep/Java/blob/master/src/dp/unboundedknapsack/MaximizeCutSegments.java)
 
 ### **COMMON SUBSEQUENCE**:
+
 * [Count Palindromic Subsequence](https://github.com/kasodeep/Java/blob/master/src/dp/commonsubsequence/CountPalindromicSubsequence.java)
 * [Edit Distance](https://github.com/kasodeep/Java/blob/master/src/dp/commonsubsequence/EditDistance.java)
 * [Interleaved Strings](https://github.com/kasodeep/Java/blob/master/src/dp/commonsubsequence/InterleavedStrings.java)
@@ -36,6 +40,7 @@
 * [Word Wrap](https://github.com/kasodeep/Java/blob/master/src/dp/commonsubsequence/WordWrap.java)
 
 ### **MCM PATTERN**:
+
 * [Traditional](https://github.com/kasodeep/Java/blob/master/src/dp/mcm/MatrixChainMultiplication.java)
 * [Boolean Parenthesize](https://github.com/kasodeep/Java/blob/master/src/dp/mcm/BooleanParenthesize.java)
 * [Egg Dropping Problem](https://github.com/kasodeep/Java/blob/master/src/dp/mcm/EggDroppingProblem.java)
@@ -44,13 +49,24 @@
 * [Scrambled String Problem](https://github.com/kasodeep/Java/blob/master/src/dp/mcm/ScrambledStringProblem.java)
 
 ### **GRID PROBLEMS**:
+
 * [Gold Mine Problem](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/GoldMineProblem.java)
 * [Matrices Square Count](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MatricesSquareCount.java)
 * [Maximum Sum Path Row](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MaxSumPathRow.java)
 * [Minimum Points To Reach](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MinimumPointsToReach.java)
 * [Mobile Numeric Keypad](https://github.com/kasodeep/Java/blob/master/src/dp/gridproblems/MobileNumericKeypad.java)
 
+### **ADJACENT PROBLEMS**:
+
+* [Balanced Height Trees](https://github.com/kasodeep/Java/blob/master/src/dp/adjacentproblems/BalancedHeightTrees.java)
+* [Count DeArrangements](https://github.com/kasodeep/Java/blob/master/src/dp/adjacentproblems/CountDeArrangements.java)
+* [Friends Pairing Problem](https://github.com/kasodeep/Java/blob/master/src/dp/adjacentproblems/FriendsPairingProblem.java)
+* [Max Sum 3 Adjacent](https://github.com/kasodeep/Java/blob/master/src/dp/adjacentproblems/MaxSumNo3Adjacent.java)
+* [Stickler Thief](https://github.com/kasodeep/Java/blob/master/src/dp/adjacentproblems/SticklerThief.java)
+* [Sum Of SubStrings](https://github.com/kasodeep/Java/blob/master/src/dp/adjacentproblems/SumOfSubstrings.java)
+
 ### **RANDOM PROBLEMS**:
+
 * [Assembly Line Scheduling](https://github.com/kasodeep/Java/blob/master/src/dp/AssemblyLineScheduling.java)
 * [Buying and Selling K Times](https://github.com/kasodeep/Java/blob/master/src/dp/BuyingAndSellingKTimes.java)
 * [Expression Matching](https://github.com/kasodeep/Java/blob/master/src/dp/ExpressionMatching.java)

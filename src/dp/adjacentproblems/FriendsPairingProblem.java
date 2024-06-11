@@ -1,5 +1,9 @@
 package dp.adjacentproblems;
 
+/**
+ * We can let the nth friend be single, so n - 1 remaining.
+ * Else pair with any of the n - 1 friends then we left with n - 2 friends.
+ */
 public class FriendsPairingProblem {
 
     public static long countFriendsPairings(int n) {

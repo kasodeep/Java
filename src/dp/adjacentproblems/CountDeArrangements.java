@@ -1,5 +1,10 @@
 package dp.adjacentproblems;
 
+/**
+ * When we replace 0 from its position we have two choice.
+ * I have n - 1 permutations to place 0.
+ * Either the number is swapped with zero, or another number is.
+ */
 public class CountDeArrangements {
 
     static int countDer(int n) {
