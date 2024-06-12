@@ -14,22 +14,23 @@ public class MedianOfSortedArrays {
         int low = 0, high = m;
 
         while (low <= high) {
+            // We want to keep more elements on left.
             int partitionX = (low + high) / 2;
             int partitionY = (m + n + 1) / 2 - partitionX;
 
-            int maxX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX - 1];
-            int maxY = (partitionY == 0) ? Integer.MIN_VALUE : nums2[partitionY - 1];
+            int leftX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX - 1];
+            int leftY = (partitionY == 0) ? Integer.MIN_VALUE : nums2[partitionY - 1];
 
-            int minX = (partitionX == m) ? Integer.MAX_VALUE : nums1[partitionX];
-            int minY = (partitionY == n) ? Integer.MAX_VALUE : nums2[partitionY];
+            int rightX = (partitionX == m) ? Integer.MAX_VALUE : nums1[partitionX];
+            int rightY = (partitionY == n) ? Integer.MAX_VALUE : nums2[partitionY];
 
-            if (maxX <= minY && maxY <= minX) {
+            if (leftX <= rightY && leftY <= rightX) {
                 if ((m + n) % 2 == 0) {
-                    return (Math.max(maxX, maxY) + Math.min(minX, minY)) / 2.0;
+                    return (Math.max(leftX, leftY) + Math.min(rightX, rightY)) / 2.0;
                 } else {
-                    return Math.max(maxX, maxY);
+                    return Math.max(leftX, leftY);
                 }
-            } else if (maxX > minY) {
+            } else if (leftX > rightY) {
                 high = partitionX - 1;
             } else {
                 low = partitionX + 1;
