@@ -10,7 +10,6 @@ public class PairInSortedRotated {
      * sum is {x}.
      */
     static boolean pairInSortedRotated(int[] arr, int n, int x) {
-
         int i;
         for (i = 0; i < n - 1; i++)
             if (arr[i] > arr[i + 1])
@@ -35,7 +34,6 @@ public class PairInSortedRotated {
 
     // Time Complexity - O(n), Auxiliary Space - O(1)
     public static void main(String[] args) {
-
         int[] arr = {11, 15, 6, 8, 9, 10};
         int X = 16;
         int N = arr.length;

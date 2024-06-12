@@ -31,8 +31,4 @@ public class ThreeSum {
         }
         return list;
     }
-
-    public static void main(String[] args) {
-
-    }
 }

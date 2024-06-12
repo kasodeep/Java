@@ -23,7 +23,6 @@ public class PairsWithGivenSum {
 
     // Time Complexity - O(n), Auxiliary Space - O(1)
     public static void main(String[] args) {
-
         int[] arr = {1, 5, 7, -1, 5};
         int n = arr.length;
         int sum = 6;

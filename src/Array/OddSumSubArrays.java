@@ -7,8 +7,8 @@ public class OddSumSubArrays {
      * @return - It returns the number of odd sum sub arrays.
      */
     static int oddSubArrays(int[] arr) {
-
         int odd = 0, even = 0, sum = 0;
+
         for (int num : arr) {
             if (num % 2 == 1) {
                 int temp = odd;

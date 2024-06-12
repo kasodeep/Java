@@ -20,7 +20,6 @@ public class SubArraysWithKDifferentIntegers {
 
             while (freqMap.size() > distinctK) {
                 freqMap.put(nums[left], freqMap.get(nums[left]) - 1);
-
                 if (freqMap.get(nums[left]) == 0) freqMap.remove(nums[left]);
                 left++;
             }

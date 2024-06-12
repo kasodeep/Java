@@ -11,7 +11,6 @@ public class MinimumPlatforms {
      * possess.
      */
     static int findTotalPlatforms(int[] arr, int[] dep) {
-
         Arrays.sort(arr);
         Arrays.sort(dep);
 

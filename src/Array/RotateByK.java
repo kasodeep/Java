@@ -7,7 +7,6 @@ public class RotateByK {
      * @param k - It is the steps which the array must be rotated.
      */
     public static void rotate(int[] a, int k) {
-
         // In-Case : If k > a.length
         k %= a.length;
 
@@ -17,7 +16,6 @@ public class RotateByK {
     }
 
     private static void reverse(int[] a, int i, int j) {
-
         int temp;
         while (i < j) {
             temp = a[i];

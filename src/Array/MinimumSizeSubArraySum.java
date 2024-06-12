@@ -11,9 +11,9 @@ public class MinimumSizeSubArraySum {
             sum += nums[high];
 
             while (sum >= target && low <= high) {
-                ans = Math.min(ans, high - low + 1);
                 sum -= nums[low++];
             }
+            ans = Math.min(ans, high - low + 1);
         }
         return ans == Integer.MAX_VALUE ? 0 : ans;
     }

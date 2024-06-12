@@ -9,7 +9,6 @@ public class SortSquares {
      * @return - It returns the ans array in which squares are sorted.
      */
     static int[] sortedSquares(int[] a) {
-
         int n = a.length, i = 0, j = n - 1, k = 0;
         int[] ans = new int[n];
 
