@@ -27,6 +27,5 @@ public class CountPalindromicSubsequence {
             return dp[i][j] = (1 + (solve(s, i, j - 1, dp) % mod) + (solve(s, i + 1, j, dp) % mod)) % mod;
         else
             return dp[i][j] = ((solve(s, i + 1, j, dp) % mod) + (solve(s, i, j - 1, dp) % mod) - (solve(s, i + 1, j - 1, dp) % mod) + mod) % mod;
-
     }
 }

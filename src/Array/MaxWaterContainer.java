@@ -3,7 +3,6 @@ package Array;
 public class MaxWaterContainer {
 
     static int maxArea(int[] height) {
-
         int l = 0;
         int r = height.length - 1;
         int ans = 0;
@@ -25,7 +24,6 @@ public class MaxWaterContainer {
     }
 
     public static void main(String[] args) {
-
         int[] arr = {1, 8, 3, 5, 6, 7, 8, 9, 7};
         System.err.println(maxArea(arr));
     }

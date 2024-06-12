@@ -1,5 +1,7 @@
 package Searching;
 
+import java.util.List;
+
 public class MountainArray {
 
     public static int findPeakElement(List<Integer> a) {

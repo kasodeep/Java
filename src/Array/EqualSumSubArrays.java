@@ -8,7 +8,6 @@ public class EqualSumSubArrays {
      * @return - It returns the total sum of the array.
      */
     static int totalSum(int[] arr, int n) {
-
         int sum = 0;
         for (int i = 0; i < n; i++)
             sum += arr[i];
@@ -21,7 +20,6 @@ public class EqualSumSubArrays {
      * equal.
      */
     static boolean check(int[] a) {
-
         int n = a.length;
         int prefix = 0;
         int total_sum = totalSum(a, n);

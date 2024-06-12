@@ -14,11 +14,7 @@ public class EqualZerosAndOnes {
         int sum = 0, max_len = 0, ending_index = -1;
 
         for (int i = 0; i < n; i++) {
-            arr[i] = (arr[i] == 0) ? -1 : 1;
-        }
-
-        for (int i = 0; i < n; i++) {
-            sum += arr[i];
+            sum += arr[i] == 0 ? -1 : 1;
             if (sum == 0) {
                 max_len = i + 1;
                 ending_index = i;
@@ -32,22 +28,14 @@ public class EqualZerosAndOnes {
             } else map.put(sum, i);
         }
 
-        // If the solution is not accepted.
-        for (int i = 0; i < n; i++) {
-            arr[i] = (arr[i] == -1) ? 0 : 1;
-        }
-
         int start_index = ending_index - max_len + 1;
-        System.out.println(start_index + " to " + ending_index);
         return max_len;
     }
 
     // Time Complexity - O(n), Auxiliary Space - O(n)
     public static void main(String[] args) {
-
         int[] arr = {1, 0, 0, 1, 0, 1, 1};
         int n = arr.length;
         System.out.println(maxLen(arr, n));
-
     }
 }

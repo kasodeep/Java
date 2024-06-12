@@ -16,7 +16,6 @@ public class ArrayDemo2 {
     }
 
     static void copyingArray() {
-
         int[] arr = {1, 2, 3, 4, 5};
         int[] copyArray = Arrays.copyOf(arr, 4);
 

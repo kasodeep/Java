@@ -15,7 +15,6 @@ package Array;
 public class ArrayDemo {
 
     static void oneDimensional() {
-
         int[] ages = new int[4];
         System.out.println(ages.length);
 
@@ -27,7 +26,6 @@ public class ArrayDemo {
     }
 
     static void multiDimensional() {
-
         int[][] arr = {{1, 2}, {3, 4}, {5, 6}};
         for (int[] num : arr) {
             for (int i : num) {
@@ -38,7 +36,6 @@ public class ArrayDemo {
     }
 
     static void peakElement() {
-
         int[] arr = {1, 1, 3, 4, 2, 3, 5, 7, 0};
         for (int i = 1; i < arr.length - 1; i++) {
             if (arr[i - 1] < arr[i] && arr[i] > arr[i + 1]) {

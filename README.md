@@ -85,3 +85,29 @@
 
 ### Try to solve __DIGIT DP & BIT-MASKING FROM CP PRACTICE (cses)__.
 
+## Array (Contiguous Memory Allocation):
+
+### **ALL ARE OF DIFFERENT TECHNIQUES**
+
+### **PART 1**:
+
+* [Buy And Sell Stock I](https://github.com/kasodeep/Java/blob/master/src/Array/BuyAndSellStock.java)
+* [Buy And Sell Stock II](https://github.com/kasodeep/Java/blob/master/src/Array/BuyAndSellStock2.java)
+* [Buy And Sell Stock III](https://github.com/kasodeep/Java/blob/master/src/Array/BuyAndSellStock3.java)
+* [Chocolate Distribution](https://github.com/kasodeep/Java/blob/master/src/Array/ChocolateDistribution.java)
+* [Common Elements Three Arrays](https://github.com/kasodeep/Java/blob/master/src/Array/CommonElementsThreeArrays.java)
+* [SubArray Product Less Than K](https://github.com/kasodeep/Java/blob/master/src/Array/CountSubArrayProductLessThanK.java)
+* [Equal Sum SubArrays](https://github.com/kasodeep/Java/blob/master/src/Array/EqualSumSubArrays.java)
+* [Equal Zeros And Ones](https://github.com/kasodeep/Java/blob/master/src/Array/EqualZerosAndOnes.java)
+* [Factorials Of Large Numbers](https://github.com/kasodeep/Java/blob/master/src/Array/FactorialsLargeNumber.java)
+* [Find Duplicate](https://github.com/kasodeep/Java/blob/master/src/Array/FindDuplicate.java)
+* [Inversion Count](https://github.com/kasodeep/Java/blob/master/src/Array/InversionCount.java)
+* [Jump Game I](https://github.com/kasodeep/Java/blob/master/src/Array/JumpGame.java)
+* [Jump Game II](https://github.com/kasodeep/Java/blob/master/src/Array/JumpGame2.java)
+* [Majority Element](https://github.com/kasodeep/Java/blob/master/src/Array/MajorityElement.java)
+* [Majority Element II](https://github.com/kasodeep/Java/blob/master/src/Array/MajorityElementTwo.java)
+* [Max Product SubArray](https://github.com/kasodeep/Java/blob/master/src/Array/MaxProductSubArray.java)
+* [Max Water Container](https://github.com/kasodeep/Java/blob/master/src/Array/MaxWaterContainer.java)
+* [Median Of Sorted Arrays](https://github.com/kasodeep/Java/blob/master/src/Array/MedianOfSortedArrays.java)
+
+### **PART 2**:
