@@ -3,18 +3,17 @@ package LinkedLists;
 public class GetNthNodeFromLast {
 
     static int getNthFromLast(Node head, int n) {
-        Node temp = head;
-        int l = 0;
+        Node fast = head;
+        Node slow = head;
 
-        while (head != null) {
-            head = head.next;
-            l++;
+        for (int i = 0; i < n; i++) fast = fast.next;
+        if (fast == null) return head.data;
+
+        while (fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
         }
 
-        if (n > l) return -1;
-        int c = l - n;
-
-        while (temp != null && c-- > 0) temp = temp.next;
-        return temp == null ? -1 : temp.data;
+        return slow.next.data;
     }
 }

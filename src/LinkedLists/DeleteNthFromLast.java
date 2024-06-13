@@ -14,7 +14,6 @@ public class DeleteNthFromLast {
         Node slow = head;
 
         for (int i = 0; i < n; i++) fast = fast.next;
-        // Occurs when n = length;
         if (fast == null) return head.next;
 
         while (fast.next != null) {

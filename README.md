@@ -135,3 +135,31 @@
 * [Three Way Partition](https://github.com/kasodeep/Java/blob/master/src/Array/ThreeWayPartition.java)
 * [Top K Frequent Elements](https://github.com/kasodeep/Java/blob/master/src/Array/TopKFrequentElements.java)
 * [Trapping Rain Water](https://github.com/kasodeep/Java/blob/master/src/Array/TrappingRainWater.java)
+
+## Linked List (Pointer to Next Location):
+
+### **NORMAL LIST**:
+
+* [Implementation (Must Do)](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/Implementation.java)
+* [Reverse List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/ReverseList.java)
+* [Middle Of List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/MiddleOfList.java)
+* [Delete Middle Of List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/DeleteMiddleOfList.java)
+* [Get Nth Node From Last](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/GetNthNodeFromLast.java)
+* [Delete Nth Node From Last](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/DeleteNthFromLast.java)
+* [Delete Nodes With Greater Value On Right](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/DeleteNodesWithGreaterRight.java)
+* [Add One To A Number](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/AddOneToNumber.java)
+* [Add Two Numbers](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/AddTwoNumbers.java)
+* [Multiply Two Numbers](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/MultiplyTwoNumbers.java)
+* [Intersection Of Two Linked List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/IntersectionNodeOfTwoList.java)
+* [Intersection Of Sorted List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/IntersectionOfSortedLists.java)
+* [List Cycle](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/ListCycle.java)
+* [Merge Two Sorted List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/MergedTwoSortedList.java)
+* [Merge K Sorted List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/MergeKSortedLists.java)
+* [Merge Sort](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/MergeSort.java)
+* [Odd Even List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/OddEvenList.java)
+* [Palindrome List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/PalindromeList.java)
+* [Flatten Lists Into Sorted List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/FlattenListsIntoSortedList.java)
+* [Flatten With Next And Child](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/FlattenWithNextAndChild.java)
+* [List With Random Pointer](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/ListWithRandomPointer.java)
+
+### **CIRCULAR LINKED LIST**:

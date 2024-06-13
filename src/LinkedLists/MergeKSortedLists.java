@@ -24,10 +24,8 @@ public class MergeKSortedLists {
             }
         }
 
-        if (queue.isEmpty())
-            return null;
+        if (queue.isEmpty()) return null;
         while (!queue.isEmpty()) {
-
             // Smallest Element Is Added To List.
             Node curr = queue.poll();
             last.next = curr;

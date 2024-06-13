@@ -44,9 +44,9 @@ public class ListCycle {
         Node prev = fast;
 
         while (fast != null && fast.next != null) {
-
             // This because if they meet at the head.
             prev = fast.next;
+
             slow = slow.next;
             fast = fast.next.next;
 

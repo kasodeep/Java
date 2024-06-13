@@ -5,32 +5,35 @@ package LinkedLists;
  */
 public class Implementation {
 
-    public static class linkedList {
+    static class MyLinkedList {
 
-        Node head = null;
-        Node tail = null;
-        int size = 0;
+        Node head;
+        Node tail;
+        int size;
 
-        /**
-         * @param data - It the data to be inserted in the linked list.
-         *             O(1) - > tail is Given, O(n) -> head is Given.
-         */
-        void insertAtEnd(int data) {
-            Node temp = new Node(data);
-            if (head == null) {
-                head = temp;
-            } else {
-                tail.next = temp;
-            }
-            tail = temp;
-            size++;
+        public MyLinkedList() {
+            head = null;
+            tail = null;
+            size = 0;
         }
 
-        /**
-         * @param data - It the data to be inserted in the linked list.
-         *             O(n) - > tail is Given, O(1) -> head is Given.
-         */
-        void insertAtBegin(int data) {
+        public int get(int index) {
+            if (index < 0 || index >= size) {
+                return -1;
+            } else if (index == 0) {
+                return head.data;
+            } else if (index == size - 1) {
+                return tail.data;
+            }
+
+            Node temp = head;
+            for (int i = 0; i < index; i++) {
+                temp = temp.next;
+            }
+            return temp.data;
+        }
+
+        public void addAtHead(int data) {
             Node temp = new Node(data);
             if (head == null) {
                 tail = temp;
@@ -41,23 +44,29 @@ public class Implementation {
             size++;
         }
 
-        /**
-         * @param index - It is the place where new node is to be inserted.
-         * @param data  - It is the data of the new node.
-         *              Time Complexity - O(n), Space Complexity - O(1)
-         */
-        void insertAt(int index, int data) {
+        public void addAtTail(int data) {
+            Node temp = new Node(data);
+            if (head == null) {
+                head = temp;
+            } else {
+                tail.next = temp;
+            }
+            tail = temp;
+            size++;
+        }
+
+        public void addAtIndex(int index, int data) {
+            if (index < 0 || index > size) return;
+
             Node node = new Node(data);
             Node temp = head;
 
             if (index == 0) {
-                insertAtBegin(data);
+                addAtHead(data);
                 return;
             } else if (index == size) {
-                insertAtEnd(data);
+                addAtTail(data);
                 return;
-            } else if (index < 0) {
-                throw new IndexOutOfBoundsException("Please Enter Proper Index");
             }
 
             for (int i = 0; i < index - 1; i++) {
@@ -68,37 +77,12 @@ public class Implementation {
             size++;
         }
 
-        /**
-         * Function to get the element at a particular index.
-         *
-         * @param index - It is the index of the element to be returned.
-         */
-        int getAt(int index) {
-            if (index == 0) {
-                return head.data;
-            } else if (index == size) {
-                return tail.data;
-            } else if (index < 0) {
-                throw new IndexOutOfBoundsException("Please Enter Valid Index.");
-            }
-
-            Node temp = head;
-            for (int i = 0; i < index; i++) {
-                temp = temp.next;
-            }
-            return temp.data;
-        }
-
-        /**
-         * Function to delete the node at a given index.
-         *
-         * @param index -  It is the index of the element to be deleted.
-         */
-        void deleteAt(int index) {
-            if (index == 0) {
-                head = head.next;
+        public void deleteAtIndex(int index) {
+            if (index < 0 || index >= size) {
                 return;
-            } else if (index < 0) {
+            } else if (index == 0) {
+                head = head.next;
+                size--;
                 return;
             }
 
@@ -106,36 +90,14 @@ public class Implementation {
             for (int i = 0; i < index - 1; i++) {
                 temp = temp.next;
             }
-            temp.next = temp.next.next;
-        }
 
-        /**
-         * Utility function to print the linkedList.
-         */
-        void display() {
-            Node temp = head;
-            System.out.print("[ ");
-
-            while (temp != null) {
-                System.out.print(temp.data + ", ");
-                temp = temp.next;
+            if (index == size - 1) {
+                temp.next = null;
+                tail = temp;
+            } else {
+                temp.next = temp.next.next;
             }
-            System.out.println("]");
-        }
-
-        /**
-         * Function to add the element at last.
-         */
-        void add(int data) {
-            insertAtEnd(data);
-        }
-
-        /**
-         * Function to reset the Linked List.
-         */
-        void clear() {
-            head = null;
-            size = 0;
+            size--;
         }
     }
 }
