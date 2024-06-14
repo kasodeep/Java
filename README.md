@@ -150,6 +150,7 @@
 * [Add One To A Number](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/AddOneToNumber.java)
 * [Add Two Numbers](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/AddTwoNumbers.java)
 * [Multiply Two Numbers](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/MultiplyTwoNumbers.java)
+* [Subtract Two Number](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/SubtractTwoNumbers.java)
 * [Intersection Of Two Linked List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/IntersectionNodeOfTwoList.java)
 * [Intersection Of Sorted List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/IntersectionOfSortedLists.java)
 * [List Cycle](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/ListCycle.java)
@@ -161,5 +162,17 @@
 * [Flatten Lists Into Sorted List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/FlattenListsIntoSortedList.java)
 * [Flatten With Next And Child](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/FlattenWithNextAndChild.java)
 * [List With Random Pointer](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/ListWithRandomPointer.java)
+* [Remove Duplicates](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/RemoveDuplicates2.java)
+* [Remove Duplicates Unsorted](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/RemoveDuplicatesUnsorted.java)
+* [ReOrder List](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/ReOrderList.java)
+* [Reverse Nodes In K Groups](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/ReverseNodesInKGroups.java)
+* [Segregate Even Odd](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/SegregateEvenOdd.java)
+* [Swap Nodes](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/SwapNodes.java)
+* [Swap Nodes In Pairs (Crazy Damn!)](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/SwapNodesInPairs.java)
+* [Twin Sum](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/TwinSum.java)
+* [LeetCode 117](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/LeetCode117.java)
 
 ### **CIRCULAR LINKED LIST**:
+
+### **DOUBLY LINKED LIST**:
+
