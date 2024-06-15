@@ -13,6 +13,7 @@ public class DoublyListReverse {
             after = curr.next;
             curr.next = before;
             curr.prev = after;
+
             before = curr;
             curr = after;
         }

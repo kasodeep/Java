@@ -172,7 +172,13 @@
 * [Twin Sum](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/TwinSum.java)
 * [LeetCode 117](https://github.com/kasodeep/Java/blob/master/src/LinkedLists/LeetCode117.java)
 
-### **CIRCULAR LINKED LIST**:
-
 ### **DOUBLY LINKED LIST**:
+
+* [Doubly List Reverse](https://github.com/kasodeep/Java/blob/master/src/DoublyLinkedList/DoublyListReverse.java)
+* [Pair Sum](https://github.com/kasodeep/Java/blob/master/src/DoublyLinkedList/DoublyPairSum.java)
+* [Critical Point](https://github.com/kasodeep/Java/blob/master/src/DoublyLinkedList/CriticalPoint.java)
+* [Reverse In Groups Of K](https://github.com/kasodeep/Java/blob/master/src/DoublyLinkedList/ReverseInGroupsOfSizeK.java)
+* [Rotate List By N](https://github.com/kasodeep/Java/blob/master/src/DoublyLinkedList/RotateListByN.java)
+* [Sort K Sorted List (Wow!)](https://github.com/kasodeep/Java/blob/master/src/DoublyLinkedList/SortKSortedList.java)
+* [Triplet Sum](https://github.com/kasodeep/Java/blob/master/src/DoublyLinkedList/TripletSum.java)
 
