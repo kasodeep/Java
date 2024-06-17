@@ -1,62 +1,62 @@
 package OOPS;
 
+/**
+ * Classes And Objects: ✅
+ * this -> can be used to access the current object or call default constructor.
+ */
 public class Student {
+    public static int numberOfStudents;
 
-   // Attributes of the class.
-   String name;
-   int rollno;
-   double percent;
+    final String COLLEGE_NAME = "VJTI";
 
-   // Static attribute - Only one copy for the entire class.
-   private static int numberOfStudents;
+    protected String name;
+    protected int rollNo;
+    private double percent;
 
-   // Final Attribute - The value cannot be changes once initialized.
-   final String COLLEGE_NAME = "VJTI";
+    public Student() {
+        numberOfStudents++;
+    }
 
-   // Constructor
-   public Student() {
-      numberOfStudents++;
-   }
+    /*
+     * When parameterized constructor is created, it overrides default hence need to explicitly specify the default one.
+     */
+    public Student(String name, int rollNo, double percent) {
+        this(); // to increment the number of students.
+        this.name = name;
+        this.rollNo = rollNo;
+        this.percent = percent;
+    }
 
-   // When parameterized constructor is created, it overrides default hence need to
-   // explicitly specify the default one.
-   public Student(String name, int rollno, double percent) {
-      this.name = name;
-      this.rollno = rollno;
-      this.percent = percent;
-      numberOfStudents++;
-   }
+    public String getName() {
+        return name;
+    }
 
-   // Getters and Setters
-   public String getName() {
-      return name;
-   }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-   public void setName(String name) {
-      this.name = name;
-   }
+    public int getRollNo() {
+        return rollNo;
+    }
 
-   public int getRollno() {
-      return rollno;
-   }
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
 
-   public void setRollno(int rollno) {
-      this.rollno = rollno;
-   }
+    public double getPercent() {
+        return percent;
+    }
 
-   public double getPercent() {
-      return percent;
-   }
+    public void setPercent(int percent) {
+        this.percent = percent;
+    }
 
-   public void setPercent(int percent) {
-      this.percent = percent;
-   }
+    public void walk() {
+        System.out.println(name + " is walking!");
+    }
 
-   public static int getNumberOfStudents() {
-      return numberOfStudents;
-   }
-
-   public String getCOLLEGE_NAME() {
-      return COLLEGE_NAME;
-   }
+    // compile time polymorphism.
+    public void walk(int steps) {
+        System.out.println(name + " is walking! " + steps + " steps!");
+    }
 }

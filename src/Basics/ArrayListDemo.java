@@ -10,11 +10,9 @@ import java.util.Collections;
     It is non-synchronized.
     Its elements/objects can be accessed randomly.
  */
-
 public class ArrayListDemo {
 
     public static void main(String[] args) {
-
         ArrayList<String> arrayList = new ArrayList<>();
 
         arrayList.add("P");
@@ -30,6 +28,5 @@ public class ArrayListDemo {
         Collections.reverse(arrayList);
         arrayList.sort(Collections.reverseOrder());
         Collections.swap(arrayList, 2, 4);
-
     }
 }

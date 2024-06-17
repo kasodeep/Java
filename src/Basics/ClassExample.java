@@ -20,7 +20,6 @@ package Basics;
 public class ClassExample {
 
     public static boolean is_LeapYear(int y) {
-
         boolean a = (y % 4) == 0;
         boolean b = (y % 100) != 0;
         boolean c = ((y % 100 == 0) && (y % 400 == 0));
@@ -28,7 +27,6 @@ public class ClassExample {
     }
 
     public static String middle(String s) {
-
         if (s.length() % 2 == 0) {
             return s.substring(s.length() / 2, s.length() / 2 + 2);
         } else {

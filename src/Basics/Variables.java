@@ -16,15 +16,27 @@ package Basics;
  * Non-Primitive - String , Array , Class , Object , Interface
  */
 
+/*
+ * Implicit Casting:
+ * byte > short > int > long > float > double
+ * */
+
+import java.awt.*;
+
 public class Variables {
 
     public static void main(String[] args) {
-
         int x = 2, y = 4;
         System.out.println(x * y);
 
         int ascii = 'U';
         System.out.println(ascii);
 
+        // Referencing of objects.
+        Point point1 = new Point(10, 10);
+        Point point2 = point1;
+
+        point1.x = 20;
+        System.out.println(point2);
     }
 }

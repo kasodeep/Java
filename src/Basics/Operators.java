@@ -19,6 +19,7 @@ public class Operators {
         int x = sc.nextInt();
         System.out.println("Enter 2nd number");
         int y = sc.nextInt();
+
         x = x + y;
         y = x - y;
         x = x - y;
@@ -29,6 +30,7 @@ public class Operators {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int n = a ^ b;
+
         int count = 0;
         while (n != 0) {
             n = n & (n - 1);

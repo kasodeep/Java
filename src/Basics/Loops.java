@@ -6,7 +6,6 @@ package Basics;
 public class Loops {
 
     public static void main(String[] args) {
-
         // Continue, Labels
         first:
         for (int i = 0; i < 3; i++) {
@@ -30,6 +29,5 @@ public class Loops {
 
             }
         }
-
     }
 }
