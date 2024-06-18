@@ -1,4 +1,4 @@
-package Interview;
+package Interview.collection;
 
 import java.util.*;
 

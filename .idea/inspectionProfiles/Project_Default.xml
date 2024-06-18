@@ -33,6 +33,7 @@
     </inspection_tool>
     <inspection_tool class="UseBulkOperation" enabled="true" level="INFORMATION" enabled_by_default="true" />
     <inspection_tool class="WhileCanBeForeach" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="WrapperTypeMayBePrimitive" enabled="true" level="INFORMATION" enabled_by_default="true" />
     <inspection_tool class="unused" enabled="false" level="WARNING" enabled_by_default="false" checkParameterExcludingHierarchy="false">
       <option name="LOCAL_VARIABLE" value="true" />
       <option name="FIELD" value="true" />
