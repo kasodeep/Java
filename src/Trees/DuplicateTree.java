@@ -14,6 +14,7 @@ public class DuplicateTree {
         String right = helper(root.right);
         String curr = root.val + " " + left + " " + right;
 
+        // It should be a subtree and not a node.
         if (set.contains(curr) && curr.length() > 5) flag = true;
         set.add(curr);
         return curr;

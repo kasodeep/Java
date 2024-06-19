@@ -4,46 +4,50 @@ import java.util.*;
 
 public class SerializeDeserialize {
 
-    public static ArrayList<Integer> serialize(Node root) {
-        ArrayList<Integer> list = new ArrayList<>();
+    public String serialize(Node root) {
+        if (root == null) return "";
+
         Queue<Node> q = new LinkedList<>();
+        StringBuilder res = new StringBuilder();
 
         q.add(root);
-        while (q.size() > 0) {
-            Node curr = q.poll();
-            if (curr == null) list.add(0);
-            else list.add(curr.val);
-
-            if (curr != null) {
-                q.add(curr.left);
-                q.add(curr.right);
+        while (!q.isEmpty()) {
+            Node node = q.poll();
+            if (node == null) {
+                res.append("n ");
+                continue;
             }
+
+            res.append(node.val).append(" ");
+            q.add(node.left);
+            q.add(node.right);
         }
-        return list;
+        return res.toString();
     }
 
-    public static Node deSerialize(ArrayList<Integer> a) {
-        Node root = new Node(a.get(0));
+    public Node deserialize(String data) {
+        if (Objects.equals(data, "")) return null;
+
         Queue<Node> q = new LinkedList<>();
+        String[] values = data.split(" ");
 
+        Node root = new Node(Integer.parseInt(values[0]));
         q.add(root);
-        int i = 1;
 
-        while (!q.isEmpty() && i < a.size()) {
-            Node p = q.remove();
-            if (a.get(i) == 0) p.left = null;
-            else {
-                p.left = new Node(a.get(i));
-                q.add(p.left);
+        for (int i = 1; i < values.length; i++) {
+            Node parent = q.poll();
+
+            if (!values[i].equals("n")) {
+                Node left = new Node(Integer.parseInt(values[i]));
+                parent.left = left;
+                q.add(left);
             }
 
-            i++;
-            if (a.get(i) == 0) p.right = null;
-            else {
-                p.right = new Node(a.get(i));
-                q.add(p.right);
+            if (!values[++i].equals("n")) {
+                Node right = new Node(Integer.parseInt(values[i]));
+                parent.right = right;
+                q.add(right);
             }
-            i++;
         }
         return root;
     }

@@ -23,11 +23,13 @@ public class ConstructTreeBrackets {
         if (neg) num = -num;
         Node node = new Node(num);
 
+        // no root node.
         if (num == 0) {
             start++;
             return null;
         }
 
+        // only root node.
         if (start >= s.length()) {
             return node;
         }

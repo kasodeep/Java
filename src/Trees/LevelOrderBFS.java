@@ -23,7 +23,7 @@ public class LevelOrderBFS {
                 q.add(temp.right);
 
             System.out.print(temp.val + " ");
-            q.remove();
+            q.poll();
         }
     }
 

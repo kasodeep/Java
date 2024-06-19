@@ -10,6 +10,7 @@ public class SumTree {
 
         int l = check(root.left);
         int r = check(root.right);
+
         if (l + r != root.val) f = false;
         return l + r + root.val;
     }

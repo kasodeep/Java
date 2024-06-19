@@ -55,10 +55,8 @@ public class FlattenTree {
         Node root = ConstructTree.construct(arr);
         flattenMorris(root);
 
-        int i = 0;
         while (root != null) {
-            if (root.left == null) continue;
-            else System.err.println("Test Failed");
+            if (root.left != null) System.err.println("Test Failed");
             root = root.right;
         }
     }

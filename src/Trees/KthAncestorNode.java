@@ -1,24 +1,45 @@
 package Trees;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 public class KthAncestorNode {
 
-    static Node temp = null;
-    static int k;
+    static int kthAncestor(Node root, Node node, int k) {
+        Stack<Node> s = new Stack<>();
+        List<Integer> ancestors = new ArrayList<>();
+        boolean found = false;
 
-    static Node kthAncestorDFS(Node root, int node) {
-        if (root == null)
-            return null;
+        while (root != null || !s.empty()) {
+            if (root != null) {
+                s.push(root);
+                root = root.left;
+            } else {
+                Node temp = s.pop();
 
-        if (root.val == node || (temp = kthAncestorDFS(root.left, node)) != null || (temp = kthAncestorDFS(root.right, node)) != null) {
-            if (k > 0)
-                k--;
-            else if (k == 0) {
-                System.out.print("Kth ancestor is: " + root.val);
-                return null;
+                if (temp.val == node.val) {
+                    found = true;
+                    break;
+                }
+                if (temp.right != null) {
+                    root = temp.right;
+                }
             }
-            return root;
         }
-        return null;
+
+        if (!found) return -1;
+
+        while (!s.empty() && k > 0) {
+            Node temp = s.pop();
+            ancestors.add(temp.val);
+            k--;
+        }
+
+        if (k > 0) {
+            return -1;
+        }
+        return ancestors.get(ancestors.size() - 1);
     }
 
     public static void main(String[] args) {
