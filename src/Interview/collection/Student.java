@@ -1,8 +1,13 @@
 package Interview.collection;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Student {
+/**
+ * Comparator: Has compare method with two arguments.
+ * Comparable: Has compareTo method with one argument.
+ */
+public class Student implements Comparator<Student> {
 
     private String name;
 
@@ -33,6 +38,11 @@ public class Student {
     }
 
     @Override
+    public int compare(Student o1, Student o2) {
+        return Integer.compare(o1.rollNo, o2.rollNo);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -42,6 +52,7 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return Objects.hash(rollNo);
+        // return Objects.hash(rollNo);
+        return this.rollNo + this.name.hashCode();
     }
 }

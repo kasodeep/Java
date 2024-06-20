@@ -14,6 +14,6 @@ public class TypesOfInterfaces {
      * Java does not support multiple inheritance directly, but indirectly using interfaces we can implement.
      *
      * Abstract Classes:
-     * We can't create objects, the methods need can have body.
+     * We can't create objects, the methods can have body.
      * */
 }
