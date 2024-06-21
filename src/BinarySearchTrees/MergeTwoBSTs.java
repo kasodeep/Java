@@ -36,16 +36,19 @@ public class MergeTwoBSTs {
         return merged.right;
     }
 
-    static Node sortedListToBST(Node[] head, int n) {
-        if (n <= 0 || head[0] == null)
+    static Node sortedListToBST(Node head) {
+        if (head == null)
             return null;
 
-        Node left = sortedListToBST(head, n / 2);
-        Node root = head[0];
-        root.left = left;
-        head[0] = head[0].right;
+        if (head.right == null) {
+            Node node = new Node(head.val);
+            return node;
+        }
 
-        root.right = sortedListToBST(head, n - (n / 2) - 1);
+        Node mid = findMid(head);
+        Node root = new Node(mid.val);
+        root.left = sortedListToBST(head);
+        root.right = sortedListToBST(mid.right);
         return root;
     }
 
@@ -61,10 +64,23 @@ public class MergeTwoBSTs {
         head2[0].left = null;
 
         Node head = mergeLinkedList(head1[0], head2[0]);
-        return sortedListToBST(new Node[]{head}, m + n);
+        return sortedListToBST(head);
     }
 
     public static void main(String[] args) {
 
+    }
+
+    static Node findMid(Node head) {
+        Node slow = head;
+        Node fast = slow;
+        Node prev = slow;
+        while (fast != null && fast.right != null) {
+            prev = slow;
+            slow = slow.right;
+            fast = fast.right.right;
+        }
+        prev.right = null;
+        return slow;
     }
 }
