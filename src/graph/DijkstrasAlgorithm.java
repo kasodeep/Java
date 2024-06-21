@@ -31,9 +31,7 @@ public class DijkstrasAlgorithm {
             if (!isVisited[curr]) {
                 isVisited[curr] = true;
 
-                for (int i = 0; i < adj.get(curr).size(); i++) {
-                    Pair n = adj.get(curr).get(i);
-
+                for (Pair n : adj.get(curr)) {
                     // Relaxation.
                     if (dist[curr] + n.weight < dist[n.vertex])
                         dist[n.vertex] = dist[curr] + n.weight;

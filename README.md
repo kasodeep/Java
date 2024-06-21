@@ -262,5 +262,17 @@
 * [PreOrder To BST](https://github.com/kasodeep/Java/blob/master/src/BinarySearchTrees/PreorderToBST.java)
 * [Range Sum](https://github.com/kasodeep/Java/blob/master/src/BinarySearchTrees/RangeSum.java)
 * [Tree To BST](https://github.com/kasodeep/Java/blob/master/src/BinarySearchTrees/TreeToBST.java)
-    * [Trim BST](https://github.com/kasodeep/Java/blob/master/src/BinarySearchTrees/TrimBST.java)
+* [Trim BST](https://github.com/kasodeep/Java/blob/master/src/BinarySearchTrees/TrimBST.java)
 * [Valid BST](https://github.com/kasodeep/Java/blob/master/src/BinarySearchTrees/ValidBST.java)
+
+## Graphs(Ghumte Raho):
+
+* [Adjacency List]()
+* [All Paths]()
+* [Breadth First Search]()
+* [Depth First Search]()
+* [Detect Cycle Directed]()
+* [Detect Cycle UnDirected]()
+* [Dijkstras Algorithm]()
+* [Floyd Warshall Algorithm]()
+* [Bellman Ford Algorithm]()

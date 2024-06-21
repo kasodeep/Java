@@ -20,8 +20,7 @@ public class DepthFirstSearch {
         list.add(curr);
         isVisited[curr] = true;
 
-        ArrayList<Integer> neighbours = adj.get(curr);
-        for (int dest : neighbours)
+        for (int dest : adj.get(curr))
             if (!isVisited[dest]) solve(adj, isVisited, dest, list);
     }
 }
