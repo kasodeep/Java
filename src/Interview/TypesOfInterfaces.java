@@ -16,4 +16,39 @@ public class TypesOfInterfaces {
      * Abstract Classes:
      * We can't create objects, the methods can have body.
      * */
+
+    interface Programmable {
+        void programming();
+    }
+
+    interface Danceable {
+        void dancing();
+    }
+
+    /*
+     * Abstract classes when group of classes have share common attributes.
+     * */
+    abstract class Human {
+        public abstract void name();
+
+        public abstract void age();
+    }
+
+    class Programmer extends Human implements Programmable {
+
+        @Override
+        public void programming() {
+
+        }
+
+        @Override
+        public void name() {
+
+        }
+
+        @Override
+        public void age() {
+
+        }
+    }
 }

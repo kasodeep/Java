@@ -4,109 +4,108 @@ import java.util.LinkedList;
 
 public class MyHashMap<K, V> {
 
-   public static final int DEFAULT_CAPACITY = 4;
-   public static final float DEFAULT_LOAD_FACTOR = 0.75f;
+    public static final int DEFAULT_CAPACITY = 4;
+    public static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
-   private int n; // the number of entries in the map.
-   private LinkedList<Node>[] buckets;
+    private int n; // the number of entries in the map.
+    private LinkedList<Node>[] buckets;
 
-   private class Node {
-      K key;
-      V value;
+    public MyHashMap() {
+        initBuckets(DEFAULT_CAPACITY);
+    }
 
-      Node(K key, V value) {
-         this.key = key;
-         this.value = value;
-      }
-   }
+    @SuppressWarnings("unchecked")
+    private void initBuckets(int N) { // N - capacity/size of buckets array.
+        buckets = new LinkedList[N];
+        for (int i = 0; i < buckets.length; i++) {
+            buckets[i] = new LinkedList<>();
+        }
+    }
 
-   @SuppressWarnings("unchecked")
-   private void initBuckets(int N) { // N - capacity/size of buckets array.
-      buckets = new LinkedList[N];
-      for (int i = 0; i < buckets.length; i++) {
-         buckets[i] = new LinkedList<>();
-      }
-   }
+    private int HashFunc(K key) {
+        int hc = key.hashCode();
+        return (Math.abs(hc)) % buckets.length;
+    }
 
-   private int HashFunc(K key) {
-      int hc = key.hashCode();
-      return (Math.abs(hc)) % buckets.length;
-   }
+    // Traverse the ll and look for a node with key.
+    private int searchInBucket(LinkedList<Node> ll, K key) {
+        for (int i = 0; i < ll.size(); i++) {
+            if (ll.get(i).key == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
-   // Traverse the ll and looke for a node with key.
-   private int searchInBucket(LinkedList<Node> ll, K key) {
-      for (int i = 0; i < ll.size(); i++) {
-         if (ll.get(i).key == key) {
-            return i;
-         }
-      }
-      return -1;
-   }
+    private void rehash() {
+        LinkedList<Node>[] oldBuckets = buckets;
+        initBuckets(oldBuckets.length * 2);
+        n = 0;
 
-   private void rehash() {
-      LinkedList<Node>[] oldBuckets = buckets;
-      initBuckets(oldBuckets.length * 2);
-      n = 0;
+        for (var bucket : oldBuckets) {
+            for (var node : bucket) {
+                put(node.key, node.value);
+            }
+        }
+    }
 
-      for (var bucket : oldBuckets) {
-         for (var node : bucket) {
-            put(node.key, node.value);
-         }
-      }
-   }
+    public int size() { // returns the number of entries in map.
+        return n;
+    }
 
-   public MyHashMap() {
-      initBuckets(DEFAULT_CAPACITY);
-   }
+    public void put(K key, V value) {
+        int bi = HashFunc(key);
+        LinkedList<Node> currBucket = buckets[bi];
+        int ei = searchInBucket(currBucket, key);
 
-   public int size() { // returns the number of entries in map.
-      return n;
-   }
+        if (ei == -1) { // key doesn't exists
+            Node node = new Node(key, value);
+            currBucket.add(node);
+            n++;
+        } else {
+            Node currNode = currBucket.get(ei);
+            currNode.value = value;
+        }
 
-   public void put(K key, V value) {
-      int bi = HashFunc(key);
-      LinkedList<Node> currBucket = buckets[bi];
-      int ei = searchInBucket(currBucket, key);
+        if (n >= buckets.length * DEFAULT_LOAD_FACTOR) {
+            rehash();
+        }
+    }
 
-      if (ei == -1) { // key doesn't exists
-         Node node = new Node(key, value);
-         currBucket.add(node);
-         n++;
-      } else {
-         Node currNode = currBucket.get(ei);
-         currNode.value = value;
-      }
+    public V get(K key) {
+        int bi = HashFunc(key);
+        LinkedList<Node> currBucket = buckets[bi];
+        int ei = searchInBucket(currBucket, key);
 
-      if (n >= buckets.length * DEFAULT_LOAD_FACTOR) {
-         rehash();
-      }
-   }
+        if (ei != -1) { // key exists
+            Node currNode = currBucket.get(ei);
+            return currNode.value;
+        }
+        return null;
+    }
 
-   public V get(K key) {
-      int bi = HashFunc(key);
-      LinkedList<Node> currBucket = buckets[bi];
-      int ei = searchInBucket(currBucket, key);
+    public V remove(K key) {
+        int bi = HashFunc(key);
+        LinkedList<Node> currBucket = buckets[bi];
+        int ei = searchInBucket(currBucket, key);
 
-      if (ei != -1) { // key exists
-         Node currNode = currBucket.get(ei);
-         return currNode.value;
-      }
-      return null;
-   }
+        if (ei != -1) { // key exists
+            Node currNode = currBucket.get(ei);
+            V val = currNode.value;
+            currBucket.remove(ei);
+            n--;
+            return val;
+        }
+        return null;
+    }
 
-   public V remove(K key) {
-      int bi = HashFunc(key);
-      LinkedList<Node> currBucket = buckets[bi];
-      int ei = searchInBucket(currBucket, key);
+    private class Node {
+        K key;
+        V value;
 
-      if (ei != -1) { // key exists
-         Node currNode = currBucket.get(ei);
-         V val = currNode.value;
-         currBucket.remove(ei);
-         n--;
-         return val;
-      }
-      return null;
-   }
-
+        Node(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
 }
