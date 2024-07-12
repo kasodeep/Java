@@ -35,7 +35,7 @@ public class DijkstrasAlgorithm {
                     // Relaxation.
                     if (dist[curr] + n.weight < dist[n.vertex])
                         dist[n.vertex] = dist[curr] + n.weight;
-                    pq.add(new Pair(n.vertex, dist[n.weight]));
+                    pq.add(new Pair(n.vertex, dist[n.vertex]));
                 }
             }
         }

@@ -7,7 +7,9 @@ public class NetworkTimeDelay {
     public static int networkDelayTime(int[][] times, int n, int k) {
 
         // Creating Graph.
+        @SuppressWarnings("unchecked")
         List<Node>[] graph = new List[n];
+
         for (int i = 0; i < n; i++) {
             graph[i] = new ArrayList<>();
         }

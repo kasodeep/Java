@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class KruskalAlgorithm {
+
     private static void kruskals(int V, ArrayList<Edge> edges) {
         edges.sort(new Comparator<>() {
             @Override
