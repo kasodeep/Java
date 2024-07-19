@@ -306,3 +306,53 @@
 * [Make Network Connected](https://github.com/kasodeep/Java/blob/master/src/graph/MakeNetworkConnected.java)
 * [UnReachable Pair Nodes](https://github.com/kasodeep/Java/blob/master/src/graph/UnReachablePairsNodes.java)
 * [GCD Traversals](https://github.com/kasodeep/Java/blob/master/src/graph/GCDTraversal.java)
+
+## Stack(Ek ke Upar Ek):
+
+### **Khane Ki Plates**:
+
+* [Basics](https://github.com/kasodeep/Java/blob/master/src/Stacks/Basic.java)
+* [Array Implementation](https://github.com/kasodeep/Java/blob/master/src/Stacks/ArrayImplementation.java)
+* [LL Implementation](https://github.com/kasodeep/Java/blob/master/src/Stacks/LLImplementation.java)
+* [Insert Bottom](https://github.com/kasodeep/Java/blob/master/src/Stacks/InsertBottom.java)
+* [Balanced Brackets](https://github.com/kasodeep/Java/blob/master/src/Stacks/BalancedBrackets.java)
+* [Redundant Brackets](https://github.com/kasodeep/Java/blob/master/src/Stacks/RedundantBrackets.java)
+* [Reverse Recursive](https://github.com/kasodeep/Java/blob/master/src/Stacks/RedundantBrackets.java)
+* [Simplify Path](https://github.com/kasodeep/Java/blob/master/src/Stacks/SimplifyPath.java)
+* [Asteroid Collision](https://github.com/kasodeep/Java/blob/master/src/Stacks/AsteroidCollision.java)
+* [Next Greater](https://github.com/kasodeep/Java/blob/master/src/Stacks/NextGreater.java)
+* [Next Smaller](https://github.com/kasodeep/Java/blob/master/src/Stacks/NextSmaller.java)
+* [Largest Number](https://github.com/kasodeep/Java/blob/master/src/Stacks/LargestNumber.java)
+* [Largest Histogram](https://github.com/kasodeep/Java/blob/master/src/Stacks/LargestHistogram.java)
+* [Longest Valid Parenthesis](https://github.com/kasodeep/Java/blob/master/src/Stacks/LongestValidParenthesis.java)
+* [Maximum Stock Span](https://github.com/kasodeep/Java/blob/master/src/Stacks/MaximumStockSpan.java)
+* [Min Stack](https://github.com/kasodeep/Java/blob/master/src/Stacks/MinStack.java)
+* [Decode String (Karlo Acha Hai)](https://github.com/kasodeep/Java/blob/master/src/Stacks/DecodeString.java)
+* [Sliding Window](https://github.com/kasodeep/Java/blob/master/src/Stacks/SlidingWindow.java)
+* [Sort Stack](https://github.com/kasodeep/Java/blob/master/src/Stacks/SortStack.java)
+* [Sum Of SubArray Minimums](https://github.com/kasodeep/Java/blob/master/src/Stacks/SumOfSubArrayMinimums.java)
+* [Stack With Middle OP](https://github.com/kasodeep/Java/blob/master/src/Stacks/StackWithMiddleOP.java)
+* [The Celebrity Problem](https://github.com/kasodeep/Java/blob/master/src/Stacks/TheCelebrityProblem.java)
+* [Two Stacks](https://github.com/kasodeep/Java/blob/master/src/Stacks/TwoStacks.java)
+* [Consecutive Subsequence](https://github.com/kasodeep/Java/blob/master/src/Stacks/TwoStacks.java)
+* [Conversions (Andar Jake Dekh Lo)](https://github.com/kasodeep/Java/blob/master/src/Stacks)
+
+## Queue(Pehle Andar Pehle Bahar):
+
+### **Line Mein Lago**:
+
+* [Basics](https://github.com/kasodeep/Java/blob/master/src/Queue/Basics.java)
+* [Array Implementation](https://github.com/kasodeep/Java/blob/master/src/Queue/ArrayImplementation.java)
+* [LL Implementation](https://github.com/kasodeep/Java/blob/master/src/Queue/LLImplementation.java)
+* [Circular Queue](https://github.com/kasodeep/Java/blob/master/src/Queue/CircularQueue.java)
+* [Circular Tour](https://github.com/kasodeep/Java/blob/master/src/Queue/CircularTour.java)
+* [Dota2Senate](https://github.com/kasodeep/Java/blob/master/src/Queue/Dota2Senate.java)
+* [First Negative](https://github.com/kasodeep/Java/blob/master/src/Queue/FirstNegativeWindow.java)
+* [First Non Repeating](https://github.com/kasodeep/Java/blob/master/src/Queue/FirstNonRepeating.java)
+* [LRU Cache (Karna Padega)](https://github.com/kasodeep/Java/blob/master/src/Queue/LRUCache.java)
+* [My Queue](https://github.com/kasodeep/Java/blob/master/src/Queue/MyQueue.java)
+* [My Stack](https://github.com/kasodeep/Java/blob/master/src/Queue/MyStack.java)
+* [Recent Calls](https://github.com/kasodeep/Java/blob/master/src/Queue/RecentCalls.java)
+* [ReOrder Queue](https://github.com/kasodeep/Java/blob/master/src/Queue/ReorderQueue.java)
+* [Reverse First K](https://github.com/kasodeep/Java/blob/master/src/Queue/ReverseFirstK.java)
+* [Rotten Oranges](https://github.com/kasodeep/Java/blob/master/src/Queue/RottenOranges.java)
