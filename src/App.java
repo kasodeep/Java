@@ -5,7 +5,7 @@
  */
 
 /*
-    JVM - Class Loader, Memory Area, Execution Engine->Interpreter + JIT + GC
+    JVM - Class Loader, Memory Area, Execution Engine -> Interpreter + JIT + GC
     JRE - JVM + Runtime Libraries
     JDK - JRE + Development Tools
  */
@@ -15,7 +15,7 @@
     java Main
  */
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         System.out.println("Hello, World! ");
         System.out.println(args[0]);
     }
