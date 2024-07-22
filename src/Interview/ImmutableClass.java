@@ -31,6 +31,7 @@ public final class ImmutableClass {
 }
 
 class Engine {
+
     int speed;
 
     public Engine(int speed) {

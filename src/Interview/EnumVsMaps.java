@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 enum LoyaltyLevel {
+
     BRONZE(0.02, 1),
     SILVER(0.05, 1.5),
     GOLD(0.1, 2),
@@ -27,6 +28,7 @@ enum LoyaltyLevel {
 }
 
 class LoyaltyProgram {
+
     private static final Map<String, Double> discountMap = new HashMap<>();
     private static final Map<String, Double> pointsMultiplierMap = new HashMap<>();
 

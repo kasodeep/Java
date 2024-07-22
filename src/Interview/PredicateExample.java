@@ -3,7 +3,7 @@ package Interview;
 import java.util.function.Predicate;
 
 /**
- * There are some predefined functional interface in Java like Predicate, consumer, supplier etc.
+ * There are some predefined functional interface in Java like Predicate, Consumer, Supplier etc.
  * The return type of Lambda function (introduced in JDK 1.8) is an also functional interface.
  */
 public class PredicateExample {

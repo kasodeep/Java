@@ -18,6 +18,7 @@ public class OptionalExample {
     }
 
     static class Address {
+
         private String city;
 
         public String getCity() {
@@ -30,6 +31,7 @@ public class OptionalExample {
     }
 
     static class Person {
+
         private Optional<Address> address;
 
         public Person(Optional<Address> address) {

@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**
  * Comparator: Has compare method with two arguments.
- * Comparable: Has compareTo method with one argument.
+ * Comparable: Has compareTo method with one argument(for Arrays.stream()).
  */
 public class Student implements Comparator<Student> {
 
