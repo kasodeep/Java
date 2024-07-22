@@ -19,6 +19,7 @@ public class SubMatrixSumTarget {
             for (int c2 = c1; c2 < m; c2++) {
                 map.clear();
                 map.put(0, 1);
+
                 int sum = 0;
                 for (int[] ints : matrix) {
                     sum += c1 == c2 ? ints[c1] : ints[c2] - ints[c1];

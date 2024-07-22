@@ -267,7 +267,7 @@
 
 ## Graphs(Ghumte Raho):
 
-### **Road Pe Niklo, Raasta Apne Aap Banega**
+### **Road Pe Niklo, Raasta Apne Aap Banega**:
 
 * [Adjacency List](https://github.com/kasodeep/Java/blob/master/src/graph/AdjacencyList.java)
 * [All Paths](https://github.com/kasodeep/Java/blob/master/src/graph/AllPaths.java)
@@ -348,7 +348,7 @@
 * [Circular Tour](https://github.com/kasodeep/Java/blob/master/src/Queue/CircularTour.java)
 * [Dota2Senate](https://github.com/kasodeep/Java/blob/master/src/Queue/Dota2Senate.java)
 * [First Negative](https://github.com/kasodeep/Java/blob/master/src/Queue/FirstNegativeWindow.java)
-* [First Non Repeating](https://github.com/kasodeep/Java/blob/master/src/Queue/FirstNonRepeating.java)
+* [First Non-Repeating](https://github.com/kasodeep/Java/blob/master/src/Queue/FirstNonRepeating.java)
 * [LRU Cache (Karna Padega)](https://github.com/kasodeep/Java/blob/master/src/Queue/LRUCache.java)
 * [My Queue](https://github.com/kasodeep/Java/blob/master/src/Queue/MyQueue.java)
 * [My Stack](https://github.com/kasodeep/Java/blob/master/src/Queue/MyStack.java)
@@ -356,3 +356,32 @@
 * [ReOrder Queue](https://github.com/kasodeep/Java/blob/master/src/Queue/ReorderQueue.java)
 * [Reverse First K](https://github.com/kasodeep/Java/blob/master/src/Queue/ReverseFirstK.java)
 * [Rotten Oranges](https://github.com/kasodeep/Java/blob/master/src/Queue/RottenOranges.java)
+
+## Matrix(3x3, 4x4):
+
+### **Hamesha O(n^2)**:
+
+* [Binary Search](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/BinarySearch.java)
+* [Common Element All Rows](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/CommonElementAllRows.java)
+* [Count Island](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/CountIsland.java)
+* [Determinant Of Matrix](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/DeterminantOfMatrix.java)
+* [Diagonal Traversal](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/DiagonalTraversal.java)
+* [Generate Spiral](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/GenerateSpiral.java)
+* [Print Spiral](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/PrintSpiral.java)
+* [Make Matrix Beautiful](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/MakeMatrixBeautiful.java)
+* [Maximum Rectangle 1s](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/MaximumRectangle1s.java)
+* [Multiplication Of Matrix](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/MultiplicationOfMatrix.java)
+* [Overlapping Intervals](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/OverlappingIntervals.java)
+* [Pascal Triangle](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/PascalTriangle.java)
+* [Rectangle Sum](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/RectangleSum.java)
+* [Replace O With X](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/ReplaceOWithX.java)
+* [Reverse Each Row](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/ReverseEachRow.java)
+* [Rotate By 90](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/RotateBy90.java)
+* [Rows With Max One](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/RowsWithMaxOne.java)
+* [Set Matrix Zeros](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/SetMatrixZeros.java)
+* [Sub Matrix Sum Target](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/SubMatrixSumTarget.java)
+* [Sub Square Surrounded By X](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/SubSquareSurroundedByX.java)
+* [Toeplitz Matrix](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/ToeplitzMatrix.java)
+* [Transpose](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/Transpose.java)
+* [Word Search](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/WordSearch.java)
+* [Largest Sub Matrix Sum Zero](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/LargestSubMatrixSumZero.java)
