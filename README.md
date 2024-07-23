@@ -385,3 +385,20 @@
 * [Transpose](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/Transpose.java)
 * [Word Search](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/WordSearch.java)
 * [Largest Sub Matrix Sum Zero](https://github.com/kasodeep/Java/blob/master/src/ArraysD2/LargestSubMatrixSumZero.java)
+
+## Backtracking (U Turn Le Lo):
+
+### **Rasta Nahi Hai...**:
+
+* [RatInAMaze](https://github.com/kasodeep/Java/blob/master/src/BackTracking/RatInADeadMazeFour.java)
+* [N Queens](https://github.com/kasodeep/Java/blob/master/src/BackTracking/NQueens.java)
+* [Word Break 2](https://github.com/kasodeep/Java/blob/master/src/BackTracking/WordBreakTwo.java)
+* [Maze Paths](https://github.com/kasodeep/Java/blob/master/src/BackTracking/MazePathWays.java)
+* [Sudoku Solver](https://github.com/kasodeep/Java/blob/master/src/BackTracking/SudokuSolver.java)
+* [All Palindromic Partitions](https://github.com/kasodeep/Java/blob/master/src/BackTracking/AllPalindromicPartitions.java)
+* [Knights Tour](https://github.com/kasodeep/Java/blob/master/src/BackTracking/KnightsTour.java)
+* [K Knights Max](https://github.com/kasodeep/Java/blob/master/src/BackTracking/KKnightsMax.java)
+* [Largest Number K Swaps](https://github.com/kasodeep/Java/blob/master/src/BackTracking/LargestNumberKSwaps.java)
+* [Combination Sum](https://github.com/kasodeep/Java/blob/master/src/BackTracking/CombinationSum.java)
+* [Partition Into K SubSets](https://github.com/kasodeep/Java/blob/master/src/BackTracking/PartitionIntoKSubsets.java)
+* [Remove Invalid Parenthesis](https://github.com/kasodeep/Java/blob/master/src/BackTracking/RemoveInvalidParenthesis.java) 

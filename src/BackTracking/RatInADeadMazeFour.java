@@ -3,7 +3,7 @@ package BackTracking;
 public class RatInADeadMazeFour {
 
     private static void print(int sr, int sc, int er, int ec, String s, int[][] maze) {
-        if (sr < 0 || sc < 0 || sc > ec || sr > er || maze[sr][sc] == 0 || maze[sr][sc] == -1)
+        if (sr < 0 || sc < 0 || sc > ec || sr > er || maze[sr][sc] == 0)
             return;
 
         if (sr == er && sc == ec) {
@@ -11,7 +11,7 @@ public class RatInADeadMazeFour {
             return;
         }
 
-        maze[sr][sc] = -1;
+        maze[sr][sc] = 0;
 
         print(sr, sc + 1, er, ec, s + "R", maze);
         print(sr + 1, sc, er, ec, s + "D", maze);
