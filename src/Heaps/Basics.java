@@ -8,8 +8,8 @@ import java.util.List;
                          Last Level must be filled from left to right.
 *
 * HEAP : Heap is a data structure which is a Complete Binary Tree, represented in terms of Array and visualized in terms if Tree.
-* MAX HEAP : For every node parent must be greater than the child.
-* MIN HEAP : For every node parent must be smaller than the child.
+* MAX HEAP : For every node parent must be greater than the children.
+* MIN HEAP : For every node parent must be smaller than the children.
 *
 * Left Child : (2 * i) + 1
 * Right Child : (2 * i) + 2

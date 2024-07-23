@@ -47,8 +47,6 @@ public class Basics {
     }
 
     private static class StudentComparator implements Comparator<Student> {
-        // Max Heap: return 1;
-        // Min Heap: return -1;
         public int compare(Student s1, Student s2) {
             if (s1.marks > s2.marks) {
                 return 1;
@@ -59,5 +57,4 @@ public class Basics {
             }
         }
     }
-
 }

@@ -7,7 +7,7 @@ public class KthLargest {
     // Time Complexity - O(N * logN), Auxiliary Space - O(K)
     public static void main(String[] args) {
         int[] arr = {3, 7, 2, 9, 5};
-        int k = 3;
+        int k = 2;
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int element : arr) {

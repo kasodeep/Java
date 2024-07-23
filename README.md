@@ -401,4 +401,29 @@
 * [Largest Number K Swaps](https://github.com/kasodeep/Java/blob/master/src/BackTracking/LargestNumberKSwaps.java)
 * [Combination Sum](https://github.com/kasodeep/Java/blob/master/src/BackTracking/CombinationSum.java)
 * [Partition Into K SubSets](https://github.com/kasodeep/Java/blob/master/src/BackTracking/PartitionIntoKSubsets.java)
-* [Remove Invalid Parenthesis](https://github.com/kasodeep/Java/blob/master/src/BackTracking/RemoveInvalidParenthesis.java) 
+* [Remove Invalid Parenthesis](https://github.com/kasodeep/Java/blob/master/src/BackTracking/RemoveInvalidParenthesis.java)
+
+## Heaps (Priority Queue):
+
+### **Upar Wala Element**:
+
+* [Basics](https://github.com/kasodeep/Java/blob/master/src/Heaps/Basics.java)
+* [Deletion Min Heap](https://github.com/kasodeep/Java/blob/master/src/Heaps/DeletionMinHeap.java)
+* [Deletion Max Heap](https://github.com/kasodeep/Java/blob/master/src/Heaps/DeletionMaxHeap.java)
+* [Insertion Min Heap](https://github.com/kasodeep/Java/blob/master/src/Heaps/InsertionMinHeap.java)
+* [Insertion Max Heap](https://github.com/kasodeep/Java/blob/master/src/Heaps/InsertionMaxHeap.java)
+* [Heap Sort](https://github.com/kasodeep/Java/blob/master/src/Heaps/HeapSort.java)
+* [Basics](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/Basics.java)
+* [Kth Largest](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/KthLargest.java)
+* [Merge K Sorted Arrays](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/MergeKSortedArrays.java)
+* [Merge K Sorted List](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/MergeKSortedLists.java)
+* [Is Tree Heap](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/IsTreeHeap.java)
+* [Median Stream](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/MedianStream.java)
+* [BST To Min Heap](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/BstToMeanHeap.java)
+* [Kth Largest Sub Array Sum](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/KthLargestSubArraySum.java)
+* [Reorganize Strings](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/ReorganizeStrings.java)
+* [K1 & K2](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/K1thAndK2th.java)
+* [Kth Smallest Fraction](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/KthSmallestFraction.java)
+* [Merge Heaps](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/MergeHeaps.java)
+* [Minimum Cost To Hire K Workers](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/MinimumCostToHireKWorkers.java)
+* [Smallest Range K List](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/SmallestRangeKLists.java)
