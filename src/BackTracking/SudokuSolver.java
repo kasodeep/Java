@@ -31,7 +31,6 @@ public class SudokuSolver {
     }
 
     static boolean SolveSudoku(int[][] grid) {
-
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid.length; j++) {
                 if (grid[i][j] == 0) {
@@ -55,7 +54,6 @@ public class SudokuSolver {
     }
 
     static void printGrid(int[][] grid) {
-
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid.length; j++) {
                 if (i == grid.length - 1 && j == grid.length - 1) {
