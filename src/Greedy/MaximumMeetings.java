@@ -20,6 +20,7 @@ public class MaximumMeetings {
 
         List<Integer> result = new ArrayList<>();
         meetings.sort(new ItemComparator());
+
         result.add(meetings.get(0).no);
         Meeting previous = meetings.get(0);
 

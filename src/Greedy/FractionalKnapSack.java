@@ -38,7 +38,7 @@ public class FractionalKnapSack {
     private static class ItemComparator implements Comparator<Item> {
         @Override
         public int compare(Item o1, Item o2) {
-            return Integer.compare(o2.value / o2.weight, o1.value / o1.weight);
+            return Double.compare((double) o2.value / o2.weight, (double) o1.value / o1.weight);
         }
     }
 

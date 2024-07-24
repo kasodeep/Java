@@ -6,6 +6,7 @@ import java.util.Comparator;
 public class WeightedJobScheduling {
 
     public static int[] JobScheduling(Job[] arr, int n) {
+
         Arrays.sort(arr, new Comparator<>() {
             @Override
             public int compare(Job j1, Job j2) {
@@ -17,6 +18,7 @@ public class WeightedJobScheduling {
 
         int jobs = 0, max = 0;
         boolean[] isDone = new boolean[n];
+
         for (Job job : arr) {
             for (int i = job.deadline - 1; i >= 0; i--) {
                 if (isDone[i]) continue;

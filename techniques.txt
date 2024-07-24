@@ -1,8 +1,0 @@
-1. Monotonic Stack + Sliding Window:
-    When we have window and need to remove the elements + custom logic (Sliding Window Maximum).
-
-2. Tow Pointers:
-    (Max Score of a Good SubArray).
-
-3. Prefix Sum + HashMap + Target Sum:
-    (Number Of Sub-Matrices That Sum to Target).

@@ -427,3 +427,21 @@
 * [Merge Heaps](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/MergeHeaps.java)
 * [Minimum Cost To Hire K Workers](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/MinimumCostToHireKWorkers.java)
 * [Smallest Range K List](https://github.com/kasodeep/Java/blob/master/src/priorityQueue/SmallestRangeKLists.java)
+
+## Greedy (Lalach):
+
+### **Jo Theek Lage**:
+
+* [Activity Selection Problem](https://github.com/kasodeep/Java/blob/master/src/Greedy/ActivitySelectionProblem.java)
+* [Fractional Knapsack](https://github.com/kasodeep/Java/blob/master/src/Greedy/FractionalKnapSack.java)
+* [Weighted Job Scheduling](https://github.com/kasodeep/Java/blob/master/src/Greedy/WeightedJobScheduling.java)
+* [Minimum Cost To Cut](https://github.com/kasodeep/Java/blob/master/src/Greedy/MinimumCostToCut.java)
+* [Survive](https://github.com/kasodeep/Java/blob/master/src/Greedy/Survive.java)
+* [Maximum Meetings](https://github.com/kasodeep/Java/blob/master/src/Greedy/MaximumMeetings.java)
+* [Maximize Consecutive Differences](https://github.com/kasodeep/Java/blob/master/src/Greedy/MaximizeConsecutiveDifferences.java)
+* [Max Sum Stack](https://github.com/kasodeep/Java/blob/master/src/Greedy/MaxSumStack.java)
+* [Smallest Number Digits](https://github.com/kasodeep/Java/blob/master/src/Greedy/SmallestNumberDigits.java)
+* [Max Sum K Negations](https://github.com/kasodeep/Java/blob/master/src/Greedy/MaxSumKNegations.java)
+* [HuffMan Coding](https://github.com/kasodeep/Java/blob/master/src/Greedy/HuffManCoding.java)
+* [Water Connection Problem](https://github.com/kasodeep/Java/blob/master/src/Greedy/WaterConnectionProblem.java)
+

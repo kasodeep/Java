@@ -19,7 +19,7 @@ public class Survive {
 
         int totalFood = S * M;
         int result;
-        if (M > N || (7 * M) > (6 * N)) {
+        if (M > N || (S >= 6 && (7 * M) > (6 * N))) {
             result = -1;
         } else {
             result = (int) Math.ceil((double) totalFood / N);
