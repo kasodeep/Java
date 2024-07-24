@@ -5,6 +5,7 @@ public class AllocateBooks {
     public static int findPages(int[] arr, int n, int m) {
         long sum = 0;
         long max = Integer.MIN_VALUE;
+
         for (int i = 0; i < n; i++) {
             sum += arr[i];
             max = Math.max(max, arr[i]);

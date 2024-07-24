@@ -4,6 +4,7 @@ public class MinimizeMaxDistance {
 
     public static int noOfGasStationsBetween(int[] arr, double dist) {
         int cnt = 0, n = arr.length;
+
         for (int i = 0; i < n - 1; i++) {
             double stationsInBetween = (arr[i + 1] - arr[i]) / dist;
             cnt += stationsInBetween;
@@ -14,7 +15,9 @@ public class MinimizeMaxDistance {
     public static double findSmallestMaxDist(int[] arr, int k) {
         int n = arr.length;
         double maxi = Integer.MIN_VALUE;
-        for (int i = 0; i < n - 1; i++) maxi = Math.max(maxi, arr[i + 1] - arr[i]);
+
+        for (int i = 0; i < n - 1; i++)
+            maxi = Math.max(maxi, arr[i + 1] - arr[i]);
 
         double low = 0, high = maxi, diff = 1e-6;
         while (high - low > diff) {

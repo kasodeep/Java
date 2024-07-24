@@ -6,15 +6,15 @@ public class DistributeChocolates {
         int numOfStudents = 1;
         int choc = 0;
 
-        for (int j : a) {
-            if (j > mxChocoAllowed)
+        for (int num : a) {
+            if (num > mxChocoAllowed)
                 return false;
 
-            if (choc + j <= mxChocoAllowed) {
-                choc += j;
+            if (choc + num <= mxChocoAllowed) {
+                choc += num;
             } else {
                 numOfStudents++;
-                choc = j;
+                choc = num;
             }
         }
 

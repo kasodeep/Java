@@ -445,3 +445,25 @@
 * [HuffMan Coding](https://github.com/kasodeep/Java/blob/master/src/Greedy/HuffManCoding.java)
 * [Water Connection Problem](https://github.com/kasodeep/Java/blob/master/src/Greedy/WaterConnectionProblem.java)
 
+## Searching & Sorting:
+
+### **Dundho**:
+
+* [Binary Search](https://github.com/kasodeep/Java/blob/master/src/Searching/BinarySearch.java)
+* [Aggressive Cows](https://github.com/kasodeep/Java/blob/master/src/Searching/AggressiveCows.java)
+* [Allocate Books](https://github.com/kasodeep/Java/blob/master/src/Searching/AllocateBooks.java)
+* [Max Profit Workers](https://github.com/kasodeep/Java/blob/master/src/Searching/AssignMaxProfitToWorkers.java)
+* [Days To Make M Bouquets](https://github.com/kasodeep/Java/blob/master/src/Searching/DaysToMakeMBouquets.java)
+* [Distribute Chocolates](https://github.com/kasodeep/Java/blob/master/src/Searching/DistributeChocolates.java)
+* [Find K Closest Elements](https://github.com/kasodeep/Java/blob/master/src/Searching/FindKClosestElements.java)
+* [Minimum Rotated Sorted](https://github.com/kasodeep/Java/blob/master/src/Searching/FindMinimumRotated.java)
+* [Square Root](https://github.com/kasodeep/Java/blob/master/src/Searching/FindSquareRoot.java)
+* [First Occurrence](https://github.com/kasodeep/Java/blob/master/src/Searching/FirstOccurrence.java)
+* [Minimize Max Distance](https://github.com/kasodeep/Java/blob/master/src/Searching/MinimizeMaxDistance.java)
+* [Mountain Array](https://github.com/kasodeep/Java/blob/master/src/Searching/MountainArray.java)
+* [Race Track](https://github.com/kasodeep/Java/blob/master/src/Searching/RaceTrack.java)
+* [Search Matrix](https://github.com/kasodeep/Java/blob/master/src/Searching/SearchMatrix.java)
+* [Search Rotated](https://github.com/kasodeep/Java/blob/master/src/Searching/SearchRotated.java)
+* [Successful Potions](https://github.com/kasodeep/Java/blob/master/src/Searching/SuccessfulPotions.java)
+
+
