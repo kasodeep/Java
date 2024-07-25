@@ -1,7 +1,7 @@
 package Sorting;
 
 /**
- * Time Complexity: Worst -O(N^2), Best & Average - O(NlogN), Auxiliary Space: O(1).
+ * Time Complexity: Worst - O(N^2), Best & Average - O(NlogN), Auxiliary Space: O(1).
  * It is "UnStable Sort" as it does change the order of the duplicate items.
  * It is also "In Place".
  */

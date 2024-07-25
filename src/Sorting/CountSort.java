@@ -3,7 +3,7 @@ package Sorting;
 /**
  * 1) Non-Comparison
  * 2) This sorting Technique is used when Whe Range of input is limited.
- * Time Complexity: Worst & Average -O(N+K), Best - O(N), Auxiliary Space: O(N+K)
+ * Time Complexity: Worst & Average -O(N + K), Best - O(N), Auxiliary Space: O(N + K)
  * k is the time required to find the maximum number.
  * It is "Stable Sort" as it does not change the order of the duplicate items.
  * It is also "In Place".

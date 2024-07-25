@@ -3,4 +3,4 @@ Stable Sort: A sorting algorithm is said to be stable if two objects with equal 
 
 In Place Sort: An in-place algorithm is an algorithm which does not require an extra space and produces an output in the
                same memory that contains the original data by transforming the input ‘in-place’.
-               However,we can use a small constant extra space for variables.
+               However, we can use a small constant extra space for variables.

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Time Complexity: Worst & Average -O(N+K), Best - O(N), Auxiliary Space: O(N+K)
+ * Time Complexity: Worst & Average -O(N + K), Best - O(N), Auxiliary Space: O(N + K)
  * It is "Stable Sort" as it does not change the order of the duplicate items.
  * It is also "In Place".
  */

@@ -1,7 +1,7 @@
 package Sorting;
 
 /**
- * Time Complexity: Worst & Average -O(NlogN), Best - O(NlogN), Auxiliary Space: O(N)
+ * Time Complexity: Worst & Average - O(NlogN), Best - O(NlogN), Auxiliary Space: O(N)
  * It is "Stable Sort" as it does not change the order of the duplicate items.
  * It is not an "In Place".
  * T(n) = 2T(n/2) + O(n)

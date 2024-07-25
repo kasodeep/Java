@@ -2,7 +2,7 @@ package Sorting;
 
 /**
  * 1) Digit by digit sorting or place by place.
- * Time Complexity: Worst & Average -O(N * d), Best - O(N), Auxiliary Space: O(N)
+ * Time Complexity: Worst & Average - O(N * d), Best - O(N), Auxiliary Space: O(N)
  * When all elements have the same number of digits, best case time complexity.
  * It is "Stable Sort" as it does not change the order of the duplicate items.
  * It is also "In Place".
@@ -20,7 +20,6 @@ public class RadixSort {
 
     // Count Sort for Radix implementation.
     static void countSort(int[] arr, int place) {
-
         int n = arr.length;
         int[] output = new int[n];
 
