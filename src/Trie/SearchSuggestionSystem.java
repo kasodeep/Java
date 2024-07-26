@@ -52,6 +52,7 @@ public class SearchSuggestionSystem {
             List<String> topThree = new ArrayList<>();
             while (!pq.isEmpty())
                 topThree.add(pq.poll());
+
             Collections.reverse(topThree);
             return topThree;
         }

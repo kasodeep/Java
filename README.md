@@ -487,3 +487,13 @@
 * [Triplet Sum Less Than K](https://github.com/kasodeep/Java/blob/master/src/Sorting/TripletSumLessThanK.java)
 * [Sort By Bit Count](https://github.com/kasodeep/Java/blob/master/src/Sorting/SortByBitCount.java)
 
+## Trie (Not from this World):
+
+### **Jaadu (✌)**:
+
+* [TrieNode](https://github.com/kasodeep/Java/blob/master/src/Trie/TrieNode.java)
+* [Trie](https://github.com/kasodeep/Java/blob/master/src/Trie/Trie.java)
+* [Search Suggestion System](https://github.com/kasodeep/Java/blob/master/src/Trie/SearchSuggestionSystem.java)
+* [Shortest Unique Prefix](https://github.com/kasodeep/Java/blob/master/src/Trie/ShortestUniquePrefix.java)
+* [Word Break](https://github.com/kasodeep/Java/blob/master/src/Trie/WordBreak.java)
+
