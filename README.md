@@ -279,6 +279,8 @@
 * [Detect Cycle UnDirected](https://github.com/kasodeep/Java/blob/master/src/graph/DetectCycleUnDirected.java)
 * [Dijkstras Algorithm](https://github.com/kasodeep/Java/blob/master/src/graph/DijkstrasAlgorithm.java)
 * [Floyd Warshall Algorithm](https://github.com/kasodeep/Java/blob/master/src/graph/FloydWarshallAlgorithm.java)
+* [All City Threshold](https://github.com/kasodeep/Java/blob/master/src/graph/AllCityThreshold.java)
+* [Minimum Cost To Convert](https://github.com/kasodeep/Java/blob/master/src/graph/MinimumCostToConvert.java)
 * [Bellman Ford Algorithm](https://github.com/kasodeep/Java/blob/master/src/graph/BellManFordAlgorithm.java)
 * [Cheapest Flight K Stops](https://github.com/kasodeep/Java/blob/master/src/graph/CheapestFlightKStops.java)
 * [Open The Lock](https://github.com/kasodeep/Java/blob/master/src/graph/OpenTheLock.java)
