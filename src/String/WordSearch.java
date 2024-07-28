@@ -1,24 +1,47 @@
 package String;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class WordSearch {
 
-    public static int wordBreak(String A, ArrayList<String> B) {
-        int n = A.length();
-        HashSet<String> wordSet = new HashSet<>(B);
+    public static int[][] searchWord(char[][] grid, String word) {
+        int m = grid.length;
+        int n = grid[0].length;
+        ArrayList<int[]> ar = new ArrayList<>();
 
-        boolean[] dp = new boolean[n + 1];
-        dp[0] = true;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < i; j++) {
-                if (dp[j] && wordSet.contains(A.substring(j, i))) {
-                    dp[i] = true;
-                    break;
+        int[] dRow = {-1, -1, 0, 1, 1, 1, 0, -1};
+        int[] dCol = {0, 1, 1, 1, 0, -1, -1, -1};
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == word.charAt(0)) {
+
+                    for (int k = 0; k < 8; k++) {
+                        if (isTrue(i, j, dRow[k], dCol[k], word, grid, 0)) {
+                            ar.add(new int[]{i, j});
+                            break;
+                        }
+                    }
                 }
             }
         }
-        return dp[n] ? 1 : 0;
+
+        int s = ar.size();
+        int[][] ans = new int[s][2];
+        int i = 0;
+
+        for (int[] it : ar) ans[i++] = it;
+        return ans;
+    }
+
+    static boolean isTrue(int i, int j, int dr, int dc, String word, char[][] grid, int ind) {
+        if (ind == word.length()) return true;
+
+        int m = grid.length;
+        int n = grid[0].length;
+
+        if (i < 0 || j < 0 || i >= m || j >= n) return false;
+        if (word.charAt(ind) != grid[i][j]) return false;
+        else return isTrue(i + dr, j + dc, dr, dc, word, grid, ind + 1);
     }
 }

@@ -11,6 +11,7 @@ public class Palindrome {
         while (start <= last) {
             char currFirst = s.charAt(start);
             char currLast = s.charAt(last);
+
             if (!Character.isLetterOrDigit(currFirst)) start++;
             else if (!Character.isLetterOrDigit(currLast)) last--;
             else {

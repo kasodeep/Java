@@ -499,3 +499,21 @@
 * [Shortest Unique Prefix](https://github.com/kasodeep/Java/blob/master/src/Trie/ShortestUniquePrefix.java)
 * [Word Break](https://github.com/kasodeep/Java/blob/master/src/Trie/WordBreak.java)
 
+### Strings (English or Spanish):
+
+### **(Techniques Important Hai)**:
+
+* [Palindrome](https://github.com/kasodeep/Java/blob/master/src/String/Palindrome.java)
+* [String Rotation](https://github.com/kasodeep/Java/blob/master/src/String/StringRotation.java)
+* [Longest Palindromic Substring](https://github.com/kasodeep/Java/blob/master/src/String/LongestPalindromicSubstring.java)
+* [Isomorphic Strings](https://github.com/kasodeep/Java/blob/master/src/String/IsomorphicStrings.java)
+* [Roman To Integer](https://github.com/kasodeep/Java/blob/master/src/String/RomanToInteger.java)
+* [Window Substring](https://github.com/kasodeep/Java/blob/master/src/String/WindowSubstring.java)
+* [Permutations](https://github.com/kasodeep/Java/blob/master/src/String/Permutations.java)
+* [Word Search](https://github.com/kasodeep/Java/blob/master/src/String/WordSearch.java)
+* [KMP Algorithm](https://github.com/kasodeep/Java/blob/master/src/String/KMPAlgorithm.java)
+* [Rabin Karp Algorithm](https://github.com/kasodeep/Java/blob/master/src/String/RabinKarpAlgorithm.java)
+* [Count And Say](https://github.com/kasodeep/Java/blob/master/src/String/CountAndSay.java)
+* [Longest Common Prefix](https://github.com/kasodeep/Java/blob/master/src/String/LongestCommonPrefix.java)
+* [Print All Anagrams](https://github.com/kasodeep/Java/blob/master/src/String/PrintAllAnagramsTogether.java)
+* [Add To Front Palindrome](https://github.com/kasodeep/Java/blob/master/src/String/AddToFrontPalindrome.java)

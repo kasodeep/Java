@@ -7,6 +7,7 @@ public class RabinKarpAlgorithm {
     static void search(String pat, String txt) {
         int M = pat.length();
         int N = txt.length();
+
         int i, j;
         int p = 0; // Hash value for pattern.
         int t = 0; // Hash value for txt.
@@ -16,8 +17,7 @@ public class RabinKarpAlgorithm {
         for (i = 0; i < M - 1; i++)
             h = (h * d) % q;
 
-        // Calculate the hash value of pattern and first
-        // window of text
+        // Calculate the hash value of pattern and first window of text
         for (i = 0; i < M; i++) {
             p = (d * p + pat.charAt(i)) % q;
             t = (d * t + txt.charAt(i)) % q;
