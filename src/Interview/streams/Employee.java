@@ -1,4 +1,4 @@
-package Streams;
+package Interview.streams;
 
 public class Employee {
 

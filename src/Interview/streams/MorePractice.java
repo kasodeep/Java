@@ -1,4 +1,4 @@
-package Streams;
+package Interview.streams;
 
 import java.util.*;
 import java.util.function.Function;

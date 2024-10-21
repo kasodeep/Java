@@ -5,7 +5,9 @@ import java.util.Objects;
 
 /**
  * Comparator: Has compare method with two arguments.
- * Comparable: Has compareTo method with one argument(for Arrays.stream()).
+ * Comparable: Has compareTo method with one argument(for Arrays.sort()).
+ * <p>
+ * The Comparator is an external component to the objects being compared, whereas the Comparable is an interface implemented by the compared objects themselves.
  */
 public class Student implements Comparator<Student> {
 

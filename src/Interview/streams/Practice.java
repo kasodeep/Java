@@ -1,4 +1,4 @@
-package Streams;
+package Interview.streams;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -23,7 +23,6 @@ public class Practice {
         String collected = words
                 .stream()
                 .collect(Collectors.joining(", "));
-        System.out.println(collected);
 
         String repeatingCharacter = "Kasodariya Deep";
 

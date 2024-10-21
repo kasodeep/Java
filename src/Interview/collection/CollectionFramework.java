@@ -28,12 +28,18 @@ public class CollectionFramework {
 
         list.remove(1);
         list.remove(Integer.valueOf(2));
-        list.clear();
 
+        // Modification not allowed throws, Concurrent Modification Exception.
+        // Iterable is implemented for iterator() method.
         Iterator<Integer> it = list.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }
+
+        ListIterator<Integer> listIt = list.listIterator();
+        System.out.println(listIt.next());
+        System.out.println(listIt.previous());
+
 
         // Methods of the queue interface.
         Queue<Integer> q = new LinkedList<>();
