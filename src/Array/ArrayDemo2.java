@@ -2,8 +2,9 @@ package Array;
 
 import java.util.Arrays;
 
-/*
+/**
  * When we use copy the value of an array to a new array both are referring to the same memory address, therefore changing one value will also change other array's value.
+ * <p>
  * We can also copy the array with various functions/methods to create new array.
  */
 public class ArrayDemo2 {

@@ -1,14 +1,13 @@
 package OOPS;
 
-/*
+/**
+ * Inheritance: super keyword is used to call the parent constructor, extends keyword is used to implement inheritance in java.
  * <p>
- * Inheritance: super keyword is used to call the parent constructor.
- * extends keyword is used to implement inheritance in java.
- *
  * Polymorphism: one name, many forms.
+ * <p>
  * Encapsulation: data protection & data hiding.
  * </p>
- * */
+ */
 public class Developer extends Student {
 
     public Developer() {

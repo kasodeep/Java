@@ -10,7 +10,9 @@ public class Student {
     final String COLLEGE_NAME = "VJTI";
 
     protected String name;
+
     protected int rollNo;
+
     private double percent;
 
     public Student() {
