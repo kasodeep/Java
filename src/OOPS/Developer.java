@@ -10,6 +10,9 @@ package OOPS;
  */
 public class Developer extends Student {
 
+    /**
+     * This will also call super() in its first line.
+     */
     public Developer() {
     }
 

@@ -19,6 +19,11 @@ public class Student {
         numberOfStudents++;
     }
 
+    static {
+        System.out.println("This block will be executed once.");
+        System.out.println("Runs when the class loader loads the class.");
+    }
+
     /*
      * When parameterized constructor is created, it overrides default hence need to explicitly specify the default one.
      */

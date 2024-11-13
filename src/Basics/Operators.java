@@ -2,13 +2,12 @@ package Basics;
 
 import java.util.Scanner;
 
-/*
+/**
  * Bitwise Operators :
  * & (AND) , | (OR) , ^ (XOR) , ~ (1'Complements)
  * << (Left Shift)
  * >> (Right Shift)
  */
-
 public class Operators {
 
     public static void main(String[] args) {

@@ -20,6 +20,9 @@ import java.awt.*;
  * <p>
  * Implicit Casting:
  * byte > short > int > long > float > double
+ * <p>
+ * When byte overflows, it converts using Modulo operation.
+ * Ex: byte num = 257; (It will be 1)
  */
 public class Variables {
 
@@ -29,6 +32,9 @@ public class Variables {
 
         int ascii = 'U';
         System.out.println(ascii);
+
+        int literal = 0b101;
+        System.out.println(literal);
 
         // Referencing of objects.
         Point point1 = new Point(10, 10);
