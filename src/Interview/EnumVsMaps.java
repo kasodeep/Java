@@ -11,6 +11,7 @@ enum LoyaltyLevel {
     PLATINUM(0.15, 2.5);
 
     private final double discount;
+
     private final double pointsMultiplier;
 
     LoyaltyLevel(double discount, double pointsMultiplier) {
@@ -30,6 +31,7 @@ enum LoyaltyLevel {
 class LoyaltyProgram {
 
     private static final Map<String, Double> discountMap = new HashMap<>();
+
     private static final Map<String, Double> pointsMultiplierMap = new HashMap<>();
 
     static {

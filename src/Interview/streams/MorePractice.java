@@ -42,7 +42,7 @@ public class MorePractice {
         list.add(list1);
         list.add(list2);
 
-        // List of List of Integers
+        // List of Integers
         List<Integer> flattenedList = list
                 .stream()
                 .flatMap(List::stream)

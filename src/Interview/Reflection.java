@@ -34,7 +34,7 @@ public class Reflection {
                 System.out.println(" " + method.getName());
             }
 
-            // getting all the constructors.
+            // Getting all the constructors.
             System.out.println("Constructors:");
             Constructor<?>[] constructors = personClass.getConstructors();
             for (Constructor<?> constructor : constructors) {

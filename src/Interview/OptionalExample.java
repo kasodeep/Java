@@ -8,12 +8,12 @@ public class OptionalExample {
         Person person = new Person(Optional.empty());
 
         String city = person
-                .getAddress()
+                .address()
                 .map(Address::getCity)
                 .orElse("Unknown");
 
         // Print city if present.
-        person.getAddress().ifPresent(address -> System.out.println("City: " + address.getCity()));
+        person.address().ifPresent(address -> System.out.println("City: " + address.getCity()));
 
     }
 
@@ -30,16 +30,6 @@ public class OptionalExample {
         }
     }
 
-    static class Person {
-
-        private Optional<Address> address;
-
-        public Person(Optional<Address> address) {
-            this.address = address;
-        }
-
-        public Optional<Address> getAddress() {
-            return address;
-        }
+    record Person(Optional<Address> address) {
     }
 }

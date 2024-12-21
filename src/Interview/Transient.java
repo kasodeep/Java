@@ -29,6 +29,7 @@ public class Transient {
 class User implements Serializable {
 
     private String username;
+
     private transient String password;
 
     public User(String username, String password) {

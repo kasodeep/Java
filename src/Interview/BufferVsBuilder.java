@@ -40,7 +40,7 @@ public class BufferVsBuilder {
             thread1.join();
             thread2.join();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
         System.out.println(shared.length());
