@@ -18,10 +18,10 @@ public class SlidingWindow {
         nge[n - 1] = n;
 
         for (int i = n - 2; i >= 0; i--) {
-            while (st.size() > 0 && arr[i] > arr[st.peek()]) {
+            while (!st.isEmpty() && arr[i] > arr[st.peek()]) {
                 st.pop();
             }
-            if (st.size() == 0)
+            if (st.isEmpty())
                 nge[i] = n;
             else
                 nge[i] = st.peek();
@@ -53,10 +53,10 @@ public class SlidingWindow {
         Deque<Integer> win = new ArrayDeque<>();
 
         for (int i = 0; i < n; ++i) {
-            while (win.size() > 0 && win.peekFirst() <= i - k) {
+            while (!win.isEmpty() && win.peekFirst() <= i - k) {
                 win.pollFirst();
             }
-            while (win.size() > 0 && nums[win.peekLast()] < nums[i]) {
+            while (!win.isEmpty() && nums[win.peekLast()] < nums[i]) {
                 win.pollLast();
             }
             win.offerLast(i);
