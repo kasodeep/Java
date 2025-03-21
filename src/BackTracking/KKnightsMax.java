@@ -48,7 +48,7 @@ public class KKnightsMax {
         // 2 Left 1 Up
         i = row - 1;
         j = col - 2;
-       return i < 0 || j < 0 || board[i][j] != 'K';
+        return i < 0 || j < 0 || board[i][j] != 'K';
     }
 
     private static void nKnight(char[][] board, int row, int col, int num) {

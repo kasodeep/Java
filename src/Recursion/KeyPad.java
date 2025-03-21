@@ -1,26 +1,31 @@
 package Recursion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class KeyPad {
 
-    static void combination(String digit, String[] kp, String res) {
-        if (digit.length() == 0) {
-            System.out.print(res + " ");
+    private final List<String> res = new ArrayList<>();
+
+    private final String[] digitToChar = {
+            "", "", "abc", "def", "ghi", "jkl", "mno", "qprs", "tuv", "wxyz"
+    };
+
+    public List<String> letterCombinations(String digits) {
+        if (digits.isEmpty()) return res;
+        backtrack(0, "", digits);
+        return res;
+    }
+
+    private void backtrack(int i, String curStr, String digits) {
+        if (i == digits.length()) {
+            res.add(curStr);
             return;
         }
 
-        // Self-Work
-        int currNum = digit.charAt(0) - '0';
-        String currChoices = kp[currNum];
-
-        // Recursive Work
-        for (int i = 0; i < currChoices.length(); i++) {
-            combination(digit.substring(1), kp, res + currChoices.charAt(i));
+        String chars = digitToChar[digits.charAt(i) - '0'];
+        for (char c : chars.toCharArray()) {
+            backtrack(i + 1, curStr + c, digits);
         }
-    }
-
-    public static void main(String[] args) {
-        String digit = "253";
-        String[] kp = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        combination(digit, kp, "");
     }
 }

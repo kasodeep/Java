@@ -8,9 +8,9 @@ public class EuclideanAlgo {
      * @return - It returns the gcd of {a} and {b}
      */
     public static int gcdByDivision(int a, int b) {
-        if (a == 0)
-            return b;
-        return gcdByDivision(b % a, a);
+        if (b == 0)
+            return a;
+        return gcdByDivision(b, a % b);
     }
 
     static int gcdBySubtraction(int a, int b) {

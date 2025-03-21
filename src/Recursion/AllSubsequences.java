@@ -1,57 +1,19 @@
 package Recursion;
 
-import java.util.ArrayList;
-
 public class AllSubsequences {
 
-    /**
-     * @param s - It is the string which is to be used for getting SSQ
-     * @return - It returns the ArrayList containing all the subsequences
-     */
-    static ArrayList<String> getSubSequence(String s) {
-        ArrayList<String> ans = new ArrayList<>();
-        if (s.length() == 0) {
-            ans.add("");
-            return ans;
-        }
-
-        // Recursive Work
-        char curr = s.charAt(0);
-        ArrayList<String> smallAns = getSubSequence(s.substring(1));
-
-        // Self-Work
-        for (String string : smallAns) {
-            ans.add(string);
-            ans.add(curr + string);
-        }
-        return ans;
-    }
-
-    /**
-     * @param s - It is the string which is to be used for getting SSQ
-     * @param currAnswer - It is the current answer, initially zero
-     */
-    static void printSubSequence(String s, String currAnswer) {
-
-        // Base case
-        if (s.length() == 0) {
-            System.out.print(currAnswer + " ");
+    public static void printSubsequences(String s, int index, String curr) {
+        if (index == s.length()) {
+            System.out.println(curr);
             return;
         }
 
-        char curr = s.charAt(0);
-        String remString = s.substring(1);
-
-        // Add the curr character
-        printSubSequence(remString, currAnswer + curr);
-        // Do not add the curr character
-        printSubSequence(remString, currAnswer);
-
+        printSubsequences(s, index + 1, curr + s.charAt(index));
+        printSubsequences(s, index + 1, curr);
     }
 
     public static void main(String[] args) {
-        ArrayList<String> ans = getSubSequence("abc");
-        System.out.println(ans);
-        printSubSequence("abc", "");
+        String s = "abc";
+        printSubsequences(s, 0, "");
     }
 }
