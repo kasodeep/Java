@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  * For ex: dist[u] + wt < dist[v], then we update the value of dist[v]. <br>
  * Fails when edges weight is <b>Negative.</b>
  */
-public class DijkstrasAlgorithm {
+public class DijkstraAlgorithm {
 
     // Time Complexity - O(E + E * logV)
     static int[] dijkstra(int V, ArrayList<ArrayList<Pair>> adj, int S) {

@@ -9,7 +9,7 @@ public class MColoringProblem {
         return true;
     }
 
-    // A recursive utility function to solve m coloring problem
+    // A recursive utility function to solve m coloring problem.
     static boolean graphColoringUtil(boolean[][] graph, int m, int[] color, int v, int V) {
         if (v == V) return true;
 

@@ -18,8 +18,7 @@ public class BellManFordAlgorithm {
 
         for (int k = 0; k < V - 1; k++) { // O(V)
             for (int i = 0; i < V; i++) { // O(E) for both the loops.
-                for (int j = 0; j < adj.get(i).size(); j++) {
-                    Pair<Integer, Integer> e = adj.get(i).get(j);
+                for (Pair<Integer, Integer> e : adj.get(i)) {
 
                     // Relaxation.
                     if (dist[e.dest()] != Integer.MAX_VALUE && dist[i] + e.weight() < dist[e.dest()])

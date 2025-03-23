@@ -10,12 +10,14 @@ public class SnakesAndLadders {
 
         Queue<Integer> q = new LinkedList<>();
         q.add(1);
+
         while (!q.isEmpty()) {
             result++;
             int size = q.size();
 
             while (size-- > 0) {
                 int curr = q.poll();
+
                 for (int i = 1; i <= 6; i++) {
                     int next = curr + i;
                     int[] rc = getRowCol(next, n);

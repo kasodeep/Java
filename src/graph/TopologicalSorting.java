@@ -26,7 +26,7 @@ public class TopologicalSorting {
             if (!isVisited[i]) topSortUtil(graph, isVisited, i, st);
         }
 
-        while (st.size() > 0) {
+        while (!st.isEmpty()) {
             System.out.print(st.pop() + " ");
         }
     }

@@ -18,6 +18,7 @@ public class PrimAlgorithm {
         int mstCost = 0;
 
         pq.add(new Pair(0, 0));
+
         while (!pq.isEmpty()) {
             Pair p = pq.poll();
             int curr = p.vertex;
@@ -37,7 +38,7 @@ public class PrimAlgorithm {
             }
         }
 
-        System.out.println("Minimum cost: " + mstCost);
+        System.out.println(STR."Minimum cost: \{mstCost}");
     }
 
     public static class Pair {

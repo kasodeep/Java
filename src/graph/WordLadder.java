@@ -6,11 +6,13 @@ public class WordLadder {
 
     public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
         if (!wordList.contains(endWord)) return 0;
+
         int cnt = 0;
         Set<String> dict = new HashSet<>(wordList);
 
         Queue<String> que = new LinkedList<>();
         que.add(beginWord);
+
         while (!que.isEmpty()) {
             cnt++;
             int size = que.size();

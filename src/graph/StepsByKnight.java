@@ -15,8 +15,9 @@ public class StepsByKnight {
         int step = 0;
         int[][] dir = {{-2, -1}, {-2, 1}, {-1, -2}, {-1, 2}, {1, -2}, {1, 2}, {2, -1}, {2, 1}};
 
-        while (q.size() > 0) {
+        while (!q.isEmpty()) {
             int sz = q.size();
+
             while (sz-- > 0) {
                 int[] pos = q.poll();
                 if (pos[0] == TargetPos[0] && pos[1] == TargetPos[1]) {

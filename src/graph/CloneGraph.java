@@ -27,7 +27,7 @@ public class CloneGraph {
     }
 
     // Definition for a Node.
-    static class Node {
+    public static class Node {
         public int val;
         public List<Node> neighbors;
 

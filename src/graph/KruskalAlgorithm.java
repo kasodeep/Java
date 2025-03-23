@@ -50,9 +50,9 @@ public class KruskalAlgorithm {
         if (rank[rootY] < rank[rootX]) {
             parent[rootY] = rootX;
         } else if (rank[rootX] < rank[rootY]) {
-            rank[rootX] = rootY;
+            parent[rootX] = rootY;
         } else {
-            rank[rootY] = rootX;
+            parent[rootY] = rootX;
             rank[rootX]++;
         }
     }

@@ -16,6 +16,7 @@ public class AllPeopleWithSecrets {
         // Secret knowing time initialization!
         int[] secretTime = new int[n];
         Arrays.fill(secretTime, Integer.MAX_VALUE);
+
         secretTime[0] = 0;
         secretTime[firstPerson] = 0;
 
@@ -23,11 +24,11 @@ public class AllPeopleWithSecrets {
         q.add(0);
         q.add(firstPerson);
 
-        // Doing dfs!
-        while (q.size() > 0) {
+        while (!q.isEmpty()) {
             int curr = q.poll();
+
             ArrayList<Pair> temp = graph.get(curr);
-            if (temp.size() == 0) continue;
+            if (temp.isEmpty()) continue;
 
             for (Pair pair : temp) {
                 if (secretTime[curr] <= pair.time && secretTime[pair.dest] > pair.time) {

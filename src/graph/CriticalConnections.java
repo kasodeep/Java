@@ -23,7 +23,7 @@ public class CriticalConnections {
             if (a.get(0).equals(b.get(0))) {
                 return a.get(1) - b.get(1);
             } else {
-                return a.get(0) - b.get(0);
+                return a.getFirst() - b.getFirst();
             }
         });
 

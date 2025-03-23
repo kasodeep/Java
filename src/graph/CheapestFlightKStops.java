@@ -20,21 +20,22 @@ public class CheapestFlightKStops {
         int[] dist = new int[n];
 
         Arrays.fill(dist, (int) 1e9);
-        q.add(new Tuple(0, src, 0));
+        q.add(new Tuple(0, src));
 
         while (!q.isEmpty()) {
             Tuple it = q.poll();
             int stop = it.stops;
-            int node = it.nodes;
-            int dis = it.dist;
+            int curr = it.node;
 
             if (stop > k) continue;
-            for (Pair curr : adj.get(node)) {
-                int currNode = curr.dest;
-                int edW = curr.dist;
-                if (dis + edW < dist[currNode]) {
-                    dist[currNode] = dis + edW;
-                    q.add(new Tuple(stop + 1, currNode, dis + edW));
+
+            for (Pair pair : adj.get(curr)) {
+                int dest = pair.dest;
+                int edW = pair.dist;
+
+                if (dist[curr] + edW < dist[dest]) {
+                    dist[dest] = dist[curr] + edW;
+                    q.add(new Tuple(stop + 1, dest));
                 }
             }
         }
@@ -53,13 +54,11 @@ public class CheapestFlightKStops {
 
     static class Tuple {
         int stops;
-        int nodes;
-        int dist;
+        int node;
 
-        public Tuple(int s, int n, int d) {
+        public Tuple(int s, int n) {
             stops = s;
-            nodes = n;
-            dist = d;
+            node = n;
         }
     }
 }

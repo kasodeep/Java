@@ -31,7 +31,7 @@ public class PreRequisiteTasks {
         }
 
         int size = 0;
-        while (q.size() > 0) {
+        while (!q.isEmpty()) {
             int curr = q.poll();
             size++;
 
