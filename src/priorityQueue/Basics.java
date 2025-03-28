@@ -20,7 +20,7 @@ public class Basics {
         System.out.println(pq.remove());
         System.out.println(pq.peek());
 
-        PriorityQueue<Student> studentPQ = new PriorityQueue<>(new StudentComparator());
+        PriorityQueue<Student> studentPQ = new PriorityQueue<>((a, b) -> a.rollNo - b.rollNo);
         Student student1 = new Student("Deep", 29, 93);
         Student student2 = new Student("Parth", 30, 85);
 

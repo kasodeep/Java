@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 public class KthLargest {
 
-    // Time Complexity - O(N * logN), Auxiliary Space - O(K)
+    // Time Complexity - O(N * logK), Auxiliary Space - O(K)
     public static void main(String[] args) {
         int[] arr = {3, 7, 2, 9, 5};
         int k = 2;

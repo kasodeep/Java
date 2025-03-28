@@ -30,6 +30,6 @@ public class KthSmallestFraction {
         }
 
         double[] result = pq.poll();
-        return new int[]{arr[(int) result[1]], arr[(int) result[2]]};
+        return new int[]{(int) result[1], (int) result[2]};
     }
 }

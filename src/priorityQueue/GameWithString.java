@@ -22,7 +22,7 @@ public class GameWithString {
             pq.add(map.get(key));
         }
 
-        while (k != 0 && pq.size() != 0) {
+        while (k != 0 && !pq.isEmpty()) {
             int num = pq.poll();
             pq.add(num - 1);
             k--;
@@ -30,7 +30,7 @@ public class GameWithString {
 
         int ans = 0;
         while (!pq.isEmpty()) {
-            ans += Math.pow(pq.poll(), 2);
+            ans += (int) Math.pow(pq.poll(), 2);
         }
         return ans;
     }

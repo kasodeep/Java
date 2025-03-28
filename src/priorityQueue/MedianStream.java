@@ -9,7 +9,9 @@ import java.util.PriorityQueue;
 public class MedianStream {
 
     private static final PriorityQueue<Integer> small = new PriorityQueue<>(Collections.reverseOrder());
+
     private static final PriorityQueue<Integer> large = new PriorityQueue<>();
+
     private static boolean even = true;
 
     //Function to insert heap.
