@@ -5,6 +5,7 @@ import java.util.LinkedList;
 public class MyHashMap<K, V> {
 
     public static final int DEFAULT_CAPACITY = 4;
+
     public static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
     private int n; // the number of entries in the map.

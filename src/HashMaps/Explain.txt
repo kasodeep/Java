@@ -39,7 +39,7 @@ COLLISIONS:
             It is usually 0.75
          
          Threshold Value = Load Factor * Capacity
-            It is acceptable entries of elements before capacity id doubled.
+            It is acceptable entries of elements before capacity is doubled.
 
          ReHashing:
             It is copying of the nodes from old table to a new table.

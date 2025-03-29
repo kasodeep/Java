@@ -7,6 +7,7 @@ package OOPS;
 abstract public class Car {
 
     String brand;
+
     int price;
 
     abstract void start(); // this method needs to be overridden.
