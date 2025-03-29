@@ -35,6 +35,7 @@ public class SearchSuggestionSystem {
 
     static class TrieNode {
         public TrieNode[] children;
+
         public PriorityQueue<String> pq;
 
         public TrieNode() {

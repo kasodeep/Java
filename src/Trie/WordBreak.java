@@ -15,7 +15,7 @@ public class WordBreak {
     }
 
     public static boolean solve(Trie root, String A) {
-        if (A.length() == 0)
+        if (A.isEmpty())
             return true;
 
         for (int i = 1; i <= A.length(); i++) {
