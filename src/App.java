@@ -9,10 +9,9 @@
     JRE - JVM + Runtime Libraries
     JDK - JRE + Development Tools
  */
-
-/*
-    javac .\Main.java
-    java Main
+/**
+ * javac .\Main.java
+ * java Main
  */
 public class App {
     public static void main(String[] args) {
