@@ -1,5 +1,8 @@
 package Interview;
 
+/*
+ * Example of method overloading and varargs in action.
+ * */
 public class VariableLengthArgs {
 
     static int balance;

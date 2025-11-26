@@ -31,7 +31,7 @@ public class TarjansAlgorithm {
                 low[curr] = Math.min(low[curr], low[dest]);
 
                 if (dt[curr] < low[dest]) {
-                    System.out.println(STR."Bridge is \{curr} -> \{dest}");
+                    System.out.println("Bridge is " + curr + " -> " + dest);
                 }
             } else if (dest == parent) {
                 continue;

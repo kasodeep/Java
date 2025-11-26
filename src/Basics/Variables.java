@@ -23,6 +23,9 @@ import java.awt.*;
  * <p>
  * When byte overflows, it converts using Modulo operation.
  * Ex: byte num = 257; (It will be 1)
+ * <p>
+ * Each character is represented by the ascii value: (0-9: 48-57, A-Z: 65-90)
+ * </p>
  */
 public class Variables {
 
@@ -39,6 +42,9 @@ public class Variables {
         // Referencing of objects.
         Point point1 = new Point(10, 10);
         Point point2 = point1;
+
+        // can be used can't be changed.
+        var temp = 10.0;
 
         point1.x = 20;
         System.out.println(point2);

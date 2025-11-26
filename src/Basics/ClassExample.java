@@ -39,6 +39,18 @@ public class ClassExample {
     }
 
     public static void main(String[] args) {
+        B b = new B();
+    }
 
+    static class A {
+        static { System.out.println("A static"); }
+        { System.out.println("A instance"); }
+        A() { System.out.println("A constructor"); }
+    }
+
+    static class B extends A {
+        static { System.out.println("B static"); }
+        { System.out.println("B instance"); }
+        B() { System.out.println("B constructor"); }
     }
 }

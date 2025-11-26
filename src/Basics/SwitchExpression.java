@@ -5,8 +5,9 @@ public class SwitchExpression {
     public static int getDaysInMonth(Month month, boolean isLeapYear) {
         return switch (month) {
             case JANUARY, MARCH, MAY, JULY, AUGUST, OCTOBER, DECEMBER -> 31;
-            case APRIL, JUNE, SEPTEMBER, NOVEMBER -> 30;
+            case APRIL, JUNE, SEPTEMBER -> 30;
             case FEBRUARY -> isLeapYear ? 29 : 28;
+            default -> 0;
         };
     }
 

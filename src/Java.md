@@ -3,11 +3,18 @@
 - Java is a multi-platform, object-oriented language that can be used as a platform in itself.
 - It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to
   big data applications and server-side technologies.
+- It is a static typed language, type correctness checked before running.
 
 ### Compilation
 
 1. We write code in files with extension: `.java`
 2. The `javac` compiler converts the code into `byte` code.
+
+### Execution
+
+1. The JVM loads the different class loaders and the libraries, finding main to start execution.
+2. Bootstrap {java.util}, Extension {java.sql}, Application {jars} are the different class loaders present.
+3. Bytecode instructions are executed by Interpreter and JIT.
 
 #### JVM
 

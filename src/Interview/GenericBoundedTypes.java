@@ -19,7 +19,7 @@ public class GenericBoundedTypes {
             throw new IllegalArgumentException("List cannot be empty!");
         }
 
-        T max = list.get(0);
+        T max = list.getFirst();
         for (int i = 1; i < list.size(); i++) {
             T current = list.get(i);
             if (current.compareTo(max) > 0) max = current;

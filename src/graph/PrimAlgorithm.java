@@ -38,7 +38,7 @@ public class PrimAlgorithm {
             }
         }
 
-        System.out.println(STR."Minimum cost: \{mstCost}");
+        System.out.println("Minimum cost:" + mstCost);
     }
 
     public static class Pair {

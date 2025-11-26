@@ -1,4 +1,4 @@
-package Interview.execptions;
+package Interview.exceptions;
 
 /**
  * To catch or propagate exception depends on the use case.

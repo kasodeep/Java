@@ -11,7 +11,6 @@ public class BufferVsBuilder {
         /*
          * StringBuffer is thread safe (synchronized), and StringBuilder is not thread safe.
          * */
-
         String s1 = "Hello"; // Gets created in the String Pool.
         String s2 = s1.concat(""); // Gets created in the Heap Memory.
         String s3 = s2.intern(); // Looks into String Pool first.
