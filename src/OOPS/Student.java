@@ -24,6 +24,11 @@ public class Student {
         System.out.println("Runs when the class loader loads the class.");
     }
 
+    // Two types of initializer blocks.
+    {
+        System.out.println("A new student has been created.");
+    }
+
     /*
      * When parameterized constructor is created, it overrides default hence need to explicitly specify the default one.
      */

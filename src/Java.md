@@ -64,3 +64,15 @@ java -cp <path> Main.class
 - Each method has its own `Stack`.
 - Heap is an `open` space where objects are stored.
 - Objects have address in the stack.
+
+### File Handling
+
+Disk
+↓
+InputStream / OutputStream (bytes)
+↓
+Reader / Writer (characters)
+↓
+Buffered wrappers (performance)
+↓
+Higher-level utilities
