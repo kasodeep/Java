@@ -23,8 +23,8 @@ public class CollectionFramework {
          */
         ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
-        list.add(0, 2);
-        System.out.println(list.get(0));
+        list.addFirst(2);
+        System.out.println(list.getFirst());
 
         list.remove(1);
         list.remove(Integer.valueOf(2));

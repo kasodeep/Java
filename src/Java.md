@@ -61,7 +61,7 @@ java -cp <path> Main.class
 
 ### Memory Model
 
-- Each method has its own `Stack`.
+- Each thread has its own `Stack`.
 - Heap is an `open` space where objects are stored.
 - Objects have address in the stack.
 

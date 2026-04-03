@@ -12,9 +12,6 @@ java.lang.RuntimeException.
 
 - Exception wrapping is when you catch an exception, wrap it in a different exception and throw that
   exception.
-
 - The second reason is that you may not want your top level components to know anything about the bottom level
-  components,
-  nor the exceptions they throw.
-
+  components, nor the exceptions they throw.
 - We might not be able to identify the root cause of the error, and debugging might take some time.
