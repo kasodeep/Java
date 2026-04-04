@@ -8,7 +8,7 @@ public class Knapsack {
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= W; j++) {
                 if (j >= wt[i - 1]) {
-                    dp[i][j] = Math.max(dp[i - 1][j], val[i - 1] + dp[i][j - wt[i - 1]]);
+                    dp[i][j] = Math.max(dp[i - 1][j], val[i - 1] + dp[i][j - wt[i - 1]]); // no i - 1 in second term, can we reused.
                 } else {
                     dp[i][j] = dp[i - 1][j];
                 }

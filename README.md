@@ -83,8 +83,6 @@
 * [Student Attendance 2](https://github.com/kasodeep/Java/blob/master/src/dp/StudentAttendance2.java)
 * [Wild Pattern Matching](https://github.com/kasodeep/Java/blob/master/src/dp/WildPatternMatching.java)
 
-### Try to solve __DIGIT DP & BIT-MASKING FROM CP PRACTICE (cses)__.
-
 ## Array (Contiguous Memory Allocation):
 
 ### **ALL ARE OF DIFFERENT TECHNIQUES**
